@@ -1,0 +1,445 @@
+body{
+	background: #35423f;
+	background-position: center center;
+	text-align: center;
+	font-family: 'Roboto Slab', Georgial, serif;
+	color: #8aa99b;
+	color: #d2e68f;
+	padding: 0;
+	margin: 0;
+	position: relative;
+}
+
+.founded-date{
+	margin-bottom: 20px;
+	margin-top: 10px;
+	font-size: 14px;
+	font-family: Georgia, Times New Roman, Times, serif;
+	font-style: italic;
+	line-height: 24px;
+	opacity: .5;
+}
+
+.founders-name{
+	margin-bottom: 20px;
+	margin-top: -20px;
+	font-family: Georgia, Times New Roman, Times, serif;
+	font-style: italic;
+	line-height: 24px;
+	opacity: .5;
+}
+
+
+.subtitle-image{
+	margin: 15px 0 30px;
+}
+
+
+a{
+	color: #8aa99b;
+	-webkit-transition: all .2s;
+	-moz-transition: all .2s;
+}
+
+.slideshow{
+	margin-top: 30px;
+}
+
+section{
+	display: block;
+	margin: 0 auto;
+	max-width: 980px;
+	width: 100%;
+}
+
+section img{
+	max-width: 100%;
+}
+
+.slideshow img{
+	display: inline-block;
+	max-width: 100%;
+}
+
+
+
+.sep{
+	max-width: 900px;
+	width: 100%;
+	display: block;
+	height: 1px;
+	margin: 60px auto;
+	border-top: 1px solid rgba(92, 110, 93, 0.58);
+}
+
+
+header{
+	padding: 40px 0;
+}
+
+h1{
+	color: white;
+}
+
+h2{
+	font-weight: 600;
+	color: white;
+	font-size: 36px;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+}
+
+
+
+h3{
+	font-weight: normal;
+	margin: 20px 0 30px;
+}
+
+
+#reversi-icon{
+	background-image: url("http://pleeq.com/fresh-reversi/fresh-reversi-140px.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 140px;
+	height: 140px;
+	display: block;
+	margin: 0 auto;
+}
+
+.app-store{
+	background-image: url("http://pleeq.com/resources/app-store-white.svg");
+	background-size: 79% auto;
+	background-position: center center;
+	background-repeat: no-repeat;
+	width: 175px;
+	height: 55px;
+	display: inline-block;
+	margin-top: 40px;
+	background-color: rgba(0,0,0,.4);
+	padding:25px 30px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border-radius: 6px;
+
+}
+.app-store:hover{
+	background-color: rgba(0,0,0,.6);
+}
+
+/*
+.app-store{
+	display: inline-block;
+	width: 175px;
+	border-radius: 6px;
+	margin:0;
+	height: 55px;
+	background-color: rgba(0,0,0,.4);
+	background-image: url(app-store2.png);
+	background-size: 141px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	padding:25px 30px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	z-index: 10;
+	position: relative;
+	-webkit-animation: fadein-other 4s;
+}
+
+.app-store:hover{
+	background-color: rgba(0,0,0,.6);
+}
+*/
+
+.iphone-linear{
+	width: 380px;
+	height: 709px;
+	display: block;
+	background-image: url(iphone-vid-bg.png);
+	background-repeat: no-repeat;
+	margin: 0 auto;
+	position: relative;
+}
+
+.iphone-linear img{
+	position: absolute;
+	left: 35px;
+	top: 152px;
+	border: 1px solid rgba(0,0,0,.13);
+}
+
+.hero p{
+	margin: 0 auto;
+	padding: 0 7%;
+	margin-top: 40px;
+	font-size: 22px;
+	text-align: center;
+
+}
+
+#pleeq-software, #kit{
+	position: absolute;
+	top: 15px;
+	z-index: 2;
+	left: 15px;
+	color: white;
+	font-size: 14px;
+	border: 2px solid rgba(255,255,255,.2);
+	border-radius: 4px;
+	padding: 10px;
+	height: 8px;
+	line-height: 8px;
+	font-weight: 200;
+	text-decoration: none;
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+	-webkit-transition: inherit;
+	-webkit-animation: fadein-title 3s;
+	-webkit-animation-timing-function: ease-out;
+}
+
+#pleeq-software:hover, #kit:hover{
+	background: white;
+	color: hsl(270, 9%, 16%);
+	box-shadow: 0 3px 7px rgba(0, 0, 0, .2);
+}
+
+#kit{
+	left: auto !important;
+	right: 20px;
+	border-color: transparent;
+}
+
+footer{
+	width: 100%;
+	background: rgba(0,0,0,.1);
+	padding-bottom: 20px;
+	margin-top: 40px;
+	padding-top: 20px;
+	font-size: 13px;
+}
+
+footer a:hover{
+	color: #4EB6FF;
+	border-bottom: 1px solid #4EB6FF;
+}
+
+footer a{
+	text-decoration: none;
+	margin: 0 10px;
+	border-bottom: 1px solid #51655c;
+}
+
+h4{
+	color: white;
+	font-size: 14px;	
+	text-align: left;
+	margin-bottom: 5px;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.columns-box p{
+	margin: inherit;
+	font-size: 14px;
+	text-align: left;
+	margin: 0;
+	line-height: 160%;
+}
+
+.column{
+	width: 280px;
+	display: inline-block;
+	vertical-align: top;
+	margin: 0px 15px 15px 0px;
+}
+
+.columns-box h4{
+	margin-bottom: 5px;
+	font-size: 110%;
+}
+
+section p{
+	font-size: 17px;
+	line-height: 160%;
+	padding: 0 18%;
+	text-align: left;
+	display: block;
+	margin: 0 auto;
+}
+
+.columns-box p{
+	width: inherit;
+	padding:  inherit;
+}
+
+#tuts li{
+	list-style-type: none;
+	margin-bottom: 10px;
+}
+
+#tuts ul{
+	padding: 0;
+	margin: 0;
+}
+
+#tuts{
+	padding-bottom: 20px;
+}
+
+#tuts p{
+	margin-top: 20px;
+	font-size: 13px;
+	text-align: center;
+	opacity: .5;
+}
+
+#download{
+	padding-bottom: 100px;
+}
+
+#download p{
+	margin-top: 20px;
+	font-size: 13px;
+	text-align: center;
+	opacity: .5;
+}
+
+#gameplay-video{
+	position: absolute;
+	left: 32px;
+	top: 134px;
+}
+
+#subscribe{
+	max-width: 100%;
+	font-family: 'Roboto Slab', Georgial, serif;
+}
+
+::-webkit-input-placeholder{
+	color: white;
+	color: hsl(74, 34%, 53%);
+}
+
+#subscribe input:last-child{
+	display: inline-block;
+	max-width: 227px;
+	font-size: 18px;
+	line-height: 27px;
+	color: #333;
+	background: #0578ff;
+	border: 0;
+	margin: 0 auto;
+	padding: 6px 16px;
+	border-radius: 3px;
+	cursor: pointer;
+	-webkit-appearance: none;
+	background-color: hsl(74, 84%, 53%);
+	font-size: 14px;
+	font-family: 'Roboto Slab', Georgial, serif;
+}
+
+#subscribe input:focus{
+	outline:0;
+	color: white;
+}
+
+#subscribe input:first-child, #subscribe input:nth-child(2){
+	background-color: transparent;
+	border-bottom: 1px solid #b5b5b9;
+	display: inline-block;
+	width: 130px;
+	font-size: 20px;
+	color: #696B78;
+	background: transparent;
+	border: 0;
+	border-bottom: 1px solid hsl(74, 34%, 33%);
+	-webkit-appearance: none;
+	margin: 0 0 20px;
+	padding: 10px 0;
+	border-radius: 0;
+	color: white;
+	resize: none;
+	margin-right: 10px;
+	font-size: 14px;
+	font-family: 'Roboto Slab', Georgial, serif;
+}
+
+#success{
+	display: none;
+	width: 100%;
+	padding: 0;
+	text-align: center;
+	line-height: 20px;
+	font-size: 12px !important;
+	opacity: 1 !important;
+}
+
+
+#subscribe input:last-child:active{
+	background-color: hsl(74, 54%, 33%);
+}
+
+
+@media only screen and (max-width: 460px) {
+	.iphone-linear{
+		width: 280px;
+		height: 609px;
+		background-size: contain;
+	}
+	.column{
+		margin-right: 0 !important;
+		width: 100%;
+	}
+	.coluns-row{
+		padding: 0 4.5%;
+	}
+	header{
+		padding-top: 80px;
+	}
+	
+	section p{
+		padding: 0 4.5%;
+	}
+	h2{
+		font-size: 30px;
+		letter-spacing: 2px;
+	}
+	
+	.hero p{
+		margin-top: -40px;
+	}
+	
+	#gameplay-video{
+		display: none;
+	}
+	
+	body{
+		padding: 0 5px;
+	}
+	
+	#pleeq-software{
+		top: 10px;
+		left: 10px;
+	}
+	
+	#kit{
+		right: 10px;
+		top: 10px;
+		padding-right: 0;
+	}
+	
+	.sep{
+		margin: 30px 0;
+	}
+	
+}
+
+@media (-webkit-min-device-pixel-ratio: 2){
+	#reversi-icon{
+		background-image: url("http://pleeq.com/fresh-reversi/fresh-reversi-280px.png");
+	}
+}
+
+
