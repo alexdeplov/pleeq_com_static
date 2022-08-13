@@ -1,0 +1,274 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css?family=DM+Sans:400,700|Space+Mono:400,700|Chivo:400,700,900&amp;display=swap" rel="stylesheet">
+  <style>
+  body{
+    font: normal normal 700 17px/130% Space Mono,SF Mono,monospace;
+    letter-spacing: -.5px;
+  }
+  body a{
+    text-decoration: underline;
+  }
+  .purple{
+    color: #5714ff;
+  }
+  h1{
+    letter-spacing: -1px;
+  }
+  .notesSelection{
+    background-color:
+  }
+  mark {
+    background-color: #ffda41;
+    color: #100618;
+  }
+  .orange{
+    color: #ff5d47;
+  }
+
+  .gray{
+    color: #10061880;
+  }
+
+  .dm-font{
+    font: normal normal 700 1em/130% DM Sans,sans-serif;
+  }
+
+  .pressName{
+      min-width: 190px;
+  }
+
+  .pressColon{
+    margin-right: 40px;
+  }
+
+
+  </style>
+</head>
+<body class="bg-[#e2dcca]">
+  <div class="">
+
+    <!-- Header -->
+    <header class="flex max-w-2xl m-auto pt-14 justify-center text-center">
+
+      <!-- Alex -->
+        <div class="flex w-2/6 content-center flex-col items-center">
+
+          <a href="#" class="-mt-2 no-underline">
+              <img src="./images/alexDeplovAvatar.png" width="120" height="120" alt="Alex Deplov Avatar">
+              <div class="-mt-2">
+                Alex Deplov
+              </div>
+              <div class="purple">
+                Design
+              </div>
+          </a>
+
+        </div>
+
+        <!-- Logo -->
+        <div class="">
+          <img class="-mt-4" src="./images/pleeq_logo.png" width="140" height="140" alt="Pleeq Software">
+        </div>
+
+        <!-- Dima -->
+          <div class="flex w-2/6 content-center flex-col items-center">
+            <a href="#" class="-mt-2 no-underline">
+                <img class="ml-1" src="./images/dmitryDeplovAvatar.png" width="120" height="120" alt="Dmitry Deplov Avatar">
+                <div class="-mt-2">
+                  Dmitry Deplov
+                </div>
+                <div class="purple">
+                  Code
+                </div>
+            </a>
+
+          </div>
+    </header>
+
+    <!-- Description -->
+    <div class="flex max-w-2xl m-auto pt-14 justify-center text-left flex-col pb-4">
+      <h1 class="text-2xl pb-10">
+      We are Pleeq Software.<br/>
+      <mark class="notesSelection">Making iOS apps and games since 2013</mark>. Both graduated from art school we believe that only well-crafted things can improve our lives.
+      </h1>
+      <div>
+          <a class="orange underline text-xl" href="mailto:deplovsbrothers@gmail.com?subject=Pleeq Software Support" class="text-lg">Need Support?</a>
+      </div>
+    </div>
+
+    <!-- Grid -->
+    <div class="flex max-w-4xl m-auto pt-14 justify-center text-left flex-col pb-4">
+      <!-- AP -->
+      <div class="grid grid-cols-3 gap-4 gap-x-2.5 gap-y-14">
+        <div class="flex flex-col">
+          <a href="#" class="flex flex-col content-center text-center no-underline">
+            <img class="m-auto pb-4" src="./images/anchorPointer.png" width="200" height="200">
+            <h2 class="text-2xl mb-2">
+                Anchor Pointer
+            </h2>
+            <div class="gray dm-font text-lg leading-tight">
+                Navigate without internet connection
+            </div>
+          </a>
+        </div>
+
+        <!-- FR -->
+        <div>
+          <a class="flex flex-col content-center text-center no-underline" href="#">
+            <img class="m-auto pb-4" src="./images/freshReversi.png" width="200" height="200">
+            <h2 class="text-2xl mb-2">
+                Fresh Reversi
+            </h2>
+            <div class="gray dm-font text-lg leading-tight">
+                Improve your strategic thinking
+            </div>
+          </a>
+        </div>
+
+        <!-- Loc -->
+        <div>
+          <a class="flex flex-col content-center text-center no-underline" href="#">
+            <img class="m-auto pb-4" src="./images/locader.png" width="200" height="200">
+            <h2 class="text-2xl mb-2">
+                Locader
+            </h2>
+            <div class="gray dm-font text-lg leading-tight">
+                Add some magic to your MacBook
+            </div>
+          </a>
+        </div>
+
+        <!-- Filt -->
+
+        <div>
+          <a class="flex flex-col content-center text-center no-underline" href="#">
+            <img class="m-auto pb-4" src="./images/filterious.png" width="200" height="200">
+            <h2 class="text-2xl mb-2">
+                Filterious
+            </h2>
+            <div class="gray dm-font text-lg leading-tight">
+                Photo-filters from 90's
+            </div>
+          </a>
+        </div>
+
+        <!-- AK -->
+
+        <div>
+          <a class="flex flex-col content-center text-center no-underline" href="#">
+            <img class="m-auto pb-4" src="./images/animalKids.png" width="200" height="200">
+            <h2 class="text-2xl mb-2">
+                Animal Kids
+            </h2>
+            <div class="gray dm-font text-lg leading-tight">
+                Puzzle game for toddlers
+            </div>
+          </a>
+        </div>
+
+        <!-- DiQ -->
+
+        <div>
+          <a class="flex flex-col content-center text-center no-underline" href="#">
+            <img class="m-auto pb-4" src="./images/doitQUICKLY.png" width="200" height="200">
+            <h2 class="text-2xl mb-2">
+                DoitQUICKLY
+            </h2>
+            <div class="gray dm-font text-lg leading-tight">
+                Deadline reminder with alarm
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Press -->
+    <div class="flex max-w-2xl m-auto pt-14 justify-center text-left flex-col pb-4">
+
+        <h2 class="border-solid border-b-black border-b-4 text-2xl pb-4 mb-8">
+          Press about our apps.
+        </h2>
+
+        <ul>
+          <li class="pressBox flex pb-4">
+            <div class="pressNameBox flex">
+              <div class="pressName">Financial Review</div>
+              <div class="pressColon">:</div>
+            </div>
+            <div class="pressLink">
+              <a class="orange leading-tight decoration-solid" href="https://www.afr.com/technology/anchor-pointer-the-navigation-app-that-apple-should-buy-20160526-gp4cyr" target="_blank" rel="noopener noreferrer">Anchor Pointer: The navigation app that Apple should buy.
+              </a>
+            </div>
+          </li>
+          <li class="pressBox flex pb-4">
+            <div class="pressNameBox flex">
+              <div class="pressName">Engadget</div>
+              <div class="pressColon">:</div>
+            </div>
+            <div class="pressLink">
+              <a class="orange leading-tight decoration-solid" href="https://www.engadget.com/2014/08/15/anchor-pointer-is-a-great-app-for-finding-your-car-or-that-great/" target="_blank" rel="noopener noreferrer">Anchor Pointer is a great app for finding your car or that great fishing spot.
+              </a>
+            </div>
+          </li>
+          <li class="pressBox flex pb-4">
+            <div class="pressNameBox flex">
+              <div class="pressName">TheNextWeb</div>
+              <div class="pressColon">:</div>
+            </div>
+            <div class="pressLink">
+              <a class="orange leading-tight decoration-solid" href="https://thenextweb.com/apps/2014/07/01/iphone-app-uses-anchors-compass-virtual-breadcrumbs-youll-never-get-lost/" target="_blank" rel="noopener noreferrer">This iPhone app uses anchors and a compass as virtual breadcrumbs so you’ll never get lost again.
+              </a>
+            </div>
+          </li>
+        </ul>
+
+    </div>
+
+    <!-- Clients -->
+
+    <div class="flex max-w-2xl m-auto pt-14 justify-center text-left flex-col pb-4">
+
+        <h2 class="border-solid border-b-black border-b-4 text-2xl pb-4 mb-8">
+          Clients.
+        </h2>
+
+        <ul>
+          <li class="pressBox flex pb-4">
+            <div class="pressNameBox flex">
+              <div class="pressName">Tinrocket. <br/>Olli for iOS.</div>
+              <div class="pressColon">:</div>
+            </div>
+            <div class="pressLink">
+              <p class=" leading-tight decoration-solid">
+                We helped Tinrocket develop the Olli app. We made UI and part of iOS programming. Olli instantly turns your everyday moments into hand-drawn art and animations. It was included by Apple in the Best of 2017 apps category, used for App Store Twitter header. In 2018 it was featured in UI Graphics magazine.
+              </p>
+            </div>
+          </li>
+          <li class="pressBox flex pb-4">
+            <div class="pressNameBox flex">
+              <div class="pressName">Tinrocket. Waterlogue for macOS.</div>
+              <div class="pressColon">:</div>
+            </div>
+            <div class="pressLink">
+              <p class="leading-tight decoration-solid">In 2018 we helped Tinrocket develop the macOS version of it's popular iOS app Waterlogue. We made UI and part of programming.
+              </p>
+            </div>
+          </li>
+        </ul>
+
+    </div>
+
+    <!-- Logo -->
+    <div class="flex content-center items-center text-center w-full " style="border: 2px solid red">
+      <img class="inline-block" src="./images/pleeq_logo.png" width="140" height="140" alt="Pleeq Software">
+    </div>
+
+  </div>
+</body>
+</html>
