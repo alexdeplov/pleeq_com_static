@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <title>Alexander Deplov: UI Designer (alex_deplov)</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.typekit.net/qdw5lrt.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./images-min/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images-min/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images-min/favicon-16x16.png">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://pleeq.com/alexander-deplov-ui-designer/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Alexander Deplov: UI Designer (alex_deplov)">
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content="https://pleeq.com/alexander-deplov-ui-designer/images-min/websiteThumbnail.jpg">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://pleeq.com/alexander-deplov-ui-designer/">
+    <meta name="twitter:title" content="Alexander Deplov: UI Designer (alex_deplov)">
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:image" content="https://pleeq.com/alexander-deplov-ui-designer/images-min/websiteThumbnail.jpg">
+
+    <style>
+        ::selection {
+            color: white;
+            background: #6a73f5;
+        }
+
+        body::-webkit-scrollbar {
+            width: 15px;
+            /* width of the entire scrollbar */
+        }
+
+        body::-webkit-scrollbar-track {
+            /* background: transparent; */
+            /* color of the tracking area */
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background-color: #DBD8CB;
+            border-radius: 50px;
+            border: 4px solid white;
+        }
+
+        body {
+            font-family: roc-grotesk, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            color: #1F2937;
+            -moz-font-feature-settings: "kern";
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .max-w-screen-xl {
+            max-width: 1200px;
+        }
+
+        .header img {
+            width: 120px;
+            height: 120px;
+        }
+
+        img,
+        iframe,
+        video {
+            border-radius: 5px;
+            transition: .25s;
+        }
+
+        a {
+            text-decoration: underline;
+        }
+
+        a:hover {
+            color: #2563EB;
+        }
+
+        .notes {
+            letter-spacing: -0.05rem;
+        }
+
+        .careerBox .careerCell {
+            color: white;
+        }
+
+        .careerBox .careerCell .block {
+            border: 2px solid transparent;
+        }
+
+        .career h2 {
+            color: #7624e2;
+        }
+
+        .careerBox .careerCell:nth-child(1) .block {
+            background-color: #7624e2;
+        }
+
+        .careerBox .careerCell:nth-child(1) .date {
+            color: #7624e2;
+        }
+
+        .careerBox .careerCell:nth-child(2) .block {
+            background-color: #5934FF;
+        }
+
+        .careerBox .careerCell:nth-child(2) .date {
+            color: #5934FF;
+        }
+
+        .careerBox .careerCell:nth-child(3) .block {
+            background-color: #4534FF;
+        }
+
+        .careerBox .careerCell:nth-child(3) .date {
+            color: #4534FF;
+        }
+
+        .careerBox .careerCell:nth-child(4) .block {
+            color: white;
+            border-color: #3456FF;
+            background-color: #3456FF;
+        }
+
+        .careerBox .careerCell:nth-child(4) .date {
+            color: #3456FF;
+        }
+
+        .linkedIn {
+            background-color: #3142db;
+            color: hsla(0, 0%, 100%, .9) !important;
+            display: inline-block;
+        }
+
+        .linkedIn:hover .linkedInLogo {
+            margin-right: 15px
+        }
+
+        .linkedInLogo {
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+        }
+
+        .linkedIn:hover {
+            color: #fff;
+            background-color: #2c40fa
+        }
+
+        video {
+            pointer-events: none;
+        }
+
+        video::-webkit-media-controls-start-playback-button {
+            display: none;
+        }
+
+        video::-webkit-media-controls-panel {
+            display: none !important;
+            opacity: 1 !important;
+        }
+
+        video::-webkit-media-controls {
+            display: none !important;
+        }
+
+        #floatingMenuWrapper {
+            z-index: 2;
+            bottom: 30px;
+            animation-duration: 1s;
+            animation-name: slideIn;
+            animation-timing-function: cubic-bezier(1, 0, 0, 1);
+        }
+
+        #floatingMenu {
+            background-color: white;
+            padding: 10px 20px;
+            backdrop-filter: saturate(180%) blur(20px);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            background-color: rgba(255, 255, 255, 0.72);
+            box-shadow: 0 10px 30px 0px rgba(0, 0, 0, .2);
+        }
+
+        footer {
+            background-color: white;
+            z-index: 3;
+        }
+
+        @keyframes slideIn {
+            from {
+                bottom: -60px;
+            }
+
+            to {
+                bottom: 30px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+            m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(83352052, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/83352052" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+
+    <div id="floatingMenuWrapper" class="fixed w-auto w-full flex justify-center">
+        <div id="floatingMenuBox" class="max-w-screen-xl w-auto">
+            <div id="floatingMenu" class="text-1xl lg:text-2xl text-center rounded-full"></div>
+        </div>
+    </div>
+
+    <div id="portfolioBox" class="wrapper m-auto px-6 lg:px-20">
+
+        <!-- HEADER -->
+        <div id="header">
+            <section class="header max-w-screen-xl mt-10 lg:mt-28 block lg:flex justify-between items-center mx-auto">
+                <img class="avatar mb-10 lg:mb-0 block lg:hidden" src="./images-min/avatar.png" />
+                <h1 class="pr-0 lg:pr-36 text-3xl lg:text-5xl lg:leading-tight mt-10">Hello. I’m Alexander
+                    Deplov. I design UI’s for apps and web since 2011.
+                </h1>
+
+                <img class="avatar mt-6 lg:mt-0 hidden lg:block" src="./images-min/avatar.png" />
+            </section>
+
+            <!-- MY CAREER PATH -->
+            <section class="career max-w-screen-xl mt-16 lg:mt-28 mx-auto">
+                <div class="text-base w-full">
+                    <h2 class="text-3xl lg:text-3xl font-medium">
+                        My Career Path<span class="inline-block lg:hidden">:</span> <img class="hidden lg:inline-block"
+                            src="./images-min/arrow.svg" style="margin-left: 3px;width: 140px;" />
+                    </h2>
+
+                    <div class="careerBox mt-6 block lg:flex">
+                        <div class="careerCell lg:mr-1 mb-5 lg:mb-0">
+                            <div class="block px-3 py-2 rounded-md">
+                                Making social networks: web&#8209;design, HTML, CSS, JS
+                            </div>
+                            <div class="date mt-2 lg:mt-4">
+                                2011 – 2013
+                            </div>
+                        </div>
+
+                        <div class="careerCell lg:mr-1 mb-5 lg:mb-0">
+                            <div class="block px-3 py-2 rounded-md">
+                                Making iOS apps and games: UI design, Swift
+                            </div>
+                            <div class="date mt-2 lg:mt-4">
+                                2013 – 2017
+                            </div>
+                        </div>
+
+                        <div class="careerCell lg:mr-1 mb-5 lg:mb-0">
+                            <div class="block px-3 py-2 rounded-md">
+                                Helping US companies to build mobile apps users experience
+                            </div>
+                            <div class="date mt-2 lg:mt-4">
+                                2017 – <span id="currentYear"></span>
+                            </div>
+                        </div>
+
+                        <div class="careerCell lg:mr-1 mb-5 lg:mb-0">
+                            <div class="block px-3 py-2 rounded-md">
+                                Senior Product Designer
+                            </div>
+                            <div class="date mt-2 lg:mt-4">
+                                Presently
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+        </div>
+
+        <div id="portfolio">
+            <section class="max-w-screen-xl m-auto leading-normal lg:leading-snug">
+                <h2 class="mt-20 lg:mt-28 text-6xl lg:text-5xl">
+                    Portfolio.
+                </h2>
+                <!-- ANCHOR POINTER -->
+                <div id="anchorPointer" class="section">
+                    <a href="https://apps.apple.com/us/app/anchor-pointer-gps-compass/id791684332">
+                        <div class="relative w-auto mt-6">
+                            <img class="w-full" src="./images-min/anchor-pointer-1.jpg" alt="Anchor Pointer" />
+                        </div>
+                    </a>
+                    <img class="w-full mt-3" src="./images-min/anchor-pointer-2.jpg" alt="Anchor Pointer" />
+                    <img class="w-full mt-3" src="./images-min/anchor-pointer-3.jpg" alt="Anchor Pointer" />
+                    <img class="w-full mt-3" src="./images-min/anchor-pointer-gif.gif" alt="Anchor Pointer" />
+                    <p class="notes px-5 lg:px-20 pt-8 text-2xl lg:text-3xl">
+                        <span class="font-semibold">Navigation App for iOS.</span> Anchor Pointer is a <a
+                            href="https://apps.apple.com/us/app/anchor-pointer-gps-compass/id791684332">avigation
+                            app</a> that uses a simple arrow to show where you need to go and how far you need to go.
+                        <br /><br />
+                        I created a UI prototype using Sketch and we quickly built the first working MVP in code.
+                        Over the next few years, the
+                        app evolved by collecting user feedback and analyzing <a rel="nofollow"
+                            href="https://www.flurry.com/">Flurry analytics</a>.
+                        <br /><br />
+                        Currently, Anchor Pointer has 400K+ users worldwide, it's translated into more than 10
+                        languages, and the average rating in the US is 4.6, with 1.6K+ having voted.
+
+
+                    </p>
+                    <hr class="mt-14 lg:mt-20" />
+                </div>
+
+                <!-- YOUTUBE ICONS REDESIGN -->
+                <div id="youtubeIcons" class="section">
+                    <img class="relative w-auto mt-6" src="./images-min/youtube-icons-redesign-1.jpg"
+                        alt="YouTube Icons Redesign by alex_deplov" />
+                    <img class="w-full mt-3" src="./images-min/youtube-icons-redesign-2.jpg"
+                        alt="YouTube Icons Redesign by alex_deplov" />
+                    <p class="notes px-5 lg:px-20 pt-8 text-2xl lg:text-3xl">
+                        <span class="font-semibold">Reimagining YouTube Icons.</span> My version of YouTube icons is
+                        based on larger menu items. It is better suited for
+                        touchscreen devices. The
+                        second idea is to give the icons more humanity.
+
+                        <br /><br />The icons should be more about people and less
+                        about the "tube". That's why we see a face on the "Watch Later" item menu icon, rounded, soft
+                        corners, and
+                        the home icon has a roof that enhances this effect.
+                    </p>
+                    <hr class="mt-14 lg:mt-20" />
+                </div>
+
+                <!-- OLLI -->
+                <div id="olli" class="section">
+                    <a rel="nofollow" href="https://apps.apple.com/us/app/olli-by-tinrocket/id1039012834">
+                        <img class="relative w-auto mt-6" src="./images-min/olli-1.jpg"
+                            alt="Olli by Tinrocket" />
+                    </a>
+                    <img class="w-full mt-3" src="./images-min/olli-2.jpg" alt="Olli by Tinrocket" />
+                    <a rel="nofollow" href="https://twitter.com/tinrocket/status/1059472509689565184">
+                        <img class="w-full mt-3" src="./images-min/olli-3.jpg" alt="Olli by Tinrocket" />
+                    </a>
+                    <p class="notes px-5 lg:px-20 pt-8 text-2xl lg:text-3xl">
+                        <span class="font-semibold">Olli for iOS.</span> The client set the task of creating an
+                        interface for
+                        the new <a rel="nofollow"
+                            href="https://apps.apple.com/us/app/olli-by-tinrocket/id1039012834">iOS app</a> that
+                        could
+                        apply filters to
+                        a camera view in real-time.
+                        <br /><br />
+
+                        Based on the research data, a prototype interface was developed in low-fidelity and
+                        high-fidelity forms. In order for the
+                        programmers to implement an interface, the manual was created.
+                        <br /><br />
+                        The annual design magazine <a rel="nofollow"
+                            href="https://twitter.com/tinrocket/status/1059472509689565184">"UI
+                            Graphics 2"</a> (Japan) publishes a separate chapter on App UI.
+                    </p>
+                    <hr class="mt-14 lg:mt-20" />
+                </div>
+
+                <!-- TRANSMISSION -->
+                <div id="transmission" class="section">
+                    <a rel="nofollow" href="https://transmissionbt.com/">
+                        <img class="relative w-auto mt-6" src="./images-min/projects-in-archieve-2.jpg"
+                            alt="Transmission" />
+                    </a>
+                    <p class="notes px-5 lg:px-20 pt-8 text-2xl lg:text-3xl">
+                        Redesign of the <a rel="nofollow" href="https://transmissionbt.com/">transmission</a> website.
+                        Project in the
+                        archive.
+                    </p>
+                    <hr class="mt-14 lg:mt-20" />
+                </div>
+
+                <!-- WATERLOGUE PRO -->
+                <div id="waterloguePro" class="section">
+                    <a rel="nofollow" href="https://apps.apple.com/us/app/waterlogue-pro/id1425568219">
+                        <img class="relative w-auto mt-6" src="./images-min/waterlogue-pro-1.jpg"
+                            alt="Waterlogue Pro" />
+                    </a>
+                    <img class="w-full mt-3" src="./images-min/waterlogue-pro-3.jpg"
+                        alt="Waterlogue Pro" />
+                    <img class="w-full mt-3" src="./images-min/waterlogue-pro-2.jpg"
+                        alt="Waterlogue Pro" />
+                    <img class="w-full mt-3" src="./images-min/waterlogue-pro-animation.gif"
+                        alt="Waterlogue Pro" />
+                    <img class="w-full mt-3" src="./images-min/waterlogue-pro-4.jpg"
+                        alt="Waterlogue Pro" />
+                    <p class="notes px-5 lg:px-20 pt-8 text-2xl lg:text-3xl">
+                        <span class="font-semibold">Waterlogue Pro for macOS.</span> New York-based <a rel="nofollow"
+                            href="https://www.tinrocket.com/">Tinrocket, LLC</a>, is developing the
+                        Waterlogue app for iOS. The app can take any photo and magically
+                        transform it into a real-looking watercolor painting. My job was to translate the iOS user
+                        interface into the <a rel="nofollow"
+                            href="https://apps.apple.com/us/app/waterlogue-pro/id1425568219">macOS
+                            version</a> of the app.
+                        <br /><br />
+                        Since the target audience is not professional artists, I decided to make the interface elements
+                        large and uncluttered.
+                        In addition to a toolbar with large icons, I created a popup window that contains controls
+                        related only to the active
+                        tool.
+                        <br /><br />This menu has a non-standard look, so the clickable area is larger than the
+                        standard macOS UI elements.
+                    </p>
+                    <hr class="mt-14 lg:mt-20" />
+                </div>
+
+                <!-- IMIWA -->
+                <div id="imiwa" class="section">
+                    <a rel="nofollow" href="http://www.imiwaapp.com">
+                        <img class="relative w-auto mt-6" src="./images-min/projects-in-archieve-1.jpg"
+                            alt="Imiwa? for iPhone" />
+                    </a>
+                    <p class="notes px-5 lg:px-20 pt-8 text-2xl lg:text-3xl">
+                        <span class="font-semibold">Japanese dictionary for iOS.</span> Work closely with the developer
+                        of <a rel="nofollow" href="http://www.imiwaapp.com">Imiwa?</a> and help design
+                        the app icon and website. Imiwa? is a
+                        free multilingual
+                        Japanese dictionary for iOS.
+                    </p>
+                    <hr class="mt-14 lg:mt-20" />
+                </div>
+
+                <!-- MACILOVE -->
+                <div id="macilove" class="section">
+                    <a href="https://macilove.com">
+                        <img class="relative w-auto mt-6" src="./images-min/macilove-1.jpg"
+                            alt="Macilove" />
+                    </a>
+                    <img class="w-full mt-5" src="./images-min/macilove-2.jpg" alt="Macilove" />
+                    <p class="notes px-5 lg:px-20 pt-8 text-2xl lg:text-3xl">
+                        <span class="font-semibold">Self written blog engine.</span> <a
+                            href="https://macilove.com/">Macilove</a>
+                        is an Apple fan blog. We decided to write our own
+                        blog engine on PHP/JS to have more options for custom layouts. Most competitors on the market
+                        were using blog templates that looked the same, we wanted to change that.
+                        <br /><br />
+                        The site caught the
+                        attention of Neo@Ogilvy and they invited me to promote Apple's online store in Russia through an
+                        affiliate program.
+
+                    </p>
+                    <hr class="mt-14 lg:mt-20" />
+                </div>
+
+                <!-- SWAY -->
+                <div id="sway" class="section">
+                    <a rel="nofollow" href="https://apps.apple.com/us/app/sway-magic-dance/id1441466995">
+                        <img class="relative w-auto mt-6" src="./images-min/sway-1.jpg"
+                            alt="Sway by Humen" />
+                    </a>
+                    <img class="w-full mt-5" src="./images-min/sway-2.jpg" alt="Sway by Humen" />
+                    <img class="w-full mt-5" src="./images-min/sway-3.jpg" alt="Sway by Humen" />
+                    <img class="w-full mt-5" src="./images-min/sway-4.gif" alt="Sway by Humen" />
+                    <p class="notes px-5 lg:px-20 pt-8 text-2xl lg:text-3xl">
+                        <span class="font-semibold">Sway for iOS.</span> At the time I was hired, a draft version of the
+                        <a rel="nofollow" href="https://apps.apple.com/us/app/sway-body-swap-videos/id1441466995">Sway
+                            app</a> had already been created, my task was to
+                        improve the original
+                        design. It was also necessary to create an app icon, improve the corporate colors and user flow,
+                        create promo assets and
+                        more.
+                        <br /><br />
+                        Each variant of the app interface was recreated in Figma and tested on a real device with the
+                        target audience.
+                        <br /><br />
+                        Sway launches #CoolRanchDance in partnership with Doritos: <a rel="nofollow"
+                            href="https://www.youtube.com/watch?v=OBDo4u-2eEI">Join the AI Dance Challenge!</a>
+                    </p>
+                    <hr class="mt-14 lg:mt-20" />
+                </div>
+
+            </section>
+        </div>
+    </div>
+
+    <footer id="footer" class="max-w-screen-xl m-auto pt-10 pb-20 relative section">
+        <div class="linkedInAndResume flex flex-col text-center">
+            <div>
+                <a href="https://www.linkedin.com/in/alexander-deplov/"
+                    class="linkedIn flex flex-row text-xl text-center rounded-xl mb-5 no-underline px-8 py-5">
+                    <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjRweCIgaGVpZ2h0PSIyNHB4IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8dGl0bGU+U2hhcGU8L3RpdGxlPgogICAgPGcgaWQ9IlBvcnRmb2xpbyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9IlBvcnRmb2xpby12NC3Cty1HcmlzLUNvcHktMTMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC01MzcuMDAwMDAwLCAtMTY3OS4wMDAwMDApIiBmaWxsPSIjRkZGRkZGIiBmaWxsLXJ1bGU9Im5vbnplcm8iPgogICAgICAgICAgICA8ZyBpZD0iR3JvdXAtOSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNTM3LjAwMDAwMCwgMTY3Ni4wMDAwMDApIj4KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0yMi4yNjkxMDQ5LDMgTDEuNzMwODk2MDUsMyBDMC43NzQ5MDIzNzUsMyAwLDMuNzc0OTAyMzcgMCw0LjczMDg5NjA1IEwwLDI1LjI2OTEwNDkgQzAsMjYuMjI1MDk4NiAwLjc3NDkwMjM3NSwyNyAxLjczMDg5NjA1LDI3IEwyMi4yNjkxMDQ5LDI3IEMyMy4yMjUwOTg2LDI3IDI0LDI2LjIyNTA5ODYgMjQsMjUuMjY5MTA0OSBMMjQsNC43MzA4OTYwNSBDMjQsMy43NzQ5MDIzNyAyMy4yMjUwOTg2LDMgMjIuMjY5MTA0OSwzIFogTTguNTEyOTM5NzksMjEuMTQwNjI1NyBMNS41OTAzOTMzLDIxLjE0MDYyNTcgTDUuNTkwMzkzMywxMi4zNDgwODM5IEw4LjUxMjkzOTc5LDEyLjM0ODA4MzkgTDguNTEyOTM5NzksMjEuMTQwNjI1NyBaIE03LjA1MTc1ODA5LDExLjE0NzQ2MTMgTDcuMDMyNzE1MTIsMTEuMTQ3NDYxMyBDNi4wNTIwMDIxOSwxMS4xNDc0NjEzIDUuNDE3NzI0ODIsMTAuNDcyMzUxNCA1LjQxNzcyNDgyLDkuNjI4NjAxMzMgQzUuNDE3NzI0ODIsOC43NjU4MDgzMiA2LjA3MTQxMTQsOC4xMDkzNzUyIDcuMDcxMTY3MjUsOC4xMDkzNzUyIEM4LjA3MDkyMzIsOC4xMDkzNzUyIDguNjg2MTU3Niw4Ljc2NTgwODMyIDguNzA1MjAwNTYsOS42Mjg2MDEzMyBDOC43MDUyMDA1NiwxMC40NzIzNTE0IDguMDcwOTIzMiwxMS4xNDc0NjEzIDcuMDUxNzU4MDksMTEuMTQ3NDYxMyBaIE0xOS4wNTEwMjYxLDIxLjE0MDYyNTcgTDE2LjEyODg0NTgsMjEuMTQwNjI1NyBMMTYuMTI4ODQ1OCwxNi40MzY4MjkyIEMxNi4xMjg4NDU4LDE1LjI1NDcwMDIgMTUuNzA1Njg5MSwxNC40NDg0ODY4IDE0LjY0ODI1NSwxNC40NDg0ODY4IEMxMy44NDA5NDMsMTQuNDQ4NDg2OCAxMy4zNjAxMDgsMTQuOTkyMzEwMSAxMy4xNDg4MDQyLDE1LjUxNzI3MzQgQzEzLjA3MTUzMzcsMTUuNzA1MTM5NyAxMy4wNTI2NzM4LDE1Ljk2NzcxMjkgMTMuMDUyNjczOCwxNi4yMzA0NjkzIEwxMy4wNTI2NzM4LDIxLjE0MDYyNTcgTDEwLjEzMDMxMDQsMjEuMTQwNjI1NyBDMTAuMTMwMzEwNCwyMS4xNDA2MjU3IDEwLjE2ODU3OTUsMTMuMTcyOTc0MSAxMC4xMzAzMTA0LDEyLjM0ODA4MzkgTDEzLjA1MjY3MzgsMTIuMzQ4MDgzOSBMMTMuMDUyNjczOCwxMy41OTMwMTggQzEzLjQ0MTA0MDYsMTIuOTkzODk2OSAxNC4xMzU5MjU4LDEyLjE0MTcyNCAxNS42ODY0NjMsMTIuMTQxNzI0IEMxNy42MDkyNTM2LDEyLjE0MTcyNCAxOS4wNTEwMjYxLDEzLjM5ODM3NjkgMTkuMDUxMDI2MSwxNi4wOTg5OTk1IEwxOS4wNTEwMjYxLDIxLjE0MDYyNTcgWiIgaWQ9IlNoYXBlIj48L3BhdGg+CiAgICAgICAgICAgIDwvZz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg=="
+                        class="linkedInLogo inline rounded-none mb-0 mr-2 -mt-1" alt="LinkedIn"> LinkedIn</a>
+            </div>
+            <div>
+                <a href="mailto:deplov@gmail.com" class="resume text-xl"> Message Me</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+<script>
+
+    var footerHeight;
+
+
+    $(document).ready(function () {
+        footerHeight = $("#footer").height();
+        const currentYear = new Date().getFullYear();
+        $("#currentYear").text(currentYear);
+    });
+
+    $(document).scroll(function () {
+        if ($(window).scrollTop() + $(window).height() > $('body').height() - (footerHeight - 100)) {
+            $("#floatingMenu").hide();
+        } else {
+            $("#floatingMenu").show();
+        }
+    });
+
+    const section = document.querySelector('.section');
+    const sections = document.querySelectorAll('.section');
+    const floatingMenu = document.getElementById("floatingMenu");
+
+    const options = {
+        root: null,
+        threshold: 0,
+    };
+    const observer = new IntersectionObserver(function (entries, observer) {
+
+        entries.forEach(entry => {
+
+            if (!entry.isIntersecting) {
+                return;
+            }
+
+            switch (entry.target.id) {
+                case "anchorPointer":
+                    floatingMenu.innerHTML = "Anchor Pointer";
+                    return;
+                case "olli":
+                    floatingMenu.innerHTML = "Olli by Tinrocket";
+                    return;
+                case "transmission":
+                    floatingMenu.innerHTML = "Transmission";
+                    return;
+                case "waterloguePro":
+                    floatingMenu.innerHTML = "Waterlogue Pro";
+                    return;
+                case "imiwa":
+                    floatingMenu.innerHTML = "Imiwa?";
+                    return;
+                case "macilove":
+                    floatingMenu.innerHTML = "Macilove";
+                    return;
+                case "sway":
+                    floatingMenu.innerHTML = "Sway by Humen";
+                    return;
+                case "youtubeIcons":
+                    floatingMenu.innerHTML = "YouTube Icons Redesign";
+                    return;
+                default:
+                    return;
+            }
+
+        })
+    }, options);
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+
+</script>
+
+</html>
