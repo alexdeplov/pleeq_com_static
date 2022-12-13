@@ -19,7 +19,7 @@ var addColorButton = document.getElementById('addColorButton')
 addColorButton.addEventListener("click", addColorButtonClick)
 function addColorButtonClick(event){
   event.preventDefault()
-  createCard(generateRandomPositionInsideACircle(activeObject.position, 100), 20)
+  createCard(generateRandomPositionInsideACircle(activeObject.position, 100), 18)
   addColorButton.style.color = labelColorArray[activeBGcolorIndex]
 }
 
@@ -30,12 +30,12 @@ function changeBackgroundClick(event){
   changeBackgroundColor()
 }
 
-var downloadPaletteButton = document.getElementById('downloadPaletteButton')
-downloadPaletteButton.addEventListener("click", downloadPaletteClick)
-function downloadPaletteClick(event){
-  event.preventDefault()
-  downloadPalette()
-}
+//var downloadPaletteButton = document.getElementById('downloadPaletteButton')
+//downloadPaletteButton.addEventListener("click", downloadPaletteClick)
+//function downloadPaletteClick(event){
+//  event.preventDefault()
+//  downloadPalette()
+//}
 
 var infoButton = document.getElementById('infoButton')
 infoButton.addEventListener("click", infoButtonClick)
@@ -306,9 +306,9 @@ function createBordersAround(){
 }
 createBordersAround()
 
-createCard(generateRandomPositionInsideACircle(view.center, 140), 20)
-createCard(generateRandomPositionInsideACircle(view.center, 140), 20)
-createCard(generateRandomPositionInsideACircle(view.center, 140), 20)
+createCard(generateRandomPositionInsideACircle(view.center, 140), 18)
+createCard(generateRandomPositionInsideACircle(view.center, 140), 18)
+createCard(generateRandomPositionInsideACircle(view.center, 140), 18)
 
 createGridOfColorHUEs()
 
@@ -412,23 +412,34 @@ function createGridOfColorHUEs(){
   }
 
   //Saturation
-  var maxY = 7
+  var maxY = 10
   var stepY = (view.size.height - padding) / maxY
   for (var i = 0; i < maxY + 1; i++){
-    var path = new Path.Circle({
-      radius: 2.5,
-      center: [view.center.x, padding/2 + stepY/2 * i],
-      parent: saturationGroup,
-      applyMatrix: false
-    })
-    // path.scaling = Math.sqrt(maxY / i) * 0.8
-    path.fillColor = convertCoordinateToColor(path.position)
-    path.sendToBack()
 
+      var saturation = new Path.Rectangle({
+            size: [200/(Math.pow(i,1.2)), 5],
+          radius: 2.5,
+          fillColor: 'red',
+          position: [view.center.x, padding/2 + 80 + stepY/2 * i - 80]
+      })
+      saturation.fillColor = convertCoordinateToColor(saturation.position)
+      saturationGroup.addChild(saturation)
+      
+//    var label = new PointText({
+//        point: [view.center.x, padding/2 + 20 + stepY/2 * i - 10 * i],
+//        content: 'Saturation: ' + Math.floor(i*20),
+//        fillColor: 'black',
+//        fontWeight: '300',
+//        fontFamily: '-apple-system, HelveticaNeue',
+//        fontSize: 13,
+//        justification: 'center',
+//        opacity: 0.5
+//    })
+//    saturationGroup.addChild(label)
+      
   }
-  saturationGroup.sendToBack()
   gridOfHUEsGroup.sendToBack()
-
+    saturationGroup.sendToBack()
 }
 
 function generateRandomPositionInsideACircle(point, radius){
@@ -436,6 +447,10 @@ function generateRandomPositionInsideACircle(point, radius){
   var theta = Math.random() * 2 * Math.PI
   var x = point.x + r * Math.cos(theta)
   var y = point.y + r * Math.sin(theta)
+//  if (x > bordersAround.width){
+  console.log(bordersAround.width)
+//  }
+//console.log('borders', bordersAround)
   return new Point(x,y)
 }
 
@@ -498,7 +513,7 @@ function changeBackgroundColor(){
   document.getElementById('subtitle').style.color = labelColorArray[activeBGcolorIndex]
   document.getElementById('addColorButton').style.color = labelColorArray[activeBGcolorIndex]
   document.getElementById('changeBackgroundButton').style.color = labelColorArray[activeBGcolorIndex]
-  document.getElementById('downloadPaletteButton').style.color = labelColorArray[activeBGcolorIndex]
+//  document.getElementById('downloadPaletteButton').style.color = labelColorArray[activeBGcolorIndex]
   document.getElementById('infoButton').style.color = labelColorArray[activeBGcolorIndex]
 
 }
@@ -593,7 +608,7 @@ function downloadPalette(){
 
 function onKeyUp(event) {
   if (event.key == 'a'){
-    createCard(generateRandomPositionInsideACircle(activeObject.position, 100), 20)
+    createCard(generateRandomPositionInsideACircle(activeObject.position, 100), 18)
   }
   if (event.key == 'c'){
     changeBackgroundColor()
@@ -626,7 +641,7 @@ bg.sendToBack()
     <div id="bottomTips">
       <div id="addColorButton" class="button"><span>A</span> – add color</div>
       <div id="changeBackgroundButton" class="button"><span>C</span> – change background</div>
-      <div id="downloadPaletteButton" class="button "><span>D</span> – download palette</div>
+      <!-- <div id="downloadPaletteButton" class="button "><span>D</span> – download palette</div> -->
       <div id="infoButton" class="button "><span>?</span> – how to use the app</div>
     </div>
   </div>
