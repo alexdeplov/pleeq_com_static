@@ -30,13 +30,6 @@ function changeBackgroundClick(event){
   changeBackgroundColor()
 }
 
-//var downloadPaletteButton = document.getElementById('downloadPaletteButton')
-//downloadPaletteButton.addEventListener("click", downloadPaletteClick)
-//function downloadPaletteClick(event){
-//  event.preventDefault()
-//  downloadPalette()
-//}
-
 var infoButton = document.getElementById('infoButton')
 infoButton.addEventListener("click", infoButtonClick)
 function infoButtonClick(event){
@@ -114,31 +107,6 @@ function createCard(point, squircleRadius){
   paletteCell.addChild(paletteLabel)
   paletteCell.name = 'paletteCell ' + name
   paletteGroup.addChild(paletteCell)
-
-  // var label = new PointText({
-  //     content: 'text',
-  //     fillColor: '#222',
-  //     fontSize: 12,
-  //     fontFamily: '-apple-system',
-  //     fontWeight: '800',
-  //     // parent: labelsGroup,
-  //     justification: 'center'
-  // })
-  // label.position = paletteColor.position
-
-  // label.content = paletteColor.fillColor.toCSS('hex')
-  // label.position.x = paletteColor.position.x
-  // // 0 + label.bounds.width/2 + paletteColor.position.x
-  // label.position.y = 40 + paletteColor.position.y
-
-
-  // var paletteLabel = new PointText({
-  //   point: [50, 50],
-  //   content: 'The contents of the point text',
-  //   fillColor: 'black',
-  //   fontWeight: '400',
-  // })
-
 
   // Plus icon for paletteColor:
   var plusIcon
@@ -300,11 +268,50 @@ function createBordersAround(){
     strokeColor: borderColorArray[activeBGcolorIndex],
     strokeWidth: 0.2,
     position: view.center,
+      visible: false
   })
   squircleCornerRadius(bordersAround, 20)
   bordersAround.sendToBack()
+    createCircleForBody()
 }
+
 createBordersAround()
+
+function createCircleForBody(){
+    
+    var amount = 2000
+    for (var i = 0; i < amount; i++){
+        var length = bordersAround.length / (amount / i) 
+        var step = bordersAround.getPointAt(length)
+        var circle = new Path.Circle({
+          center: view.center,
+          radius: 2,
+          fillColor: 'blue'
+        })
+        
+        circle.position = step 
+        circle.fillColor = convertCoordinateToColor(circle.position)
+        circle.sendToBack()
+    }
+    
+    
+    
+
+//  
+//  for (var i = 0; i < 20; i++){
+//    var offset = bordersAround.length * i
+//      var point = bordersAround.getPointAt(offset)
+//      circle.position = point
+//  }
+//  console.log('bordersAroundLength', bordersAround.length)
+
+
+//  circle.fillColor.hue += time * 60
+//
+//  var offset = time * path.children[1].children[0].length
+//  var point = path.children[1].children[0].getPointAt(offset)
+//  circle.position = point
+}
 
 createCard(generateRandomPositionInsideACircle(view.center, 140), 18)
 createCard(generateRandomPositionInsideACircle(view.center, 140), 18)
@@ -414,13 +421,13 @@ function createGridOfColorHUEs(){
   //Saturation
   var maxY = 10
   var stepY = (view.size.height - padding) / maxY
-  for (var i = 0; i < maxY + 1; i++){
+  for (var i = 0; i < maxY; i++){
 
       var saturation = new Path.Rectangle({
-            size: [200/(Math.pow(i,1.2)), 5],
+          size: [10, 2.5 * Math.tan(i * maxY)],
           radius: 2.5,
           fillColor: 'red',
-          position: [view.center.x, padding/2 + 80 + stepY/2 * i - 80]
+          position: [view.center.x, padding/2 + 100 + stepY/2 * i - 100]
       })
       saturation.fillColor = convertCoordinateToColor(saturation.position)
       saturationGroup.addChild(saturation)
