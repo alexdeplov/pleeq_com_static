@@ -424,7 +424,7 @@ function createGridOfColorHUEs(){
   for (var i = 0; i < maxY; i++){
 
       var saturation = new Path.Rectangle({
-          size: [10, 2.5 * Math.tan(i * maxY)],
+          size: [10, 4],
           radius: 2.5,
           fillColor: 'red',
           position: [view.center.x, padding/2 + 100 + stepY/2 * i - 100]
