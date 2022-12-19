@@ -115,6 +115,9 @@ function createCard(point, squircleRadius){
   paletteCell.addChild(paletteLabel)
   paletteCell.name = 'paletteCell ' + name
   paletteGroup.addChild(paletteCell)
+    
+    
+    
 
   // PLUS ICON FOR PALETTECOLOR:
   var plusIcon
@@ -188,8 +191,8 @@ function createCard(point, squircleRadius){
     if (this.position.x < padding/2){
       this.position.x = padding/2
     }
-    if (this.position.y > view.size.height - padding/2 - 100){
-      this.position.y = view.size.height - padding/2
+    if (this.position.y > view.size.height - (padding/2 + 100)){
+      this.position.y = view.size.height - (padding/2 + 100)
     }
     if (this.position.y < padding/2){
       this.position.y = padding/2
