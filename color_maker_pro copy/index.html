@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>Paper.js</title>
+<link rel="stylesheet" href="./PaperJSEngine/style.css" >
+<link rel="stylesheet" href="./style.css" >
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+<script type="text/javascript" src="./PaperJSEngine/paper-full.js"></script>
+<script type"text/javscript" src="./UIElements.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/paperscript" canvas="canvas">
+
+var addColorButton = document.getElementById('addColorButton')
+addColorButton.addEventListener("click", addColorButtonClick)
+function addColorButtonClick(event){
+  event.preventDefault()
+  createCard(generateRandomPositionInsideACircle(activeObject.position, 80), 20)
+  addColorButton.style.color = labelColorArray[activeBGcolorIndex]
+}
+
+var changeBackgroundButton = document.getElementById('changeBackgroundButton')
+changeBackgroundButton.addEventListener("click", changeBackgroundClick)
+function changeBackgroundClick(event){
+  event.preventDefault()
+  changeBackgroundColor()
+}
+
+var downloadPaletteButton = document.getElementById('downloadPaletteButton')
+downloadPaletteButton.addEventListener("click", downloadPaletteClick)
+function downloadPaletteClick(event){
+  event.preventDefault()
+  downloadPalette()
+}
+
+var infoButton = document.getElementById('infoButton')
+infoButton.addEventListener("click", infoButtonClick)
+function infoButtonClick(event){
+  event.preventDefault()
+  console.log('show info how to use the app')
+}
+
+var canvas = document.getElementById('canvas')
+var count = 0.5
+var scrollStep = 0.02
+var horisontalMovement = 0.5
+var padding = 200
+var rootGroup = new Group()
+var paletteGroup = new Group()
+var saturationGroup = new Group()
+var bgColorGroup = new Group()
+var labelsGroup = new Group()
+var gridOfHUEsGroup = new Group()
+var activeObject, activePaletteColor, activePaletteCell
+var allElementsArray = []
+var activeBGcolorIndex = 0
+var bgColorsArray = ['white', '#f5f5dc', '#3d3d3d', 'black']
+var borderColorArray = ['#333', '#666', '#999', 'white']
+var labelColorArray = ['black', 'black', '#E2E2E2', '#999']
+
+var dict = {}
+
+
+function createCard(point, squircleRadius){
+
+  var name = 'id' + (new Date()).getTime()
+
+  var path = new Path.Rectangle({
+    size: new Size(100, 100),
+    position: point,
+    applyMatrix: false,
+    parent: rootGroup,
+    opacity: 0,
+    name: name
+  })
+
+  allElementsArray.push(path.name)
+
+  squircleCornerRadius(path, squircleRadius)
+
+  var color = convertCoordinateToColor(path.position)
+  var lightness = color.lightness
+
+  addOrUpdateColor(name, color, lightness, path.position.x, path.position.y)
+
+  activeObject = path
+
+  path.fillColor = color
+  path.rotation = rotateObject(path.position)
+  path.position = [view.center.x, view.size.height - 100]
+
+  path.tweenTo({
+    'position': point,
+    'easing': 'easeOut',
+    'opacity': 1,
+  }, 200)
+
+  var paletteCell = new Group()
+  var paletteColor = new Path.Rectangle({
+    size: [70, 40],
+    radius: 5,
+    fillColor: path.fillColor,
+    center: [view.center.x, view.size.height - 60],
+    parent: paletteCell,
+    applyMatrix: false,
+    name: name
+  })
+  squircleCornerRadius(paletteColor, 5)
+  var paletteLabel = createLabel(paletteColor.fillColor.toCSS('hex'), paletteCell.position + new Point(-25, -25), 'center', 12, '400')
+  paletteLabel.name = name
+  paletteCell.addChild(paletteLabel)
+  paletteCell.name = 'paletteCell ' + name
+  paletteGroup.addChild(paletteCell)
+    
+    
+    
+
+  // PLUS ICON FOR PALETTECOLOR:
+  var plusIcon
+  paletteColor.onMouseEnter = function(event){
+    this.opacity = 0.1
+    this.tweenTo({
+      'scaling.x': 1.1,
+      'scaling.y': 1.2,
+      'saturation': 0
+    }, 150)
+    plusIcon = createPlusIcon(this.position, 15, 45)
+    plusIcon.insertAbove(this)
+  }
+  paletteColor.onMouseLeave = function(event){
+    this.opacity = 1
+    this.tweenTo({
+      'scaling': 1
+    }, 150)
+    plusIcon.remove()
+  }
+
+  paletteColor.onMouseUp = function(event){
+    var tween = path.tweenTo({
+      'scaling': 1.2
+    }, 100)
+
+    tween.then(function(){
+      path.tweenTo({
+        'rotation': '-360',
+        'scaling': 0
+      }, 250)
+    })
+
+    setTimeout(function() {
+      path.remove()
+      paletteCell.remove()
+    }, 1000)
+
+    paletteColor.remove()
+    plusIcon.remove()
+    paletteLabel.remove()
+    paletteCell.remove()
+
+    centerPaletteColorsRow()
+
+    //If there is no color, highlight 'add' button:
+    allElementsArray.pop()
+    if(allElementsArray.length == 0){
+      document.getElementById("addColorButton").style.color = "#FF5A74"
+    }
+  }
+
+  activePaletteColor = paletteColor
+  activePaletteCell = paletteCell
+
+  centerPaletteColorsRow()
+
+  path.onMouseDrag = function(event){
+
+    //SET:
+    activeObject = path
+    activePaletteColor = paletteColor
+    activePaletteCell = paletteCell
+
+
+    //MODIFY:
+    this.position += event.delta //cool: * 1.5
+    if (this.position.x > view.size.width - padding/2){
+      this.position.x = view.size.width - padding/2
+    }
+    if (this.position.x < padding/2){
+      this.position.x = padding/2
+    }
+    if (this.position.y > view.size.height - (padding/2 + 100)){
+      this.position.y = view.size.height - (padding/2 + 100)
+    }
+    if (this.position.y < padding/2){
+      this.position.y = padding/2
+    }
+    this.fillColor = convertCoordinateToColor(this.position)
+    this.fillColor.lightness = dict[activeObject.name].lightness
+    paletteColor.fillColor = this.fillColor
+
+    this.bringToFront()
+    this.rotation = rotateObject(this.position)
+    paletteCell.lastChild.content = paletteColor.fillColor.toCSS('hex')
+
+    var color = new Color(activeObject.fillColor)
+    color.saturation = 0.3
+    color.lightness = 0.4
+    console.log(color.toCSS('hex'))
+    document.getElementById("title").style.color = color.toCSS()
+      
+    
+    //SHOW GRID COLOR ON MOVE
+    for (var i = 0; i < gridObjectsArray.length; i++){
+        var object = gridObjectsArray[i]
+        var distance = this.position.getDistance(object.position)
+        object.fillColor = convertCoordinateToColor(object.position)
+            
+        if (distance < 200){
+            object.opacity = 1
+            object.scaling = 1
+            
+         var tween = object.tweenTo({
+              opacity: 0,
+             scaling: 0,
+            }, Math.floor(4 * distance))            
+                
+        } else{
+            object.opacity = 0
+            object.scaling = 0.01
+        }
+        
+    }
+
+  }
+
+
+  path.onMouseDown = function(event){
+    this.bringToFront()
+    activeObject = path
+    activePaletteColor = paletteColor
+    activePaletteCell = paletteCell
+
+  }
+
+}
+
+function addOrUpdateColor(name, color, lightness, x, y){
+  dict[name] = {
+    name: name,
+    color: color,
+    lightness: lightness,
+    x: x,
+    y: y
+  }
+}
+
+$("#canvas" ).on( 'wheel', function(event) {
+
+  event.preventDefault()
+
+  if (activeObject == undefined){
+    activeObject = rootGroup.lastChild
+  }
+
+  //READ:
+  var name = activeObject.name
+  var delta = Math.floor(event.originalEvent.wheelDeltaY) / 4000
+  var tempLightness = dict[name].lightness
+  var tempPoint = activeObject.position
+
+  //MODIFY:
+  tempLightness -= delta
+
+  if (tempLightness > 1){
+    tempLightness = 1
+  }
+  if (tempLightness < 0){
+    tempLightness = 0
+  }
+
+  //WRITE:
+  dict[name].lightness = tempLightness
+
+  //USE:
+  activeObject.fillColor.lightness = dict[name].lightness
+  activePaletteColor.fillColor = activeObject.fillColor
+  activePaletteCell.lastChild.content = activePaletteColor.fillColor.toCSS('hex')
+})
+
+
+var bordersAround
+function createBordersAround(){
+  if (bordersAround){
+    bordersAround.remove()
+  }
+
+  bordersAround = new Path.Rectangle({
+    size: view.size - new Point(100, 260),
+    strokeColor: borderColorArray[activeBGcolorIndex],
+    strokeWidth: 0.1,
+    position: view.center,
+  })
+    bordersAround.position.y -= 20
+  squircleCornerRadius(bordersAround, 20)
+  bordersAround.sendToBack()
+}
+createBordersAround()
+
+createCard(generateRandomPositionInsideACircle(view.center, 80), 20)
+createCard(generateRandomPositionInsideACircle(view.center, 80), 20)
+createCard(generateRandomPositionInsideACircle(view.center, 80), 20)
+
+createGridOfColorHUEs()
+
+var stepPointsX = view.size.width / 30
+var amountOfPointsX = view.size.width / stepPointsX
+
+
+var amountX = view.size.width / 20
+var amountY = 50
+var spacingX = 0.07
+var spacingY = 0.1
+var radius = 4
+var gridObjectsArray = []
+
+for (var x = 0; x < amountOfPointsX; x++){
+    for (var y = 0; y < amountY; y++){
+        var circle = new Path.Circle({
+            radius: radius,
+            fillColor: 'blue',
+            position: [view.center.x * x * stepPointsX, view.center.y],
+//            position: [view.center.x * x * stepPointsX, view.center.y * y * spacingY],
+            applyMatrix: false,
+            opacity: 1
+        })
+        
+//        if (x % 2 == 0){
+//            circle.position.y += 10
+//        }
+        
+//        circle.scaling = 0.2
+        
+        circle.sendToBack()
+        gridObjectsArray.push(circle)
+    }
+}
+
+
+
+//Background Color
+var bg = new Path.Rectangle({
+  size: view.size,
+  fillColor: bgColorsArray.firstChild,
+  position: view.center
+})
+
+//Functions
+function createLabel(text, position, justification, fontSize, fontWeight){
+  var label = new PointText({
+      content: text,
+      fillColor: labelColorArray[activeBGcolorIndex],
+      fontSize: fontSize,
+      fontFamily: '-apple-system',
+      fontWeight: fontWeight,
+      parent: labelsGroup,
+      justification: justification,
+  })
+  label.position.y = 60 + position.y
+  label.position.x = 0 + label.bounds.width/2 + position.x
+
+  return label
+}
+
+function rotateObject(point){
+  return bordersAround.position.x / (bordersAround.bounds.size.width / (bordersAround.bounds.center.x - point.x)) / 1.2
+}
+
+var compoundPathOfPlusIcon
+function createPlusIcon(position, size, rotateAngle){
+
+  compoundPathOfPlusIcon = new CompoundPath({
+      opacity: 0.42,
+      strokeColor: borderColorArray[activeBGcolorIndex],
+      strokeWidth: 3,
+      strokeCap: 'round',
+  })
+
+  var plusH = new Path.Line({
+    from: [0, size],
+    to: size,
+    position: position,
+    locked: true,
+  })
+  var plusV = plusH.clone()
+  plusV.rotate(90)
+  compoundPathOfPlusIcon.addChild(plusH)
+  compoundPathOfPlusIcon.addChild(plusV)
+  compoundPathOfPlusIcon.rotate(rotateAngle)
+
+  return compoundPathOfPlusIcon
+}
+
+function centerPaletteColorsRow(){
+  // console.log(paletteGroup.children.length)
+  for (var i = 0; i < paletteGroup.children.length; i++){
+    var paletteCell = paletteGroup.children[i]
+    paletteCell.position.x = view.center.x + i * 75
+  }
+  paletteGroup.position.x = view.center.x
+}
+
+function convertCoordinateToColor(point){
+
+  var color = new Color(1, 0, 0)
+  color.hue = 360 / ((bordersAround.bounds.size.width - padding) / point.x)
+  var yCoordinate = (Math.abs(point.y - padding/2)) / ((bordersAround.bounds.size.height - (padding) ) / 2)
+
+  if (point.y < padding/2){
+    yCoordinate = 0
+  }
+
+  color.saturation = yCoordinate
+
+  return color
+}
+
+function createGridOfColorHUEs(){
+  var max = 20
+  var pointLeft = new Point(50, 0)
+  var pointRight = new Point(view.size.width - 50, 0)
+  var pintsInBetween = (pointRight.x - pointLeft.x)
+
+  var stepX = (view.size.width - padding) / max
+
+  //HUE
+  for (var i = 0; i < max + 1; i++){
+    var path = new Path.Rectangle({
+      size: 5,
+      radius: 2.5,
+      center: [padding/2 + stepX * i, view.center.y],
+      parent: gridOfHUEsGroup
+    })
+    path.sendToBack()
+    path.fillColor = convertCoordinateToColor(path.position)
+
+
+  }
+
+  //Saturation
+  var maxY = 7
+  var stepY = (view.size.height - padding) / maxY
+  for (var i = 0; i < maxY + 1; i++){
+    var path = new Path.Circle({
+      radius: 2.5,
+      center: [view.center.x, padding/2 + stepY/2 * i],
+      parent: saturationGroup,
+      applyMatrix: false
+    })
+    // path.scaling = Math.sqrt(maxY / i) * 0.8
+    path.fillColor = convertCoordinateToColor(path.position)
+    path.sendToBack()
+
+  }
+  saturationGroup.sendToBack()
+  gridOfHUEsGroup.sendToBack()
+    
+  saturationGroup.visible = false
+  gridOfHUEsGroup.visible = false
+
+}
+
+function generateRandomPositionInsideACircle(point, radius){
+  var r = radius * Math.sqrt(Math.random() * 2)
+  var theta = Math.random() * 2 * Math.PI
+  var x = point.x + r * Math.cos(theta)
+  var y = point.y + r * Math.sin(theta)
+  return new Point(x,y)
+}
+
+function squircleCornerRadius(path, radius) {
+
+  var segments = path.segments.slice(0)
+  path.removeSegments()
+
+  for(var i = 0, l = segments.length; i < l; i++) {
+    var curPoint = segments[i].point
+    var nextPoint = segments[i + 1 == l ? 0 : i + 1].point
+    var prevPoint = segments[i - 1 < 0 ? segments.length - 1 : i - 1].point
+    var nextDelta = curPoint.subtract(nextPoint)
+    var prevDelta = curPoint.subtract(prevPoint)
+
+    nextDelta.length = radius
+    prevDelta.length = radius
+
+    path.add(
+      new paper.Segment(
+        curPoint.subtract(prevDelta),
+        null,
+        prevDelta.divide(1.5)
+      )
+    )
+
+    path.add(
+      new paper.Segment(
+        curPoint.subtract(nextDelta),
+        nextDelta.divide(1.5),
+        null
+      )
+    )
+  }
+  path.closed = true
+  return path
+}
+
+function onResize(event){
+
+  if (bg){
+    bg.bounds = view.size
+  }
+
+}
+
+function changeBackgroundColor(){
+  activeBGcolorIndex += 1
+  if (activeBGcolorIndex == bgColorsArray.length){
+    activeBGcolorIndex = 0
+  }
+  bg.fillColor = bgColorsArray[activeBGcolorIndex]
+  bordersAround.strokeColor = borderColorArray[activeBGcolorIndex]
+
+  for (var i = 0; i < paletteGroup.children.length; i++){
+    paletteGroup.children[i].lastChild.fillColor = labelColorArray[activeBGcolorIndex]
+  }
+
+  document.getElementById('title').style.color = labelColorArray[activeBGcolorIndex]
+  document.getElementById('subtitle').style.color = labelColorArray[activeBGcolorIndex]
+  document.getElementById('addColorButton').style.color = labelColorArray[activeBGcolorIndex]
+  document.getElementById('changeBackgroundButton').style.color = labelColorArray[activeBGcolorIndex]
+  document.getElementById('downloadPaletteButton').style.color = labelColorArray[activeBGcolorIndex]
+  document.getElementById('infoButton').style.color = labelColorArray[activeBGcolorIndex]
+
+}
+
+function downloadPalette(){
+  var fileName = "paperjs_example.svg"
+  rootGroup.visible = false
+  gridOfHUEsGroup.visible = false
+  bordersAround.visible = false
+  saturationGroup.visible = false
+
+  var component = paper.project.exportSVG({asString:true})
+  var url = "data:image/svg+xml;utf8," + encodeURIComponent(component)
+
+  var link = document.createElement("a")
+  link.download = fileName
+  link.href = url
+
+  link.click()
+
+  rootGroup.visible = true
+  gridOfHUEsGroup.visible = true
+  bordersAround.visible = true
+  saturationGroup.visible = true
+}
+
+function onKeyUp(event) {
+  if (event.key == 'a'){
+    createCard(generateRandomPositionInsideACircle(activeObject.position, 80), 20)
+  }
+  if (event.key == 'c'){
+    changeBackgroundColor()
+  }
+  if (event.key == 'd'){
+    downloadPalette()
+  }
+
+  if (event.key == '/' || event.key == '?'){
+    console.log('how to use the app')
+  }
+}
+
+bg.sendToBack()
+
+
+
+</script>
+</head>
+<body>
+
+<div>
+
+  <div id="toolbar">
+    <h1 id="title">Color Maker Pro</h1>
+    <h5 id="subtitle">Create a color palette without dealing with sliders.</h5>
+  </div>
+
+  <div id="bottomTipsBox" class="flexSide">
+    <div id="bottomTips">
+      <div id="addColorButton" class="button"><span>A</span> – add color</div>
+      <div id="changeBackgroundButton" class="button"><span>C</span> – change background</div>
+      <div id="downloadPaletteButton" class="button "><span>D</span> – download palette</div>
+      <div id="infoButton" class="button "><span>?</span> – how to use the app</div>
+    </div>
+  </div>
+
+</div>
+
+<canvas id="canvas" hidpi='on' resize></canvas>
+</body>
+</html>
