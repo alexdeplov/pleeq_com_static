@@ -30,13 +30,6 @@ function changeBackgroundClick(event){
   changeBackgroundColor()
 }
 
-var downloadPaletteButton = document.getElementById('downloadPaletteButton')
-downloadPaletteButton.addEventListener("click", downloadPaletteClick)
-function downloadPaletteClick(event){
-  event.preventDefault()
-  downloadPalette()
-}
-
 var infoButton = document.getElementById('infoButton')
 infoButton.addEventListener("click", infoButtonClick)
 function infoButtonClick(event){
@@ -49,18 +42,21 @@ var count = 0.5
 var scrollStep = 0.02
 var horisontalMovement = 0.5
 var padding = 200
-var rootGroup = new Group()
-var paletteGroup = new Group()
-var saturationGroup = new Group()
-var bgColorGroup = new Group()
-var labelsGroup = new Group()
-var gridOfHUEsGroup = new Group()
+var cellSize = 90
+
 var activeObject, activePaletteColor, activePaletteCell
 var allElementsArray = []
 var activeBGcolorIndex = 0
 var bgColorsArray = ['white', '#f5f5dc', '#3d3d3d', 'black']
 var borderColorArray = ['#333', '#666', '#999', 'white']
 var labelColorArray = ['black', 'black', '#E2E2E2', '#999']
+
+var rootGroup = new Group()
+var paletteGroup = new Group()
+var saturationGroup = new Group()
+var bgColorGroup = new Group()
+var labelsGroup = new Group()
+var gridOfHUEsGroup = new Group()
 
 var dict = {}
 
@@ -70,7 +66,7 @@ function createCard(point, squircleRadius){
   var name = 'id' + (new Date()).getTime()
 
   var path = new Path.Rectangle({
-    size: new Size(100, 100),
+    size: [cellSize],
     position: point,
     applyMatrix: false,
     parent: rootGroup,
@@ -115,12 +111,11 @@ function createCard(point, squircleRadius){
   paletteCell.addChild(paletteLabel)
   paletteCell.name = 'paletteCell ' + name
   paletteGroup.addChild(paletteCell)
-    
-    
-    
+
+  var plusIcon = createPlusIcon(paletteColor.position, 12, 45)
+  plusIcon.insertAbove(paletteColor)
 
   // PLUS ICON FOR PALETTECOLOR:
-  var plusIcon
   paletteColor.onMouseEnter = function(event){
     this.opacity = 0.1
     this.tweenTo({
@@ -128,15 +123,13 @@ function createCard(point, squircleRadius){
       'scaling.y': 1.2,
       'saturation': 0
     }, 150)
-    plusIcon = createPlusIcon(this.position, 15, 45)
-    plusIcon.insertAbove(this)
+
   }
   paletteColor.onMouseLeave = function(event){
     this.opacity = 1
     this.tweenTo({
       'scaling': 1
     }, 150)
-    plusIcon.remove()
   }
 
   paletteColor.onMouseUp = function(event){
@@ -163,7 +156,7 @@ function createCard(point, squircleRadius){
 
     centerPaletteColorsRow()
 
-    //If there is no color, highlight 'add' button:
+    //If there is no color left, highlight 'add' button:
     allElementsArray.pop()
     if(allElementsArray.length == 0){
       document.getElementById("addColorButton").style.color = "#FF5A74"
@@ -177,14 +170,13 @@ function createCard(point, squircleRadius){
 
   path.onMouseDrag = function(event){
 
-    //SET:
+    //Set:
     activeObject = path
     activePaletteColor = paletteColor
     activePaletteCell = paletteCell
 
-
-    //MODIFY:
-    this.position += event.delta //cool: * 1.5
+    //Modify:
+    this.position += event.delta  //cool * 1.5
     if (this.position.x > view.size.width - padding/2){
       this.position.x = view.size.width - padding/2
     }
@@ -208,30 +200,27 @@ function createCard(point, squircleRadius){
     var color = new Color(activeObject.fillColor)
     color.saturation = 0.3
     color.lightness = 0.4
-    console.log(color.toCSS('hex'))
     document.getElementById("title").style.color = color.toCSS()
-      
-    
-    //SHOW GRID COLOR ON MOVE
+
+    //Show grid color on move:
     for (var i = 0; i < gridObjectsArray.length; i++){
         var object = gridObjectsArray[i]
         var distance = this.position.getDistance(object.position)
         object.fillColor = convertCoordinateToColor(object.position)
-            
-        if (distance < 200){
+
+        if (distance < cellSize * 1.2){
             object.opacity = 1
             object.scaling = 1
-            
+
          var tween = object.tweenTo({
               opacity: 0,
              scaling: 0,
-            }, Math.floor(4 * distance))            
-                
+          }, Math.floor(4 * distance))
+
         } else{
             object.opacity = 0
             object.scaling = 0.01
         }
-        
     }
 
   }
@@ -242,7 +231,6 @@ function createCard(point, squircleRadius){
     activeObject = path
     activePaletteColor = paletteColor
     activePaletteCell = paletteCell
-
   }
 
 }
@@ -265,13 +253,13 @@ $("#canvas" ).on( 'wheel', function(event) {
     activeObject = rootGroup.lastChild
   }
 
-  //READ:
+  //Read:
   var name = activeObject.name
   var delta = Math.floor(event.originalEvent.wheelDeltaY) / 4000
   var tempLightness = dict[name].lightness
   var tempPoint = activeObject.position
 
-  //MODIFY:
+  //Modify:
   tempLightness -= delta
 
   if (tempLightness > 1){
@@ -281,10 +269,10 @@ $("#canvas" ).on( 'wheel', function(event) {
     tempLightness = 0
   }
 
-  //WRITE:
+  //Write:
   dict[name].lightness = tempLightness
 
-  //USE:
+  //Use:
   activeObject.fillColor.lightness = dict[name].lightness
   activePaletteColor.fillColor = activeObject.fillColor
   activePaletteCell.lastChild.content = activePaletteColor.fillColor.toCSS('hex')
@@ -322,35 +310,53 @@ var spacingY = 0.1
 var radius = 4
 var gridObjectsArray = []
 
+//Saturation Line:
+var saturationLine = new Path.Line({
+  from: [padding, view.center.y],
+  to: [view.size.width - padding, view.center.y],
+  strokeColor: '#999',
+  strokeWidth: 0.2,
+  opacity: 0.8
+})
+saturationLine.sendToBack()
+
+//Grid:
+
 for (var x = 0; x < amountX; x++){
     for (var y = 0; y < amountY; y++){
+
+      var xPos = x * 40
+      var yPos = y * 40
+
+      if (xPos < view.size.width && yPos < view.size.height){
         var circle = new Path.Circle({
             radius: radius,
             fillColor: 'blue',
-            position: [view.center.x * x * spacingX, view.center.y * y * spacingY],
+            position: [xPos, yPos],
             applyMatrix: false,
             opacity: 0
         })
-        
+
         if (x % 2 == 0){
-            circle.position.y += 10
+            circle.position.y += 20
         }
-        
+
         circle.scaling = 0.2
-        
         circle.sendToBack()
         gridObjectsArray.push(circle)
+      }
+
     }
 }
 
-//Background Color
+//Background Color:
 var bg = new Path.Rectangle({
   size: view.size,
   fillColor: bgColorsArray.firstChild,
   position: view.center
 })
 
-//Functions
+//Functions:
 function createLabel(text, position, justification, fontSize, fontWeight){
   var label = new PointText({
       content: text,
@@ -376,8 +382,8 @@ function createPlusIcon(position, size, rotateAngle){
 
   compoundPathOfPlusIcon = new CompoundPath({
       opacity: 0.42,
-      strokeColor: borderColorArray[activeBGcolorIndex],
-      strokeWidth: 3,
+      strokeColor: borderColorArray[0],
+      strokeWidth: 2,
       strokeCap: 'round',
   })
 
@@ -397,7 +403,6 @@ function createPlusIcon(position, size, rotateAngle){
 }
 
 function centerPaletteColorsRow(){
-  // console.log(paletteGroup.children.length)
   for (var i = 0; i < paletteGroup.children.length; i++){
     var paletteCell = paletteGroup.children[i]
     paletteCell.position.x = view.center.x + i * 75
@@ -438,11 +443,9 @@ function createGridOfColorHUEs(){
     })
     path.sendToBack()
     path.fillColor = convertCoordinateToColor(path.position)
-
-
   }
 
-  //Saturation
+  //Saturation:
   var maxY = 7
   var stepY = (view.size.height - padding) / maxY
   for (var i = 0; i < maxY + 1; i++){
@@ -452,17 +455,14 @@ function createGridOfColorHUEs(){
       parent: saturationGroup,
       applyMatrix: false
     })
-    // path.scaling = Math.sqrt(maxY / i) * 0.8
     path.fillColor = convertCoordinateToColor(path.position)
     path.sendToBack()
 
   }
   saturationGroup.sendToBack()
   gridOfHUEsGroup.sendToBack()
-    
   saturationGroup.visible = false
   gridOfHUEsGroup.visible = false
-
 }
 
 function generateRandomPositionInsideACircle(point, radius){
@@ -470,6 +470,19 @@ function generateRandomPositionInsideACircle(point, radius){
   var theta = Math.random() * 2 * Math.PI
   var x = point.x + r * Math.cos(theta)
   var y = point.y + r * Math.sin(theta)
+  if (x < padding){
+    x = padding
+  }
+  if (x > view.size.width - padding){
+    x = view.size.width - padding
+  }
+  if (y < 0){
+    y = padding
+  }
+  if (y > view.size.height - padding){
+    y = view.size.height - padding
+  }
+
   return new Point(x,y)
 }
 
@@ -532,51 +545,24 @@ function changeBackgroundColor(){
   document.getElementById('subtitle').style.color = labelColorArray[activeBGcolorIndex]
   document.getElementById('addColorButton').style.color = labelColorArray[activeBGcolorIndex]
   document.getElementById('changeBackgroundButton').style.color = labelColorArray[activeBGcolorIndex]
-  document.getElementById('downloadPaletteButton').style.color = labelColorArray[activeBGcolorIndex]
   document.getElementById('infoButton').style.color = labelColorArray[activeBGcolorIndex]
 
 }
 
-function downloadPalette(){
-  var fileName = "paperjs_example.svg"
-  rootGroup.visible = false
-  gridOfHUEsGroup.visible = false
-  bordersAround.visible = false
-  saturationGroup.visible = false
-
-  var component = paper.project.exportSVG({asString:true})
-  var url = "data:image/svg+xml;utf8," + encodeURIComponent(component)
-
-  var link = document.createElement("a")
-  link.download = fileName
-  link.href = url
-
-  link.click()
-
-  rootGroup.visible = true
-  gridOfHUEsGroup.visible = true
-  bordersAround.visible = true
-  saturationGroup.visible = true
-}
-
 function onKeyUp(event) {
+  console.log(event.key)
   if (event.key == 'a'){
     createCard(generateRandomPositionInsideACircle(activeObject.position, 80), 20)
   }
   if (event.key == 'c'){
     changeBackgroundColor()
   }
-  if (event.key == 'd'){
-    downloadPalette()
-  }
-
   if (event.key == '/' || event.key == '?'){
-    console.log('how to use the app')
+    // console.log('how to use the app')
   }
 }
 
 bg.sendToBack()
-
 
 
 </script>
