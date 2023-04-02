@@ -28,6 +28,10 @@
     <meta name="twitter:image" content="./images-min/websiteThumbnail.jpg">
 
     <style>
+        :root{
+            --bg-color: hsl(33.33, 100%, 98.47%);
+        }
+
         ::selection {
             color: white;
             background: #6a73f5;
@@ -57,7 +61,7 @@
             -moz-font-feature-settings: "kern";
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
-            background-color: hsl(33.33, 100%, 98.47%);
+            background-color: var(--bg-color);
         }
 
         .max-w-screen-xl {
@@ -191,11 +195,13 @@
             backdrop-filter: saturate(180%) blur(20px);
             -webkit-backdrop-filter: saturate(180%) blur(20px);
             background-color: rgba(255, 255, 255, 0.72);
-            box-shadow: 0 10px 30px 0px rgba(0, 0, 0, .2);
+            box-shadow: 0 15px 30px 0px rgba(0, 0, 0, .2), 0 5px 10px 0px rgba(0, 0, 0, .1), inset 0px 2px 2px -2px rgba(255,255,255,.9);
+
+         
         }
 
         footer {
-            background-color: white;
+            background-color: var(--bg-color);
             z-index: 3;
         }
 
