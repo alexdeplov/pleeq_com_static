@@ -27,8 +27,10 @@
     <meta property="og:locale" content="en_US" />
     <meta name="twitter:image" content="./images-min/portfolioThumbnail.png">
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
     <style>
-        :root{
+        :root {
             --bg-color: white;
             /* hsl(33.33, 100%, 98.47%); */
         }
@@ -69,6 +71,11 @@
             max-width: 1200px;
         }
 
+        #header,
+        #portfolio {
+            opacity: 0;
+        }
+
         .header img {
             width: 120px;
             height: 120px;
@@ -82,15 +89,15 @@
         }
 
         p a {
-          border-bottom: 2px solid #ffda41;
+            border-bottom: 2px solid #ffda41;
             /* background-color: #ffda41; */
             /* padding: 5px 5px 3px 5px; */
             /* border-radius: 3px; */
         }
 
         a:hover {
-          background-color: hsl(55, 100%, 62.7%);
-          /* hsl(48.3, 100%, 62.7%) */
+            background-color: hsl(55, 100%, 62.7%);
+            /* hsl(48.3, 100%, 62.7%) */
             /* color: #2563EB; */
         }
 
@@ -197,7 +204,8 @@
             -webkit-backdrop-filter: saturate(180%) blur(20px);
             background-color: rgba(255, 255, 255, 0.72);
             box-shadow: 0 15px 30px 0px rgba(0, 0, 0, .2);
-            border-color: rgba(255, 255, 255, 0.25);border-width: 1px;
+            border-color: rgba(255, 255, 255, 0.25);
+            border-width: 1px;
         }
 
         footer {
@@ -215,7 +223,7 @@
             }
         }
 
-        #webApps img{
+        #webApps img {
             max-width: 80px;
             max-height: 80px;
         }
@@ -238,13 +246,16 @@
             <section class="header max-w-screen-xl mt-10 lg:mt-28 block lg:flex justify-between items-center mx-auto">
                 <img class="avatar mb-10 lg:mb-0 block lg:hidden" src="./images-min/photo@2x.png" />
                 <div>
-                <h1 class="pr-0 lg:pr-36 text-4xl lg:leading-tight mt-10 font-bold tracking-tight">Hello. I’m Alexander
-                    Deplov.<br/> Senior Product Designer at Vectornator.
-                </h1>
-                <p class="text-1xl mt-2 lg:pr-72 text-gray-600">With over 16 years of experience working with startups and tech companies, with focus on creating simple and delightful experiences. </p>
+                    <h1 class="pr-0 lg:pr-36 text-4xl lg:leading-tight mt-10 font-bold tracking-tight">Hello. I’m
+                        Alexander
+                        Deplov.<br /> Senior Product Designer at Vectornator.
+                    </h1>
+                    <p class="text-1xl mt-2 lg:pr-72 text-gray-600">With over 16 years of experience working with
+                        startups and tech companies, with focus on creating simple and delightful experiences. </p>
                 </div>
 
-                <img class="avatar mt-6 lg:mt-0 hidden lg:block" width="120" height="120" src="./images-min/photo@2x.png" />
+                <img class="avatar mt-6 lg:mt-0 hidden lg:block" width="120" height="120"
+                    src="./images-min/photo@2x.png" />
             </section>
 
             <!-- MY CAREER PATH -->
@@ -353,16 +364,16 @@
                 <!-- OLLI -->
                 <div id="olli" class="section">
                     <a rel="nofollow" href="https://apps.apple.com/us/app/olli-by-tinrocket/id1039012834">
-                        <img class="relative w-auto mt-6" src="./images-min/olli-1.jpg"
-                            alt="Olli by Tinrocket" />
+                        <img class="relative w-auto mt-6" src="./images-min/olli-1.jpg" alt="Olli by Tinrocket" />
                     </a>
                     <img class="w-full mt-3" src="./images-min/olli-2.jpg" alt="Olli by Tinrocket" />
                     <a rel="nofollow" href="https://twitter.com/tinrocket/status/1059472509689565184">
                         <img class="w-full mt-3" src="./images-min/olli-3.jpg" alt="Olli by Tinrocket" />
                     </a>
-                    
-                    <img class="w-full mt-3" src="./images-min/olli-4-wwdc.jpg" alt="Phil Schiller on App Store Best of 2016" />
-                    
+
+                    <img class="w-full mt-3" src="./images-min/olli-4-wwdc.jpg"
+                        alt="Phil Schiller on App Store Best of 2016" />
+
                     <h3 class="font-semibold px-5 lg:px-60 pt-8 pb-0 text-2xl">Olli for iOS.</h3>
                     <p class="notes px-5 lg:px-60 pt-4 text-xl leading-snug">
                         The client set the task of creating an
@@ -405,18 +416,14 @@
                         <img class="relative w-auto mt-6" src="./images-min/waterlogue-pro-1.jpg"
                             alt="Waterlogue Pro" />
                     </a>
-                    <img class="w-full mt-3" src="./images-min/waterlogue-pro-3.jpg"
-                        alt="Waterlogue Pro" />
-                    <img class="w-full mt-3" src="./images-min/waterlogue-pro-2.jpg"
-                        alt="Waterlogue Pro" />
-                    <img class="w-full mt-3" src="./images-min/waterlogue-pro-animation.gif"
-                        alt="Waterlogue Pro" />
-                    <img class="w-full mt-3" src="./images-min/waterlogue-pro-4.jpg"
-                        alt="Waterlogue Pro" />
+                    <img class="w-full mt-3" src="./images-min/waterlogue-pro-3.jpg" alt="Waterlogue Pro" />
+                    <img class="w-full mt-3" src="./images-min/waterlogue-pro-2.jpg" alt="Waterlogue Pro" />
+                    <img class="w-full mt-3" src="./images-min/waterlogue-pro-animation.gif" alt="Waterlogue Pro" />
+                    <img class="w-full mt-3" src="./images-min/waterlogue-pro-4.jpg" alt="Waterlogue Pro" />
                     <h3 class="font-semibold px-5 lg:px-60 pt-8 pb-0 text-2xl">Waterlogue Pro for macOS.</h3>
                     <p class="notes px-5 lg:px-60 pt-4 text-xl leading-snug">
-                        New York-based <a rel="nofollow"
-                            href="https://www.tinrocket.com/">Tinrocket, LLC</a>, is developing the
+                        New York-based <a rel="nofollow" href="https://www.tinrocket.com/">Tinrocket, LLC</a>, is
+                        developing the
                         Waterlogue app for iOS. The app can take any photo and magically
                         transform it into a real-looking watercolor painting. My job was to translate the iOS user
                         interface into the <a rel="nofollow"
@@ -454,20 +461,19 @@
                 <!-- MACILOVE -->
                 <div id="macilove" class="section">
                     <a href="https://web.archive.org/web/20160712230636/http://macilove.com/">
-                        <img class="relative w-auto mt-6" src="./images-min/macilove-1.jpg"
-                            alt="Macilove" />
+                        <img class="relative w-auto mt-6" src="./images-min/macilove-1.jpg" alt="Macilove" />
                     </a>
                     <img class="w-full mt-5" src="./images-min/macilove-2.jpg" alt="Macilove" />
                     <h3 class="font-semibold px-5 lg:px-60 pt-8 pb-0 text-2xl">Self written blog engine.</h3>
                     <p class="notes px-5 lg:px-60 pt-4 text-xl leading-snug">
-                        <a
-                            href="https://web.archive.org/web/20160712230636/http://macilove.com/">Macilove</a>
+                        <a href="https://web.archive.org/web/20160712230636/http://macilove.com/">Macilove</a>
                         is an Apple fan blog. We decided to write our own
                         blog engine on PHP/JS to have more options for custom layouts. Most competitors on the market
                         were using blog templates that looked the same, we wanted to change that.
                         <br /><br />
                         The site caught the
-                        attention of <a rel="nofollow" href="https://www.linkedin.com/company/neoogilvy/">Neo@Ogilvy</a> and they invited me to promote Apple's online store in   through an
+                        attention of <a rel="nofollow" href="https://www.linkedin.com/company/neoogilvy/">Neo@Ogilvy</a>
+                        and they invited me to promote Apple's online store in through an
                         affiliate program.
 
                     </p>
@@ -477,8 +483,7 @@
                 <!-- SWAY -->
                 <div id="sway" class="section">
                     <a rel="nofollow" href="https://apps.apple.com/us/app/sway-magic-dance/id1441466995">
-                        <img class="relative w-auto mt-6" src="./images-min/sway-1.jpg"
-                            alt="Sway by Humen" />
+                        <img class="relative w-auto mt-6" src="./images-min/sway-1.jpg" alt="Sway by Humen" />
                     </a>
                     <img class="w-full mt-5" src="./images-min/sway-2.jpg" alt="Sway by Humen" />
                     <img class="w-full mt-5" src="./images-min/sway-3.jpg" alt="Sway by Humen" />
@@ -505,7 +510,10 @@
                             href="https://www.youtube.com/watch?v=OBDo4u-2eEI">Join the AI Dance Challenge!</a>
                     </p>
                     <p class="notes px-5 lg:px-60 pt-4 text-xl leading-snug">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/OBDo4u-2eEI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/OBDo4u-2eEI"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
                     </p>
                     <hr class="mt-14 lg:mt-20" />
                 </div>
@@ -534,11 +542,8 @@
 
     var footerHeight;
 
-
     $(document).ready(function () {
         footerHeight = $("#footer").height();
-        const currentYear = new Date().getFullYear();
-        $("#currentYear").text(currentYear);
     });
 
     $(document).scroll(function () {
@@ -548,6 +553,45 @@
             $("#floatingMenu").show();
         }
     });
+
+    // Animation
+
+    anime({
+        targets: "#header",
+        opacity: {
+            duration: 400,
+            easing: 'easeOutQuart',
+            loop: false,
+            delay: 200,
+            value: 1
+        },
+        translateY: {
+            duration: 800,
+            easing: 'easeOutQuart',
+            loop: false,
+            delay: 200,
+            value: -50
+        }
+    })
+
+
+    anime({
+        targets: "#portfolio",
+        opacity: {
+            duration: 400,
+            easing: 'easeOutQuart',
+            loop: false,
+            delay: 400,
+            value: 1
+        },
+        translateY: {
+            duration: 800,
+            easing: 'easeOutQuart',
+            loop: false,
+            delay: 400,
+            value: -50
+        }
+    })
 
     const section = document.querySelector('.section');
     const sections = document.querySelectorAll('.section');
