@@ -63,6 +63,7 @@ p a {
     /* border-radius: 3px; */
 }
 
+
 a:hover {
     background-color: hsl(55, 100%, 62.7%);
     /* hsl(48.3, 100%, 62.7%) */
@@ -195,3 +196,5 @@ footer {
     max-width: 80px;
     max-height: 80px;
 }
+
+a
