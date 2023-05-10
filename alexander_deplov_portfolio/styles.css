@@ -74,51 +74,6 @@ a:hover {
     letter-spacing: -0.02rem;
 }
 
-.careerBox .careerCell {
-    color: white;
-}
-
-.careerBox .careerCell .block {
-    border: 2px solid transparent;
-}
-
-.career h2 {
-    color: #7624e2;
-}
-
-.careerBox .careerCell:nth-child(1) .block {
-    background-color: #7624e2;
-}
-
-.careerBox .careerCell:nth-child(1) .date {
-    color: #7624e2;
-}
-
-.careerBox .careerCell:nth-child(2) .block {
-    background-color: #5934FF;
-}
-
-.careerBox .careerCell:nth-child(2) .date {
-    color: #5934FF;
-}
-
-.careerBox .careerCell:nth-child(3) .block {
-    background-color: #4534FF;
-}
-
-.careerBox .careerCell:nth-child(3) .date {
-    color: #4534FF;
-}
-
-.careerBox .careerCell:nth-child(4) .block {
-    color: white;
-    border-color: #3456FF;
-    background-color: #3456FF;
-}
-
-.careerBox .careerCell:nth-child(4) .date {
-    color: #3456FF;
-}
 
 .linkedIn {
     background-color: #3142db;
