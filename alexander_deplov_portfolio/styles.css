@@ -56,24 +56,19 @@ video {
     transition: .25s;
 }
 
-@media only screen and (max-width: 767px) {
-
-    img,
-    iframe,
-    video {
-        border-radius: 0.3em;
-        transition: .25s;
-    }
-}
-
 p a {
     border-bottom: 2px solid #ffda41;
+    /* background-color: #ffda41; */
+    /* padding: 5px 5px 3px 5px; */
+    /* border-radius: 3px; */
 }
 
-p a:hover {
+
+a:hover {
     background-color: hsl(55, 100%, 62.7%);
+    /* hsl(48.3, 100%, 62.7%) */
+    /* color: #2563EB; */
 }
-
 
 .notes {
     letter-spacing: -0.02rem;

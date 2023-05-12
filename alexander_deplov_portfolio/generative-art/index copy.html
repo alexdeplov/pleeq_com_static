@@ -6,7 +6,7 @@
     <link rel="alternate" hreflang="en" href="https://pleeq.com/alexander_deplov_portfolio/" />
     <link rel="alternate" hreflang="de" href="https://pleeq.com/alexander_deplov_portfolio/deutsch.html" />
 
-    <title>Alexander Deplov: Senior Product Designer Portfolio (alex_deplov)</title>
+    <title>Alexander Deplov: Senior Product Designer (alex_deplov)</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -32,44 +32,217 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <style>
+        :root {
+            --bg-color: white;
+            /* hsl(33.33, 100%, 98.47%); */
+        }
 
-    
+        ::selection {
+            color: white;
+            background: #6a73f5;
+        }
+
+        body::-webkit-scrollbar {
+            width: 15px;
+            /* width of the entire scrollbar */
+        }
+
+        body::-webkit-scrollbar-track {
+            /* background: transparent; */
+            /* color of the tracking area */
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background-color: #DBD8CB;
+            border-radius: 50px;
+            border: 4px solid var(--bg-color);
+        }
+
+        body {
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            font-weight: 400;
+            font-style: normal;
+            color: #1F2937;
+            -moz-font-feature-settings: "kern";
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background-color: var(--bg-color);
+        }
+
+        .max-w-screen-xl {
+            max-width: 1200px;
+        }
+
+        #header,
+        #portfolio {
+            opacity: 0;
+        }
+
+        .header img {
+            width: 120px;
+            height: 120px;
+        }
+
+        img,
+        iframe,
+        video {
+            border-radius: 1em;
+            transition: .25s;
+        }
+
+        p a {
+            border-bottom: 2px solid #ffda41;
+            /* background-color: #ffda41; */
+            /* padding: 5px 5px 3px 5px; */
+            /* border-radius: 3px; */
+        }
+
+        a:hover {
+            background-color: hsl(55, 100%, 62.7%);
+            /* hsl(48.3, 100%, 62.7%) */
+            /* color: #2563EB; */
+        }
+
+        .notes {
+            letter-spacing: -0.02rem;
+        }
+
+        .careerBox .careerCell {
+            color: white;
+        }
+
+        .careerBox .careerCell .block {
+            border: 2px solid transparent;
+        }
+
+        .career h2 {
+            color: #7624e2;
+        }
+
+        .careerBox .careerCell:nth-child(1) .block {
+            background-color: #7624e2;
+        }
+
+        .careerBox .careerCell:nth-child(1) .date {
+            color: #7624e2;
+        }
+
+        .careerBox .careerCell:nth-child(2) .block {
+            background-color: #5934FF;
+        }
+
+        .careerBox .careerCell:nth-child(2) .date {
+            color: #5934FF;
+        }
+
+        .careerBox .careerCell:nth-child(3) .block {
+            background-color: #4534FF;
+        }
+
+        .careerBox .careerCell:nth-child(3) .date {
+            color: #4534FF;
+        }
+
+        .careerBox .careerCell:nth-child(4) .block {
+            color: white;
+            border-color: #3456FF;
+            background-color: #3456FF;
+        }
+
+        .careerBox .careerCell:nth-child(4) .date {
+            color: #3456FF;
+        }
+
+        .linkedIn {
+            background-color: #3142db;
+            color: hsla(0, 0%, 100%, .9) !important;
+            display: inline-block;
+        }
+
+        .linkedIn:hover .linkedInLogo {
+            margin-right: 15px
+        }
+
+        .linkedInLogo {
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+        }
+
+        .linkedIn:hover {
+            color: #fff;
+            background-color: #2c40fa
+        }
+
+        video {
+            pointer-events: none;
+        }
+
+        video::-webkit-media-controls-start-playback-button {
+            display: none;
+        }
+
+        video::-webkit-media-controls-panel {
+            display: none !important;
+            opacity: 1 !important;
+        }
+
+        video::-webkit-media-controls {
+            display: none !important;
+        }
+
+        #floatingMenuWrapper {
+            z-index: 2;
+            bottom: 30px;
+            animation-duration: 1s;
+            animation-name: slideIn;
+            animation-timing-function: cubic-bezier(1, 0, 0, 1);
+        }
+
+        #floatingMenu {
+            background-color: white;
+            padding: 3px 8px;
+            backdrop-filter: saturate(180%) blur(20px);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            background-color: rgba(255, 255, 255, 0.72);
+            box-shadow: 0 15px 30px 0px rgba(0, 0, 0, .2);
+            border-color: rgba(255, 255, 255, 0.25);
+            border-width: 1px;
+        }
+
+        footer {
+            background-color: var(--bg-color);
+            z-index: 3;
+        }
+
+        @keyframes slideIn {
+            from {
+                bottom: -60px;
+            }
+
+            to {
+                bottom: 30px;
+            }
+        }
+
+        #webApps img {
+            max-width: 80px;
+            max-height: 80px;
+        }
+    </style>
 
 </head>
 
 <body>
 
-    <div id="floatingMenuWrapper" class="fixed w-auto w-full flex justify-center">
-        <div id="floatingMenuBox" class="max-w-screen-xl w-auto">
-            <div id="floatingMenu" class="text-1xl text-center rounded-md"></div>
-        </div>
-    </div>
 
     <div id="portfolioBox" class="wrapper m-auto px-6 lg:px-20">
-        <!-- HEADER -->
-        <div id="header">
-            <section class="header max-w-screen-xl mt-28 lg:mt-28 block lg:flex justify-between items-center mx-auto">
-                <img class="avatar mb-100 lg:mb-100 block lg:hidden" src="./images-min/photo@2x.png" />
-                <div>
-                    <h1 class="pr-0 lg:pr-36 text-2xl lg:leading-tight my-10 font-bold tracking-tight">Hi, I’m
-                        Alexander
-                        Deplov. <span style="color:gray">Senior Product Designer at Vectornator. With over 16 years of experience working with
-                        startups and tech companies, with focus on creating simple and delightful experiences. 📍
-                        Berlin.</span>
-                    </h1>
-                    
-                </div>
-
-                <img class="avatar mt-6 lg:mt-0 hidden lg:block" width="120" height="120"
-                    src="./images-min/photo@2x.png" />
-            </section>
-        </div>
 
         <div id="portfolio">
             <section class="max-w-screen-xl m-auto leading-normal lg:leading-snug">
                 <h2 class="pr-0 lg:pr-36 text-4xl lg:leading-tight mt-20 font-bold tracking-tight">
-                    Portfolio
+                    Experiments With Generative Art
                 </h2>
                 <!-- ANCHOR POINTER -->
                 <div id="anchorPointer" class="section">
@@ -80,7 +253,6 @@
                     </a>
                     <img class="w-full mt-3" src="./images-min/anchor-pointer-2.jpg" alt="Anchor Pointer" />
                     <img class="w-full mt-3" src="./images-min/anchor-pointer-gif.gif" alt="Anchor Pointer" />
-                    <img class="w-full mt-3" src="./images-min/anchor-pointer-4.jpg" alt="App Store Editors’ Notes" />
                     <h3 class="font-semibold px-5 lg:px-40 pt-8 pb-0 text-2xl">Navigation App for iOS.</h3>
                     <p class="notes px-5 lg:px-40 pt-4 text-xl leading-snug">Anchor Pointer is a <a
                             href="https://apps.apple.com/us/app/anchor-pointer-gps-compass/id791684332">Navigation
@@ -99,23 +271,17 @@
 
                 <!-- SWAY -->
                 <div id="sway" class="section">
-                    <a rel="nofollow" href="https://appadvice.com/app/sway-body-swap-videos/1441466995">
+                    <a rel="nofollow" href="https://apps.apple.com/us/app/sway-magic-dance/id1441466995">
                         <img class="relative w-auto mt-6" src="./images-min/sway-1.jpg" alt="Sway by Humen" />
                     </a>
                     <img class="w-full mt-5" src="./images-min/sway-2.jpg" alt="Sway by Humen" />
                     <img class="w-full mt-5" src="./images-min/sway-3.jpg" alt="Sway by Humen" />
                     <img class="w-full mt-5" src="./images-min/sway-4.gif" alt="Sway by Humen" />
-
-                    <a rel="nofollow" href="https://twitter.com/GSP/status/1224416520635183105/photo/1">
-                        <img class="w-full mt-5 max-w-sm mx-auto" src="./images-min/sway-5.jpg" alt="Sway by Humen" />
-                    </a>
-                    <a rel="nofollow" href="https://twitter.com/AppStore/status/1228726204519370752">
-                        <video class="mt-5 max-w-sm mx-auto" width="320" height="240" autoplay muted>
-                            <source src="./images-min/sway-6.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </a>
-                    
+                    <img class="w-full mt-5 max-w-sm mx-auto" src="./images-min/sway-5.jpg" alt="Sway by Humen" />
+                    <video class="mt-5 max-w-sm mx-auto" width="320" height="240" autoplay muted>
+                        <source src="./images-min/sway-6.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                     <h3 class="font-semibold px-5 lg:px-40 pt-8 pb-0 text-2xl">Sway for iOS.</h3>
                     <p class="notes px-5 lg:px-40 pt-4 text-xl leading-snug">
                         At the time I was hired, a draft version of the
@@ -133,7 +299,7 @@
                             href="https://www.youtube.com/watch?v=OBDo4u-2eEI">Join the AI Dance Challenge!</a>
                     </p>
                     <p class="notes px-5 lg:px-40 pt-4 text-xl leading-snug">
-                        <iframe class="m-auto mt-5" width="560" height="315" src="https://www.youtube.com/embed/OBDo4u-2eEI"
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/OBDo4u-2eEI"
                             title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
@@ -243,6 +409,7 @@
                     <a href="https://web.archive.org/web/20160712230636/http://macilove.com/">
                         <img class="relative w-auto mt-6" src="./images-min/macilove-1.jpg" alt="Macilove" />
                     </a>
+                    <img class="w-full mt-5" src="./images-min/macilove-2.jpg" alt="Macilove" />
                     <h3 class="font-semibold px-5 lg:px-40 pt-8 pb-0 text-2xl">Self written blog engine.</h3>
                     <p class="notes px-5 lg:px-40 pt-4 text-xl leading-snug">
                         <a href="https://web.archive.org/web/20160712230636/http://macilove.com/">Macilove</a>
