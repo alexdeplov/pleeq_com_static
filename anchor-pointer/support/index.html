@@ -1,257 +1,126 @@
+<!doctype html>
 <html>
-	<header>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link href="http://fonts.googleapis.com/css?family=Roboto:400,700,300,500,100" rel="stylesheet" type="text/css">
-		<meta charset="utf-8" />
-		<title>Pleeq Software Support</title>
-		
-	<style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+  <link href="https://fonts.googleapis.com/css?family=DM+Sans:400,700|Space+Mono:400,700|Chivo:400,700,900&amp;display=swap" rel="stylesheet">
+  <title>Pleeq Software: Support.</title>
 
-	.inputs{
-		text-align: center !important;
-	    max-width: 700px !important;
-	    width: 100% !important;
-	    display: block !important;
-	    margin: 0 auto;
-	
-	}
-	
-	.inputs h2{
-		font-size: 120% !important;
-		text-align: center !important;
-		font-weight: 300;
-	}
-	
-	.inputs a{
-		color: #7fc104;
+  <style>
+  body{
+    font: normal normal 700 17px/130% Space Mono,SF Mono,monospace;
+    letter-spacing: -.5px;
+  }
+  body a{
+    text-decoration: underline;
+  }
+  .purple{
+    color: #5714ff;
+  }
+  h1{
+    letter-spacing: -1px;
+  }
+  .notesSelection{
+    background-color:
+  }
+  mark {
+    background-color: #ffda41;
+    color: #100618;
+  }
+  .orange{
+    color: #ff5d47;
+  }
 
-	}
-	
-/*
-	.inputs a:last-child{
-		color: #0084B4;
-	}
-*/
-	
-	.form-section{
-		text-align: center !important;
-	}
-	
-	.form-section h4{
-		text-align: center !important;
-		color: white !important;
-	}
-	
-	body{
-		background-color: hsl(270, 9%, 16%);
-		background-color: hsl(231, 4%, 14%);
-		padding-top: 20px;
-		padding-bottom: 80px;
-		font-family: 'Roboto', Helvetica, Arial, sans-serif;
-		color: white;
-	}
-	
-    #mlb2-1776119,
-    #mlb2-1776119 *,
-    #mlb2-1776119 a:hover,
-    #mlb2-1776119 a:visited,
-    #mlb2-1776119 a:active {
-        overflow: visible;
-        position: static;
-        background: none;
-        border: none;
-        bottom: auto;
-        clear: none;
-/*         cursor: default; */
-        float: none;
-        letter-spacing: normal;
-        line-height: normal;
-        text-align: left;
-        text-indent: 0;
-        text-transform: none;
-        visibility: visible;
-        white-space: normal;
-        max-height: none;
-        max-width: none;
-        left: auto;
-        min-height: 0;
-        min-width: 0;
-        right: auto;
-        top: auto;
-        width: auto;
-        z-index: auto;
-        text-shadow: none;
-        box-shadow: none;
-    }
-    
-    #mlb2-1776119 h4 {
-        font-weight: normal;
-    }
-    
-    #mlb2-1776119 .subscribe-form {
-/*
-	    max-width: 300px;
-	    width: 100%;
-*/
-	    display: block;
-	    margin: 0 auto;
-    }
-    
-    #mlb2-1776119 .subscribe-form .form-section {
-        margin-bottom: 40px;
-    }
-    
-    #mlb2-1776119 .subscribe-form .form-section h4 {
-        margin: 20px 0px;
-        padding: 0px!important;
-        line-height: 100%;
-        font-size: 24px !important;
-    }
-    
-    #mlb2-1776119 .subscribe-form .form-section p {
-        line-height: 150%;
-        padding: 0px!important;
-        margin: 0px 0px 0px 0px;
-        font-weight: normal;
-        text-align: center;
-        color: #939295;
-    }
-    
-    #mlb2-1776119 .subscribe-form .form-section .confirmation_checkbox {
-        line-height: 150%;
-        padding: 0px!important;
-        margin: 0px 0px 0px 0px;
-        margin-bottom: 15px!important;
-        color: #000000!important;
-        font-size: 12px!important;
-        font-weight: normal !important;
-    }
-    
-    #mlb2-1776119 .subscribe-form .form-section .confirmation_checkbox input[type="checkbox"] {
-        margin-right: 5px!important;
-    }
-    
-    #mlb2-1776119 .subscribe-form .form-section .form-group {
-        margin-bottom: 15px;
-    }
-    
-    #mlb2-1776119 .subscribe-form .form-section .form-group label {
-        float: left;
-        margin-bottom: 10px;
-        width: 100%;
-        line-height: 100%;
-        font-weight: bold;
-        color: #7F8C8D!important;
-        font-size: 13px!important;
-    }
-    
-    #mlb2-1776119 .subscribe-form .form-section .checkbox {
-        width: 100%;
-        margin: 0px 0px 10px 0px;
-    }
-    
-    #mlb2-1776119 .subscribe-form .form-section .checkbox label {
-        color: #7F8C8D!important;
-        font-size: 13px!important;
-    }
-    
-    #mlb2-1776119 .subscribe-form .form-section .checkbox input {
-        margin: 0px 5px 0px 0px;
-    }
-    
-    #mlb2-1776119.ml-subscribe-form .form-group .form-control:focus{
-	    outline: 0;
-	    cursor: text;
-	    color: white;
-    }
-    
-    #mlb2-1776119.ml-subscribe-form .form-group .form-control {
-        width: 100%;
-        padding: 10px 10px;
-        padding-left: 0;
-        height: auto;
-        border-bottom: 1px solid #818184;
-        border-radius: 0 !important;
-        color: white;
-        background-color: transparent;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        clear: left;
-    }
-   
-    
-    #mlb2-1776119.ml-subscribe-form button {
-        border: none !important;
-        cursor: pointer !important;
-        width: 100% !important;
-        border-radius: 5px !important;
-        height: 40px !important;
-		background-color: hsl(81, 96%, 34%) !important;
-        color: #FFFFFF!important;
-        text-align: center !important;
-    }
-    
-    #mlb2-1776119.ml-subscribe-form button.gradient-on {
-        background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
-        background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
-        background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
-        background: linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
-    }
-    
-    #mlb2-1776119.ml-subscribe-form button.gradient-on:hover {
-        background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
-        background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
-        background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
-        background: linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
-    }
-    
-    #mlb2-1776119.ml-subscribe-form button[disabled] {
-        cursor: not-allowed!important;
-    }
-    
-    #mlb2-1776119.ml-subscribe-form .form-section.ml-error label {
-        color: red!important;
-    }
-    
-    #mlb2-1776119.ml-subscribe-form .form-group.ml-error label {
-        color: red!important;
-    }
-    
-    #mlb2-1776119.ml-subscribe-form .form-group.ml-error .form-control {
-        border-color: red!important;
-    }
-    
-    .form-section p{
-	    margin-top: 20px;
-    }
-</style>
+  .gray{
+    color: #10061880;
+  }
 
-	</header>
-	<body>
-<div id="mlb2-1776119" class="ml-subscribe-form ml-subscribe-form-1776119">
-    <div class="ml-vertical-align-center">
+  .dm-font{
+    font: normal normal 700 1em/130% DM Sans,sans-serif;
+  }
 
-        <form class="ml-block-form" action="//app.mailerlite.com/webforms/submit/s5k9h6" data-code="s5k9h6" method="POST" target="_blank">
-            <div class="subscribe-form">
-                <div class="form-section">
-                    <a href="https://pleeq.com">
-		            <picture>
-					   <img srcset="https://pleeq.com/resources/ap@2x.png" width="100px" height="100px">
-					</picture>          
-		            </a>
-		            <h4>Need help with Anchor Pointer?</h4>
+  .pressName{
+      min-width: 190px;
+  }
+  @media screen and (max-width: 800px) {
+    .pressName{
+      min-width: 130px !important;
+    }
+  }
+
+  .pressColon{
+    margin-right: 40px;
+  }
+
+  .appsGrid img{
+    position: relative;
+    transition: .2s;
+    transition-timing-function: ease;
+  }
+
+  .appsGrid img:hover{
+    transform: translateY(-15px);
+    transition-timing-function: ease-in-out;
+    -webkit-transform: translateY(-15px);
+  }
+
+  </style>
+</head>
+<body class="bg-[#e2dcca]">
+  <div class="">
+
+    <!-- Header -->
+    <header class="flex max-w-2xl m-auto pt-14 justify-center text-center">
+
+      <!-- Alex -->
+        <div class="flex w-2/6 content-center flex-col items-center">
+
+          <a href="https://pleeq.com/alexander_deplov_portfolio/" class="-mt-2 no-underline">
+              <img src="../../images/alexDeplovAvatar.png" width="120" height="120" alt="Alex Deplov Avatar">
+              <div class="-mt-2">
+                Alex Deplov
+              </div>
+              <div class="purple">
+                Design
+              </div>
+          </a>
+
+        </div>
+
+        <!-- Logo -->
+        <div class="">
+          <img class="-mt-4" src="../../images/pleeq_logo.png" width="140" height="140" alt="Pleeq Software">
+        </div>
+
+        <!-- Dima -->
+          <div class="flex w-2/6 content-center flex-col items-center">
+            <a href="https://github.com/dimadeplov" class="-mt-2 no-underline">
+                <img class="ml-1" src="../../images/dmitryDeplovAvatar.png" width="120" height="120" alt="Dmitry Deplov Avatar">
+                <div class="-mt-2">
+                  Dmitry Deplov
                 </div>
-
-                <div class="inputs">
-	                <h2>Get support <a href="mailto:deplovsbrothers@gmail.com?subject=Anchor Pointer [mobile]">by E-mail</a> or <a href="https://twitter.com/pleeq_com">by Twitter</a></h2>	                
+                <div class="purple">
+                  Code
                 </div>
-            </div>
-        </form>
+            </a>
 
+          </div>
+    </header>
+
+    <!-- Description -->
+    <div class="flex max-w-2xl m-auto pt-14 justify-center text-left flex-col pb-4 px-4">
+      <h1 class="text-2xl pb-10">
+      We are Pleeq Software.<br/>
+      <mark class="notesSelection">Making iOS apps and games since 2013</mark>. Both graduated from art school we believe that only well-crafted things can improve our lives.
+      </h1>
+      <div>
+          <a class="orange underline text-xl" href="mailto:deplovsbrothers@gmail.com?subject=Pleeq Software Support" class="text-lg">Need Support?</a>
+      </div>
     </div>
-</div>		
-	</body>
+
+
+
+  </div>
+</body>
 </html>
-
-
