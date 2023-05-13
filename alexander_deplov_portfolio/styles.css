@@ -8,21 +8,6 @@
     background: #6a73f5;
 }
 
-body::-webkit-scrollbar {
-    width: 15px;
-}
-
-body::-webkit-scrollbar-track {
-    /* background: transparent; */
-    /* color of the tracking area */
-}
-
-body::-webkit-scrollbar-thumb {
-    background-color: #DBD8CB;
-    border-radius: 50px;
-    border: 4px solid var(--bg-color);
-}
-
 body {
     font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-weight: 400;
