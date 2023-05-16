@@ -35,7 +35,8 @@ body {
 
 img,
 iframe,
-video {
+video,
+canvas {
     border-radius: 1em;
     transition: .25s;
 }
