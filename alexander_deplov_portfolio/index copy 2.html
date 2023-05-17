@@ -57,8 +57,23 @@
                         Deplov. <span style="color:gray">Senior Product Designer at Vectornator. With over 16 years of
                             experience working with
                             startups and tech companies, with focus on creating simple and delightful experiences. 📍
-                            Berlin.</span>
+                            Berlin. <span id="currentTime">09:41:00</span></span>
                     </h1>
+                    <script>
+                    function getCurrentTime() {
+                        const currentTime = new Date();
+                        const hours = currentTime.getHours().toString().padStart(2, '0');
+                        const minutes = currentTime.getMinutes().toString().padStart(2, '0');
+                        const seconds = currentTime.getSeconds().toString().padStart(2, '0');
+                        
+                        const timeString = `${hours}:${minutes}:${seconds}`;
+                            document.getElementById("currentTime").textContent = timeString;
+                        }
+
+                        // Call the function every second to update the time
+                        setInterval(getCurrentTime, 1000)
+                        getCurrentTime()
+                    </script>
 
                 </div>
 
@@ -70,13 +85,11 @@
         <div id="portfolio">
             <section class="max-w-screen-xl m-auto leading-normal lg:leading-snug">
 
-                
-                <div class="relative w-auto mt-6">
+                <div id="hero" class="relative w-auto mt-6">
                     <img class="w-full" src="./images-min/hero.jpg" alt="" />
                 </div>
         
-
-                <h2 class="pr-0 text-5xl lg:leading-tight mt-20 font-bold tracking-tight text-center">
+                <h2 class="pr-0 text-6xl lg:leading-tight mt-10 font-bold tracking-tight text-center">
                     Portfolio
                 </h2>
                 <!-- ANCHOR POINTER -->
@@ -320,6 +333,8 @@
 
 <script>
 
+    var colors = ['', 'lightCyan', 'darkSkyBlue', 'aquamarine', 'electricBlue']
+
     var footerHeight;
 
     $(document).ready(function () {
@@ -382,7 +397,6 @@
         threshold: 0,
     };
     const observer = new IntersectionObserver(function (entries, observer) {
-
         entries.forEach(entry => {
 
             if (!entry.isIntersecting) {
@@ -390,10 +404,6 @@
             }
 
             switch (entry.target.id) {
-                case "hero":
-                    floatingMenu.innerHTML = "Hero";
-                    floatingMenu.style.opacity = '0'
-                    return;
                 case "anchorPointer":
                     floatingMenu.innerHTML = "Anchor Pointer";
                     return;
