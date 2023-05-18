@@ -57,8 +57,23 @@
                         Deplov. <span style="color:gray">Senior Product Designer at Vectornator. With over 16 years of
                             experience working with
                             startups and tech companies, with focus on creating simple and delightful experiences. 📍
-                            Berlin.</span>
+                            Berlin. <span id="currentTime">09:41:00</span></span>
                     </h1>
+                    <script>
+                        function getCurrentTime() {
+                            const currentTime = new Date();
+                            const hours = currentTime.getHours().toString().padStart(2, '0');
+                            const minutes = currentTime.getMinutes().toString().padStart(2, '0');
+                            const seconds = currentTime.getSeconds().toString().padStart(2, '0');
+
+                            const timeString = `${hours}:${minutes}:${seconds}`;
+                            document.getElementById("currentTime").textContent = timeString;
+                        }
+
+                        // Call the function every second to update the time
+                        setInterval(getCurrentTime, 1000)
+                        getCurrentTime()
+                    </script>
 
                 </div>
 
@@ -69,7 +84,17 @@
 
         <div id="portfolio">
             <section class="max-w-screen-xl m-auto leading-normal lg:leading-snug">
-                <h2 class="pr-0 lg:pr-36 text-4xl lg:leading-tight mt-20 font-bold tracking-tight">
+
+                <div id="hero" class="section relative w-auto mt-6">
+                    <img class="w-full sm:hidden" src="./images-min/hero_sm.jpg"
+                        alt="Slumber, Sway magic dance by ai, Olli by Tinrocket, Waterlogur Pro by Tinrocket, Imiwa?" />
+                    <img class="w-full md:hidden" src="./images-min/hero_md.jpg"
+                        alt="Slumber, Sway magic dance by ai, Olli by Tinrocket, Waterlogur Pro by Tinrocket, Imiwa?" />
+                    <img class="w-full hidden md:block" src="./images-min/hero.jpg"
+                        alt="Slumber, Sway magic dance by ai, Olli by Tinrocket, Waterlogur Pro by Tinrocket, Imiwa?" />
+                </div>
+
+                <h2 class="pr-0 text-3xl lg:text-6xl lg:leading-tight mt-10 font-bold tracking-tight text-center">
                     Portfolio
                 </h2>
                 <!-- ANCHOR POINTER -->
@@ -107,13 +132,13 @@
                     <img class="w-full mt-5" src="./images-min/sway-3.jpg" alt="Sway by Humen" />
                     <img class="w-full mt-5" src="./images-min/sway-4.gif" alt="Sway by Humen" />
 
-                    <div class="flex items-center justify-center m-auto w-full">
+                    <div class="flex flex-col lg:flex-row items-center justify-center m-auto w-full mt-10">
                         <a rel="nofollow" href="https://twitter.com/GSP/status/1224416520635183105/photo/1">
-                            <img class="w-full mt-5 max-w-sm mx-auto pr-2" src="./images-min/sway-5.jpg"
+                            <img class="max-w-sm w-full mr-0 lg:mr-5" src="./images-min/sway-5.jpg"
                                 alt="Sway by Humen" />
                         </a>
                         <a rel="nofollow" href="https://twitter.com/AppStore/status/1228726204519370752">
-                            <video class="mt-5 max-w-sm mx-auto pl-2" width="320" height="240" autoplay muted>
+                            <video class="max-w-sm w-full ml-0 lg:ml-5 mt-5 lg:mt-0" autoplay muted>
                                 <source src="./images-min/sway-6.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -186,8 +211,7 @@
                 <!-- TRANSMISSION -->
                 <div id="transmission" class="section">
                     <a rel="nofollow" href="https://transmissionbt.com/">
-                        <img class="relative w-auto mt-6" src="./images-min/transmission-1.jpg"
-                            alt="Transmission" />
+                        <img class="relative w-auto mt-6" src="./images-min/transmission-1.jpg" alt="Transmission" />
                     </a>
                     <p class="notes px-5 lg:px-40 pt-4 text-xl leading-snug">
                         Redesign of the <a rel="nofollow" href="https://transmissionbt.com/">transmission</a> website.
@@ -231,8 +255,7 @@
                 <!-- IMIWA -->
                 <div id="imiwa" class="section">
                     <a rel="nofollow" href="http://www.imiwaapp.com">
-                        <img class="relative w-auto mt-6" src="./images-min/imiwa-1.jpg"
-                            alt="Imiwa? for iPhone" />
+                        <img class="relative w-auto mt-6" src="./images-min/imiwa-1.jpg" alt="Imiwa? for iPhone" />
                     </a>
                     <h3 class="font-semibold px-5 lg:px-40 pt-8 pb-0 text-2xl">Japanese dictionary for iOS.</h3>
                     <p class="notes px-5 lg:px-40 pt-4 text-xl leading-snug">
@@ -313,6 +336,8 @@
 
 <script>
 
+    var colors = ['', 'lightCyan', 'darkSkyBlue', 'aquamarine', 'electricBlue']
+
     var footerHeight;
 
     $(document).ready(function () {
@@ -375,7 +400,6 @@
         threshold: 0,
     };
     const observer = new IntersectionObserver(function (entries, observer) {
-
         entries.forEach(entry => {
 
             if (!entry.isIntersecting) {
@@ -383,29 +407,42 @@
             }
 
             switch (entry.target.id) {
+                case "hero":
+                    floatingMenu.innerHTML = "Hero";
+                    floatingMenu.style.opacity = "0";
+                    console.log(floatingMenu.style)
+                    return;
                 case "anchorPointer":
                     floatingMenu.innerHTML = "Anchor Pointer";
+                    floatingMenu.style.opacity = "1";
                     return;
                 case "olli":
                     floatingMenu.innerHTML = "Olli by Tinrocket";
+                    floatingMenu.style.opacity = "1";
                     return;
                 case "transmission":
                     floatingMenu.innerHTML = "Transmission";
+                    floatingMenu.style.opacity = "1";
                     return;
                 case "waterloguePro":
                     floatingMenu.innerHTML = "Waterlogue Pro";
+                    floatingMenu.style.opacity = "1";
                     return;
                 case "imiwa":
                     floatingMenu.innerHTML = "Imiwa?";
+                    floatingMenu.style.opacity = "1";
                     return;
                 case "macilove":
                     floatingMenu.innerHTML = "Macilove";
+                    floatingMenu.style.opacity = "1";
                     return;
                 case "sway":
                     floatingMenu.innerHTML = "Sway by Humen";
+                    floatingMenu.style.opacity = "1";
                     return;
                 case "youtubeIcons":
                     floatingMenu.innerHTML = "YouTube Icons Redesign";
+                    floatingMenu.style.opacity = "1";
                     return;
                 default:
                     return;
