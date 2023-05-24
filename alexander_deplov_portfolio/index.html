@@ -332,8 +332,6 @@
 
 <script>
 
-    var colors = ['', 'lightCyan', 'darkSkyBlue', 'aquamarine', 'electricBlue']
-
     var footerHeight;
 
     $(document).ready(function () {
@@ -395,6 +393,23 @@
         root: null,
         threshold: 0,
     };
+
+    // const colors = ['', 'lightCyan', 'darkSkyBlue', 'aquamarine', 'electricBlue']
+    // window.addEventListener('scroll', function () {
+
+    //     const scrollFromTop = window.pageYOffset
+
+    //     for (let i = 0; sections.length > i; i++) {
+
+    //         if (scrollFromTop <= sections[i].offsetTop) {
+    //             document.body.className = colors[i]
+    //             break
+    //         }
+
+    //     }
+
+    // })
+
     const observer = new IntersectionObserver(function (entries, observer) {
         entries.forEach(entry => {
 
@@ -406,7 +421,6 @@
                 case "hero":
                     floatingMenu.innerHTML = "Hero";
                     floatingMenu.style.opacity = "0";
-                    console.log(floatingMenu.style)
                     return;
                 case "anchorPointer":
                     floatingMenu.innerHTML = "Anchor Pointer";

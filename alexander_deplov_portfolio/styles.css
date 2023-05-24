@@ -17,6 +17,23 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: var(--bg-color);
+    transition: 2s all;
+}
+
+.lightCyan {
+    background-color: #944b94;
+}
+
+.darkSkyBlue {
+    background-color: #d75a88;
+}
+
+.aquamarine {
+    background-color: #ff7e71;
+}
+
+.electricBlue {
+    background-color: #ffb25f;
 }
 
 .max-w-screen-xl {
