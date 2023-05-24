@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./styles_new.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.tailwindcss.com/3.3.1"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+</head>
+
+<body>
+
+
+    <div id="portfolioBox" class="wrapper m-auto px-6 lg:px-20">
+        <!-- HEADER -->
+        <div id="header">
+            <section
+                class="header max-w-screen-xl mt-28 lg:mt-28 flex flex-col md:flex-col flex-col-reverse flex-row-reverse md:flex-col-reverse lg:flex-row justify-between items-center mx-auto">
+                <div>
+                    <h1 class="pr-0 lg:pr-36 text-2xl lg:leading-tight my-10 font-bold tracking-tight">Hi, I’m
+                        Alexander
+                        Deplov. <span style="color:gray">Senior Product Designer at Vectornator. With over 16 years of
+                            experience working with
+                            startups and tech companies, with focus on creating simple and delightful experiences. 📍
+                            Berlin. <span id="currentTime">09:41:00</span></span>
+                    </h1>
+                    <script>
+                        function getCurrentTime() {
+                            const currentTime = new Date()
+                            const hours = currentTime.getHours().toString().padStart(2, '0')
+                            const minutes = currentTime.getMinutes().toString().padStart(2, '0')
+                            const seconds = currentTime.getSeconds().toString().padStart(2, '0')
+                            const timeString = `${hours}:${minutes}:${seconds}`
+                            document.getElementById("currentTime").textContent = timeString
+                        }
+                        setInterval(getCurrentTime, 1000)
+                        getCurrentTime()
+                    </script>
+
+                </div>
+
+                <img class="avatar mt-6 lg:mt-0" width="120" height="120" src="./images-min/photo@2x.png" />
+            </section>
+
+            <div id="portfolio">
+                <section class="max-w-screen-xl m-auto leading-normal lg:leading-snug">
+
+                    <div id="hero" class="section relative w-auto mt-6">
+                        <!-- <img class="w-full sm:block md:hidden lg:hidden" src="./images-min/hero_sm.jpg" -->
+                        <!-- alt="Slumber, Sway magic dance by ai, Olli by Tinrocket, Waterlogur Pro by Tinrocket, Imiwa?" /> -->
+                        <!-- <img class="w-full hidden md:block lg:hidden" src="./images-min/hero_md.jpg" -->
+                        <!-- alt="Slumber, Sway magic dance by ai, Olli by Tinrocket, Waterlogur Pro by Tinrocket, Imiwa?" /> -->
+                        <img class="w-full" src="./images/hero.jpg" srcset="./images/hero@2x.jpg 2x"
+                            alt="Slumber, Sway magic dance by ai, Olli by Tinrocket, Waterlogur Pro by Tinrocket, Imiwa?">
+                    </div>
+
+                    <h2 class="pr-0 text-4xl lg:text-7xl lg:leading-tight mt-10 font-bold tracking-tight text-center">
+                        Portfolio
+                    </h2>
+                    <!-- ANCHOR POINTER -->
+                    <div id="anchorPointer" class="section">
+                        <a href="https://apps.apple.com/us/app/anchor-pointer-gps-compass/id791684332">
+                            <div class="relative w-auto mt-6">
+                                <img class="w-full" src="./images-min/anchor-pointer-1.jpg" alt="Anchor Pointer" />
+                            </div>
+                        </a>
+                        <img class="w-full mt-3" src="./images-min/anchor-pointer-2.jpg" alt="Anchor Pointer" />
+                        <img class="w-full mt-3" src="./images-min/anchor-pointer-gif.gif" alt="Anchor Pointer" />
+                        <img class="w-full mt-3" src="./images-min/anchor-pointer-4.jpg"
+                            alt="App Store Editors’ Notes" />
+                        <h3 class="font-semibold px-5 lg:px-40 pt-8 pb-0 text-2xl">Navigation App for iOS.</h3>
+                        <p class="notes px-5 lg:px-40 pt-4 text-xl leading-snug">Anchor Pointer is a <a
+                                href="https://apps.apple.com/us/app/anchor-pointer-gps-compass/id791684332">Navigation
+                                app</a> that uses a simple arrow to show where you need to go and how far you need to
+                            go.
+                            <br /><br />
+                            I created a UI prototype using Sketch and we quickly built the first working MVP in code.
+                            Over the next few years, the
+                            app evolved by collecting user feedback and analyzing <a rel="nofollow"
+                                href="https://www.flurry.com/">Flurry analytics</a>.
+                            <br /><br />
+                            Currently, Anchor Pointer has 400K+ users worldwide, it's translated into more than 10
+                            languages, and the average rating in the US is 4.6, with 1.6K+ having voted.
+                        </p>
+                        <hr class="mt-14 lg:mt-20" />
+                    </div>
+
+
+
+
+                </section>
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+<script>
+</script>
+
+</html>
