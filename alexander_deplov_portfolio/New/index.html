@@ -10,6 +10,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="./styles.css">
+    <link rel="stylesheet" type="text/css" href="./css/general-sans.css">
 </head>
 
 
@@ -17,27 +18,31 @@
     <div class="max-w-5xl mx-auto px-5 py-10">
         
         <!-- Header -->
-        <section id="header" class="unselectable">
+        <section id="header" class="unselectable relative">
             <nav class="flex justify-between">
                <a href="#">Alexander Deplov</a>
                <div class="flex navigation">
-                  <a href="#" class="px-3 active">Work</a>
-                  <a href="#" class="px-3">Blog</a>
-                  <a href="#" class="px-3">About</a>
-                  <a href="#" class="pl-3">Resume</a>
+                  <a href="#" class="px-3 text-slate-800">Work</a>
+                  <a href="#" class="px-3 text-slate-400">About</a>
+                  <a href="#" class="pl-3 text-slate-400">Resume</a>
+                  <a href="" class="pl-3 text-slate-300">•</a>
+                  <a href="#" class="px-3 text-slate-400">Blog</a>
                </div>
             </nav>
 
-            <h1 class="size-84 my-52 px-20 relative">              
-              <span class="absolute dragit" style="top: 20%; left: 80%; background-color: yellowgreen; width: 100px; height: 100px; font-size: 20px">DRAG ME</span>
+            <h1 class="size-84 my-52 px-20 relative z-20">              
+              <span class="absolute dragit" style="top: -25%; left: -10%; background-color: yellowgreen; width: 100px; height: 100px; font-size: 20px">DRAG ME</span>
+              <span class="absolute dragit" style="top: -10%; left: 80%; background-color: yellowgreen; width: 100px; height: 100px; font-size: 20px">DRAG ME</span>
               <span class="absolute dragit" style="top: 110%; left: 65%; background-color: yellowgreen; width: 100px; height: 100px; font-size: 20px">DRAG ME</span>
-              <div class="size-36 pb-5 z-10 text-slate-500">Senior product designer.</div> 
-              <div class="size-73 z-10 text-slate-800">Helping startups to shape and elevate their product experience.</div>
+              <div class="size-36 pb-5 z-10 text-slate-400">Senior product designer.</div> 
+              <div class="size-84 z-10 text-slate-800 leading-none">Helping startups to shape and elevate their product experience.</div>
+              
+
             </h1>
             <script>
               var draggable = $('.dragit'); //element 
               draggable.on('mousedown', function(e){
-                var dr = $(this).addClass("drag").css("cursor","move");
+                var dr = $(this).addClass("drag").css("cursor","grabbing");
                 height = dr.outerHeight();
                 width = dr.outerWidth();
                 ypos = dr.offset().top + height - e.pageY,
@@ -57,9 +62,38 @@
 
         <section id="two" class="">
             
-          <div style="background-color:white; min-height: 500px; margin-top: 100px">
-            
+          <div class="portfolio">
+            <div class="grid grid-cols-2 gap-24">
+              
+              <!-- Column 1 -->
+              <div class="flex items-center justify-start">
+                <div class="project-1 rounded-xl">
+                  <div class="image rounded-3xl">
+                    <img class="rounded-3xl hover:shadow-lg hover:-translate-y-6" style="min-height: 600px;" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/967b34109891369.6005292dcb8e5.gif">
+                  </div>
+                  <div class="mt-3 size-18 font-semibold">Sway for iOS: Al Dance</div>
+                  <div class="mt-1 text-sm text-slate-500">Product Design / 2019</div>
+                </div>
+              </div>
+              
+              <!-- Column 2 -->
+              <div class="flex items-center justify-end">
+                <div class="project-1 rounded-xl">
+                  <div class="image rounded-3xl">
+                    <img class="rounded-3xl hover:shadow-lg hover:-translate-y-6" style="height: 300px; width: 440px;" src="https://cdn.midjourney.com/acde55aa-fb1d-4f43-8405-506b7e11034f/0_0_384_N.webp">
+                  </div>
+                  <div class="mt-3 size-18 font-semibold">Sway for iOS: Al Dance</div>
+                  <div class="mt-1 text-sm text-slate-500">Product Design / 2019</div>
+                </div>
+              </div>
+
           </div>
+
+          
+
+          <!-- <div style="background-color:white; min-height: 500px; margin-top: 100px"> -->
+            
+          <!-- </div> -->
             <div style="background-color:white; min-height: 500px; margin-top: 100px">feeback from clients</div>
             <div style="background-color:white; min-height: 500px; margin-top: 100px">features - some interesting side projects</div>
             <div style="background-color:white; min-height: 500px; margin-top: 100px">archieve of old projects</div>      

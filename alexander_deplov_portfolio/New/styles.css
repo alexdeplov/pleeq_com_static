@@ -1,10 +1,12 @@
+@import url('./css/general-sans.css');
+
 *{
     box-sizing: border-box;
     padding: 0;
 }
 
 body {
-    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: GeneralSans-Variable, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     transition: background 1s ease;
     background-color: whitesmoke;
 }
@@ -14,7 +16,6 @@ body {
 }
 
 h1{
-    
 }
 
 /* FONT SIZE */
@@ -71,6 +72,8 @@ h1{
     font-size: 96px;
 }
 
+/* 109, 123, 138, 154, 171, 189, 208, 228, 249, 271, 294, 318, 343, 369, 396, 424, 453, 483, 514, 546, 579, 613, 648, 684, 721, 759, 798, 838, 879, 921, 964, 1008, 1053, 1099, 1146, 1194, 1243, 1293, 1344, 1396, 1449, 1503. */
+
 h1{
     font-weight: 800 !important;
     line-height: normal;
@@ -83,7 +86,7 @@ h1{
 }
 
 .navigation a{
-    color: #888;
+    /* color: #888; */
 }
 
 .navigation .active{
@@ -97,10 +100,12 @@ h1{
     -moz-user-select: none;       /* Disable selection in Firefox */
     -ms-user-select: none;        /* Disable selection in Internet Explorer/Edge */
     user-select: none;            /* Standard syntax to disable selection */
+   
 }
 
 .dragit{
     transition-duration: 0.15s;
+    cursor: grab;
 }
 
 .drag{
@@ -110,3 +115,34 @@ h1{
 }
 
 
+/* Projects */
+/* .project-1{
+    height: 550px;
+    min-width: 440px;
+} */
+
+.project-1 .image{
+    /* background-color: #ef7ac8; */
+    /* display: block; */
+    /* height: 550px; */
+    /* min-width: 440px; */
+}
+
+/* .project-2{
+    background-color:#7349e3;
+    height: 400px;
+    width: 440px;
+} */
+
+.portfolio *{
+    transition: all 0.2s ease;
+}
+
+/* .gradient {
+    background: linear-gradient(120deg, #ff2a68 0%, #753fa9 30%, #753fa9 45%, #ff2a68 100%) repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-position: 0;
+    background-size: 200%;
+    /* filter: brightness(0.75); */
+  } */
