@@ -16,27 +16,53 @@
 <body>
     <div class="max-w-5xl mx-auto px-5 py-10">
         
-        <!-- NAVIGATION -->
-        <section id="one">
+        <!-- Header -->
+        <section id="header" class="unselectable">
             <nav class="flex justify-between">
                <a href="#">Alexander Deplov</a>
-               <div class="flex">
-                  <a href="#" class="px-3">Work</a>
+               <div class="flex navigation">
+                  <a href="#" class="px-3 active">Work</a>
                   <a href="#" class="px-3">Blog</a>
                   <a href="#" class="px-3">About</a>
                   <a href="#" class="pl-3">Resume</a>
                </div>
             </nav>
-            <h1 style="background-color:cornflowerblue; margin-top: 100px" class="size-84">              
-              Senior product designer. <span>Helping startups to shape and elevate their product experience.</span>
+
+            <h1 class="size-84 my-52 px-20 relative">              
+              <span class="absolute dragit" style="top: 20%; left: 80%; background-color: yellowgreen; width: 100px; height: 100px; font-size: 20px">DRAG ME</span>
+              <span class="absolute dragit" style="top: 110%; left: 65%; background-color: yellowgreen; width: 100px; height: 100px; font-size: 20px">DRAG ME</span>
+              <div class="size-36 pb-5 z-10 text-slate-500">Senior product designer.</div> 
+              <div class="size-73 z-10 text-slate-800">Helping startups to shape and elevate their product experience.</div>
             </h1>
+            <script>
+              var draggable = $('.dragit'); //element 
+              draggable.on('mousedown', function(e){
+                var dr = $(this).addClass("drag").css("cursor","move");
+                height = dr.outerHeight();
+                width = dr.outerWidth();
+                ypos = dr.offset().top + height - e.pageY,
+                xpos = dr.offset().left + width - e.pageX;
+                $(document.body).on('mousemove', function(e){
+                  var itop = e.pageY + ypos - height;
+                  var ileft = e.pageX + xpos - width;
+                  if(dr.hasClass("drag")){
+                    dr.offset({top: itop,left: ileft});
+                  }
+                }).on('mouseup', function(e){
+                    dr.removeClass("drag");
+                });
+              });
+              </script>
         </section>
-        <section id="two">
-            <div style="background-color:white; min-height: 500px; margin-top: 100px">portfolio - only the most attractive for recruiter projects</div>
-            <div style="background-color:white; min-height: 500px; margin-top: 100px">features - some interesting side projects</div>
-            <div style="background-color:white; min-height: 500px; margin-top: 100px">archieve of old projects</div>
-        
+
+        <section id="two" class="">
             
+          <div style="background-color:white; min-height: 500px; margin-top: 100px">
+            
+          </div>
+            <div style="background-color:white; min-height: 500px; margin-top: 100px">feeback from clients</div>
+            <div style="background-color:white; min-height: 500px; margin-top: 100px">features - some interesting side projects</div>
+            <div style="background-color:white; min-height: 500px; margin-top: 100px">archieve of old projects</div>      
         </section>
         <section id="three">
             <div style="background-color:cornflowerblue; min-height: 500px; margin-top: 100px">footer - what i love, about me</div>
@@ -53,17 +79,17 @@
         if (entry.isIntersecting) {
           const targetId = entry.target.id;
           switch (targetId) {
-            case "one":
+            case "header":
                 body.style.backgroundColor = 'whitesmoke';
                 document.documentElement.style.backgroundColor = 'whitesmoke';
               break;
             case "two":
-                body.style.backgroundColor = 'orange';
-                document.documentElement.style.backgroundColor = 'orange';
+                body.style.backgroundColor = 'whitesmoke';
+                document.documentElement.style.backgroundColor = 'whitesmoke';
               break;
             case "three":
-                body.style.backgroundColor = 'purple';
-                document.documentElement.style.backgroundColor = 'purple';
+                body.style.backgroundColor = 'orange';
+                document.documentElement.style.backgroundColor = 'orange';
               break;
           }
         }
@@ -71,7 +97,7 @@
     });
 
     // Observe the sections
-    observer.observe(document.getElementById("one"));
+    observer.observe(document.getElementById("header"));
     observer.observe(document.getElementById("two"));
     observer.observe(document.getElementById("three"));
 
@@ -104,7 +130,7 @@
     // sectionOne.style.opacity = 0
 
     // anime({
-    //     targets: "#one",
+    //     targets: "#header",
     //     opacity: {
     //         duration: 400,
     //         easing: 'easeOutQuart',
