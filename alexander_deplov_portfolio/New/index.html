@@ -14,14 +14,22 @@
 
 
 <body>
-    <div class="max-w-4xl mx-auto px-5 py-10">
+    <div class="max-w-5xl mx-auto px-5 py-10">
         
+        <!-- NAVIGATION -->
         <section id="one">
-            <a href="https://www.oishee.io"> inspiration </a>
-            <nav>
-                my name     - - -    Work (active), Love, About, Resume
+            <nav class="flex justify-between">
+               <a href="#">Alexander Deplov</a>
+               <div class="flex">
+                  <a href="#" class="px-3">Work</a>
+                  <a href="#" class="px-3">Blog</a>
+                  <a href="#" class="px-3">About</a>
+                  <a href="#" class="pl-3">Resume</a>
+               </div>
             </nav>
-            <div style="background-color:cornflowerblue; min-height: 500px; margin-top: 100px">header - bio and about myself, paperJS code with animation</div>
+            <h1 style="background-color:cornflowerblue; margin-top: 100px" class="size-84">              
+              Senior product designer. <span>Helping startups to shape and elevate their product experience.</span>
+            </h1>
         </section>
         <section id="two">
             <div style="background-color:white; min-height: 500px; margin-top: 100px">portfolio - only the most attractive for recruiter projects</div>
@@ -66,6 +74,13 @@
     observer.observe(document.getElementById("one"));
     observer.observe(document.getElementById("two"));
     observer.observe(document.getElementById("three"));
+
+    window.addEventListener("scroll", function() {
+      if (window.scrollY < 100) {
+        body.style.backgroundColor = 'whitesmoke';
+        document.documentElement.style.backgroundColor = 'whitesmoke';
+      } 
+    });
 
 
     // ANIMATION
