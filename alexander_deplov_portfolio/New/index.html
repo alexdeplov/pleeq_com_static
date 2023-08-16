@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.tailwindcss.com/3.3.1"></script>    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+</head>
+
+
+<body>
+    <div class="max-w-4xl mx-auto px-5 py-10">
+        <section id="one">
+            <nav>
+                my name     - - -    Work (active), Love, About, Resume
+            </nav>
+            <div style="background-color:cornflowerblue; min-height: 500px; margin-top: 100px">header - bio and about myself, paperJS code with animation</div>
+        </section>
+        <section id="two">
+            <div style="background-color:white; min-height: 500px; margin-top: 100px">portfolio - only the most attractive for recruiter projects</div>
+        </section>
+        <section id="three">
+            <div style="background-color:cornflowerblue; min-height: 500px; margin-top: 100px">footer - what i love, about me</div>
+        </section>
+    </div>
+
+</body>
+
+<script>
+    var body = document.getElementsByTagName('body')[0];
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const targetId = entry.target.id;
+          switch (targetId) {
+            case "one":
+                body.style.backgroundColor = 'whitesmoke';
+                document.documentElement.style.backgroundColor = 'whitesmoke';
+              break;
+            case "two":
+                body.style.backgroundColor = 'orange';
+                document.documentElement.style.backgroundColor = 'orange';
+              break;
+            case "three":
+                body.style.backgroundColor = 'purple';
+                document.documentElement.style.backgroundColor = 'purple';
+              break;
+          }
+        }
+      });
+    });
+
+    // Observe the sections
+    observer.observe(document.getElementById("one"));
+    observer.observe(document.getElementById("two"));
+    observer.observe(document.getElementById("three"));
+
+</script>
+
+</html>

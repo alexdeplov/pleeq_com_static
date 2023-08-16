@@ -1,0 +1,19 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body {
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    transition: background 1.5s ease;
+}
+
+section{
+    height: 1200px;
+}
+
+.red{
+    background-color: red;
+}
+
+
