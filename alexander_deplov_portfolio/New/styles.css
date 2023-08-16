@@ -9,7 +9,7 @@ body {
 }
 
 section{
-    height: 1200px;
+    min-height: 1200px;
 }
 
 .red{
