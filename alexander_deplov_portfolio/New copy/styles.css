@@ -103,6 +103,46 @@ h1{
    
 }
 
+.dragit{
+    transition-duration: 0.15s;
+    /* cursor: grab; */
+}
+
+.drag{
+    transform: rotateZ(15deg);
+    /* transition-delay: 5ms; */
+    transition: transform 0.3s ease;
+}
+
+
+/* Projects */
+/* .project-1{
+    height: 550px;
+    min-width: 440px;
+} */
+
+.project-1 .image{
+    /* background-color: #ef7ac8; */
+    /* display: block; */
+    /* height: 550px; */
+    /* min-width: 440px; */
+}
+
+/* .project-2{
+    background-color:#7349e3;
+    height: 400px;
+    width: 440px;
+} */
+
 .portfolio *{
     transition: all 0.2s ease;
 }
+
+/* .gradient {
+    background: linear-gradient(120deg, #ff2a68 0%, #753fa9 30%, #753fa9 45%, #ff2a68 100%) repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-position: 0;
+    background-size: 200%;
+    /* filter: brightness(0.75); */
+  } */
