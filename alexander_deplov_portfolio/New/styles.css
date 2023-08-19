@@ -106,3 +106,40 @@ h1{
 .portfolio *{
     transition: all 0.2s ease;
 }
+
+.height-600{
+    min-height: 600px;
+}
+
+.height-330{
+    min-height: 330px;
+}
+
+.sway{
+    background-color: #F6C755;
+}
+
+.olli{
+    background-color: #7B5ED3;
+}
+
+.anchor-pointer{
+    background-color: #E1DCCC;
+}
+
+.slumber{
+    background-color: #183D2C;
+}
+
+.waterloguePro{
+    background-color: #C1DF73;
+    min-height: 580px;
+}
+
+.projectBox{
+    min-width: 440px;
+}
+
+.transmission{
+    background-color: #26314A;
+}
