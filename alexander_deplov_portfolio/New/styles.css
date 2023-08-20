@@ -129,7 +129,8 @@ h1{
 }
 
 .slumber{
-    background-color: #183D2C;
+    /* background-color: #183D2C; */
+    background-color: #9DC29B;
 }
 
 .waterloguePro{
@@ -137,11 +138,11 @@ h1{
     min-height: 580px;
 }
 
-.projectBox{
-    min-width: 440px;
-}
-
 .transmission{
     font-family: Gambetta-Variable;
     background-color: #26314A;
+}
+
+.image:hover img{
+    transform: translateY(-15px);
 }
