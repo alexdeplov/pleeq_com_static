@@ -134,7 +134,7 @@ h1{
 }
 
 .waterloguePro{
-    background-color: #C1DF73;
+    background-color: #788fbf;
     min-height: 580px;
 }
 
@@ -143,6 +143,15 @@ h1{
     background-color: #26314A;
 }
 
-.image:hover img{
+
+.image:hover .moveUpOnHover{
     transform: translateY(-15px);
+}
+
+
+.masked{
+    mask-image: url(https://pleeq.com/images/anchorPointer.png);
+    mask-repeat: no-repeat;
+    mask-position: center center;
+    mask-size:contain;
 }
