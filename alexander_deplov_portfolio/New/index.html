@@ -92,9 +92,47 @@
               <div class="grow">
               
                 <!-- Portfolio Project -->
+                <!-- Slumber -->
                 <div class="projectBox rounded-xl max-w-full mt-28">
-                  <div class="image rounded-3xl height-330 slumber hover:shadow-lg hover:-translate-y-4">
-                    <img class="m-auto moveUpOnHover" src="./images/slumber.png" srcset="./images/slumber.png 1x, ./images/slumber@2x.png 2x">
+                  <div class="image rounded-3xl height-330 slumber hover:shadow-lg hover:-translate-y-4 group">
+                    
+                    <div class="flex -space-x-24 content-center justify-center pt-5">
+                      <img class="moveUpOnHover group-hover:-rotate-2 z-10" src="./images/slumber-1.png" srcset="./images/slumber-1.png 1x, ./images/slumber-1@2x.png 2x">
+                      <img class="moveUpOnHover scale-75 rotate-2" src="./images/slumber-2.png" srcset="./images/slumber-2.png 1x, ./images/slumber-2@2x.png 2x">
+                    </div>
+
+                    <img class="moveUpOnHover m-auto mt-4" id="slumberWave" src="./images/slumberWave-1.svg">
+                  
+                    <script>
+                      $(document).ready(function(){
+
+                        var slumberWaveImages = [
+                          './images/slumberWave-1.svg',
+                          './images/slumberWave-2.svg',
+                          './images/slumberWave-3.svg',
+                          './images/slumberWave-4.svg',
+                        ];
+
+                      
+                        var currentIndex = 0;
+                        var imageContainer = $('#slumberWave');
+
+                        function replaceImage() {
+                          
+                          currentIndex += 1
+                          if (currentIndex > slumberWaveImages.length - 1){
+                            currentIndex = 0
+                          }
+                          // console.log(currentIndex)
+
+                          imageContainer.attr('src', slumberWaveImages[currentIndex]);
+                          
+                        }
+                        setInterval(replaceImage, 1500);
+                        
+                      });
+                    </script>
+                    
                   </div>
                   <div class="mt-3 size-21 font-semibold">Slumber: Stories & Deep Sleep</div>
                   <div class="mt-1 text-sm text-slate-500">Product Design · 2022</div>
