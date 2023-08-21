@@ -118,10 +118,11 @@ h1{
 
 .sway{
     background-color: #F6C755;
+    background: linear-gradient(180deg, rgba(246,199,85,1) 0%, rgba(246,185,85,1) 100%);
 }
 
 .olli{
-    background-color: #7B5ED3;
+    background-color:#a2a5c4;
 }
 
 .anchor-pointer{
@@ -130,6 +131,7 @@ h1{
 
 .slumber{
     background-color: #9DC29B;
+    background: linear-gradient(180deg, rgba(172,215,170,1) 0%, rgba(143,186,141,1) 100%);
 }
 
 .waterloguePro{
