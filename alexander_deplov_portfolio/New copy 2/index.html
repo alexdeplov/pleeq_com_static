@@ -102,7 +102,36 @@
                     </div>
 
                     <img class="moveUpOnHover m-auto mt-4" id="slumberWave" src="./images/slumberWave-1.svg">
-                                      
+                  
+                    <script>
+                      // Animating the wave
+                      $(document).ready(function(){
+
+                        var slumberWaveImages = [
+                          './images/slumberWave-1.svg',
+                          './images/slumberWave-2.svg',
+                          './images/slumberWave-3.svg',
+                          './images/slumberWave-4.svg',
+                        ];
+                      
+                        var currentIndex = 0;
+                        var imageContainer = $('#slumberWave');
+
+                        function replaceImage() {
+                          
+                          currentIndex += 1
+                          if (currentIndex > slumberWaveImages.length - 1){
+                            currentIndex = 0
+                          }
+                          
+                          imageContainer.attr('src', slumberWaveImages[currentIndex]);
+                          
+                        }
+                        setInterval(replaceImage, 1500);
+                        
+                      });
+                    </script>
+                    
                   </div>
                   <div class="mt-3 size-21 font-semibold">Slumber: Stories & Deep Sleep</div>
                   <div class="mt-1 text-sm text-slate-500">Product Design · 2022</div>
