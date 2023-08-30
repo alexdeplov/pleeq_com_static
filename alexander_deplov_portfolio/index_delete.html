@@ -45,32 +45,16 @@
     <div id="portfolioBox" class="wrapper m-auto px-6 lg:px-20">
         <!-- HEADER -->
         <div id="header">
-            <section class="header max-w-screen-xl mt-28 lg:mt-28 block lg:flex justify-between items-center mx-auto">
+            <section class="header max-w-screen-lg mt-28 lg:mt-28 block lg:flex justify-between items-center mx-auto">
                 <img class="avatar mb-100 lg:mb-100 block lg:hidden" src="./images-min/photo@2x.png" />
                 <div>
-                    <h1 class="pr-0 lg:pr-36 text-2xl lg:leading-tight my-10 font-bold tracking-tight">Hi, I’m
+                    <h1 class="pr-0 lg:pr-36 size-28 lg:leading-tight my-10 font-semibold tracking-tight">Hi, I’m
                         Alexander
                         Deplov. Senior Product Designer at Vectornator. <span style="color:gray">With over 16 years of
                             experience working with
                             startups and tech companies, with focus on creating simple and delightful experiences. 📍
-                            Berlin. <span id="currentTime">09:41:00</span></span>
+                            Berlin. 
                     </h1>
-                    <script>
-                        function getCurrentTime() {
-                            const currentTime = new Date();
-                            const hours = currentTime.getHours().toString().padStart(2, '0');
-                            const minutes = currentTime.getMinutes().toString().padStart(2, '0');
-                            const seconds = currentTime.getSeconds().toString().padStart(2, '0');
-
-                            const timeString = `${hours}:${minutes}:${seconds}`;
-                            document.getElementById("currentTime").textContent = timeString;
-                        }
-
-                        // Call the function every second to update the time
-                        setInterval(getCurrentTime, 1000)
-                        getCurrentTime()
-                    </script>
-
                 </div>
 
                 <img class="avatar mt-6 lg:mt-0 hidden lg:block" width="120" height="120"
@@ -78,45 +62,45 @@
             </section>
         </div>
 
-        <div id="portfolio">
-            <section class="max-w-screen-xl m-auto leading-normal lg:leading-snug">
+        <div id="hero" class="section relative w-auto mt-6">
+            <img class="m-auto moveUpOnHover" src="./images-min/hero.png" srcset="./images-min/hero.png 1x, ./images-min/hero@2x.png 2x">
+        </div>
 
-                <div id="hero" class="section relative w-auto mt-6">
-                    <img class="w-full hidden lg:block" src="./images-min/hero.webp"
-                        alt="Slumber, Sway magic dance by ai, Olli by Tinrocket, Waterlogur Pro by Tinrocket, Imiwa?" />
-                </div>
-
-                <h2 class="pr-0 text-4xl lg:text-5xl lg:leading-tight mt-10 font-bold tracking-tight text-center">
-                    Portfolio
-                </h2>
-                <!-- ANCHOR POINTER -->
-                <div id="anchorPointer" class="section">
-                    <a href="https://apps.apple.com/us/app/anchor-pointer-gps-compass/id791684332">
-                        <div class="relative w-auto mt-6">
-                            <img class="w-full" src="./images-min/anchor-pointer-1.webp" alt="Anchor Pointer" />
-                        </div>
+        <section class="max-w-screen-lg m-auto">
+            <!-- Recommendations -->
+            <div class="mt-4 testimonials text-neutral-400">
+                <div class="uppercase font-semibold">Recommendations</div>
+                <div class="mt-5 size-42 font-semibold leading-none text-neutral-400">Alex was our first design contractor for our flagship app Sway, and his early contribution was a major factor for our smooth, user-friendly UI that eventually led to the big success — <a class="underline decoration-lime-500/40" href="https://twitter.com/GSP/status/1224416520635183105">peaked at #3 overall</a> in the app store chart — of our mobile marketing partnership with <span class="text-slate-950">Doritos / Lil Nas X / Sam Elliot for the Super Bowl 2020 campaign.</span> </div>
+                  
+                
+                <div class="flex flex-col lg:flex-row space-y-5 lg:space-y-0 lg:space-x-4 mt-14">
+                  <div class="grow">  
+                    <a href="https://www.youtube.com/watch?v=OBDo4u-2eEI">
+                      <img class="w-full rounded-md saturate-50" src="./images-min/ezgif.com-optimize.gif" />
                     </a>
-                    <img class="w-full mt-3" src="./images-min/anchor-pointer-2.webp" alt="Anchor Pointer" />
-                    <img class="w-full mt-3" src="./images-min/anchor-pointer-gif.gif" alt="Anchor Pointer" />
-                    <img class="w-full mt-3" src="./images-min/anchor-pointer-4.webp" alt="App Store Editors’ Notes" />
-                    <h3 class="font-semibold px-5 lg:px-40 pt-8 pb-0 text-2xl">Navigation App for iOS.</h3>
-                    <p class="notes px-5 lg:px-40 pt-4 text-xl leading-snug">Anchor Pointer is a <a
-                            href="https://apps.apple.com/us/app/anchor-pointer-gps-compass/id791684332">Navigation
-                            app</a> that uses a simple arrow to show where you need to go and how far you need to go.
-                        <br /><br />
-                        I created a UI prototype using Sketch and we quickly built the first working MVP in code.
-                        Over the next few years, the
-                        app evolved by collecting user feedback and analyzing <a rel="nofollow"
-                            href="https://www.flurry.com/">Flurry analytics</a>.
-                        <br /><br />
-                        Currently, Anchor Pointer has 400K+ users worldwide, it's translated into more than 10
-                        languages, and the average rating in the US is 4.6, with 1.6K+ having voted.
-                    </p>
-                    <hr class="mt-14 lg:mt-20" />
+                  </div>
+  
+                  <div class="grow">  
+                    <a href="https://www.youtube.com/watch?v=OBDo4u-2eEI">
+                      <img class="w-full rounded-md saturate-50 " src="./images-min/ezgif.com-optimize-2.gif" />
+                    </a>
+                  </div>
                 </div>
+  
+                <div class="mt-3 text-xs">Source: <a href="https://www.youtube.com/watch?v=OBDo4u-2eEI">YouTube</a></div>
+  
+                </div>
+                <div class="mt-5 size-18 font-semibold text-neutral-400">Alex is hardworking and possesses all the necessary skills that make a great app designer. Moreover, his programming/technical background is rare to find in most designer candidates on the market. I truly enjoyed working with him and would recommend him to anyone looking for a highly-skilled and motivated designer.</div>
+                <div class="mt-5 size-18 font-semibold text-neutral-400">Tinghui Zhou<br/>Generative AI at Roblox</div>
+                
+              </div>
+        </section>
+
+        <div id="portfolio">
+            <section class="max-w-screen-lg m-auto leading-normal lg:leading-snug mt-48">
 
                 <!-- SWAY -->
-                <div id="sway" class="section">
+                <div id="sway" class="section mt-20">
                     <a rel="nofollow" href="https://appadvice.com/app/sway-body-swap-videos/1441466995">
                         <img class="relative w-auto mt-6" src="./images-min/sway-1.webp" alt="Sway by Humen" />
                     </a>
@@ -244,66 +228,6 @@
                     <hr class="mt-14 lg:mt-20" />
                 </div>
 
-                <!-- IMIWA -->
-                <div id="imiwa" class="section">
-                    <a rel="nofollow" href="http://www.imiwaapp.com">
-                        <img class="relative w-auto mt-6" src="./images-min/imiwa-1.webp" alt="Imiwa? for iPhone" />
-                    </a>
-                    <h3 class="font-semibold px-5 lg:px-40 pt-8 pb-0 text-2xl">Japanese dictionary for iOS.</h3>
-                    <p class="notes px-5 lg:px-40 pt-4 text-xl leading-snug">
-                        Worked closely with the developer
-                        of <a rel="nofollow" href="http://www.imiwaapp.com">Imiwa?</a> and helped design
-                        the app icon and website. Imiwa? is a
-                        free multilingual
-                        Japanese dictionary for iOS.
-                    </p>
-                    <hr class="mt-14 lg:mt-20" />
-                </div>
-
-                <!-- MACILOVE -->
-                <div id="macilove" class="section">
-                    <a href="https://web.archive.org/web/20160712230636/http://macilove.com/">
-                        <img class="relative w-auto mt-6" src="./images-min/macilove-1.jpg" alt="Macilove" />
-                    </a>
-                    <h3 class="font-semibold px-5 lg:px-40 pt-8 pb-0 text-2xl">Self written blog engine.</h3>
-                    <p class="notes px-5 lg:px-40 pt-4 text-xl leading-snug">
-                        <a href="https://web.archive.org/web/20160712230636/http://macilove.com/">Macilove</a>
-                        is an Apple fan blog. We decided to write our own
-                        blog engine on PHP/JS to have more options for custom layouts. Most competitors on the market
-                        were using blog templates that looked the same, we wanted to change that.
-                        <br /><br />
-                        The site caught the
-                        attention of <a rel="nofollow" href="https://www.linkedin.com/company/neoogilvy/">Neo@Ogilvy</a>
-                        and they invited me to promote Apple's online store in through an
-                        affiliate program.
-
-                    </p>
-                    <hr class="mt-14 lg:mt-20" />
-                </div>
-
-                <!-- YOUTUBE ICONS REDESIGN -->
-                <div id="youtubeIcons" class="section">
-                    <img class="relative w-auto mt-6" src="./images-min/youtube-icons-redesign-1.jpg"
-                        alt="YouTube Icons Redesign by alex_deplov" />
-                    <img class="w-full mt-3" src="./images-min/youtube-icons-redesign-2.jpg"
-                        alt="YouTube Icons Redesign by alex_deplov" />
-                    <h3 class="font-semibold px-5 lg:px-40 pt-8 pb-0 text-2xl">Reimagining YouTube Icons.</h3>
-                    <p class="notes px-5 lg:px-40 pt-4 text-xl leading-snug">
-                        My version of YouTube icons is
-                        based on larger menu items. It is better suited for
-                        touchscreen devices. The
-                        second idea is to give the icons more humanity.
-
-                        <br /><br />The icons should be more about people and less
-                        about the "tube". That's why we see a face on the "Watch Later" item menu icon, rounded, soft
-                        corners, and
-                        the home icon has a roof that enhances this effect.
-                    </p>
-                    <hr class="mt-14 lg:mt-20" />
-                </div>
-
-
-
             </section>
         </div>
     </div>
@@ -341,7 +265,7 @@
     // Animation
 
     anime({
-        targets: "#header",
+        targets: ["#header", "#hero"],
         opacity: {
             duration: 400,
             easing: 'easeOutQuart',
@@ -414,10 +338,6 @@
                     floatingMenu.innerHTML = "Hero";
                     floatingMenu.style.opacity = "0";
                     return;
-                case "anchorPointer":
-                    floatingMenu.innerHTML = "Anchor Pointer";
-                    floatingMenu.style.opacity = "1";
-                    return;
                 case "olli":
                     floatingMenu.innerHTML = "Olli by Tinrocket";
                     floatingMenu.style.opacity = "1";
@@ -434,18 +354,11 @@
                     floatingMenu.innerHTML = "Imiwa?";
                     floatingMenu.style.opacity = "1";
                     return;
-                case "macilove":
-                    floatingMenu.innerHTML = "Macilove";
-                    floatingMenu.style.opacity = "1";
-                    return;
                 case "sway":
                     floatingMenu.innerHTML = "Sway by Humen";
                     floatingMenu.style.opacity = "1";
                     return;
-                case "youtubeIcons":
-                    floatingMenu.innerHTML = "YouTube Icons Redesign";
-                    floatingMenu.style.opacity = "1";
-                    return;
+
                 default:
                     return;
             }
