@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.tailwindcss.com/3.3.1"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+</head>
+
+
+<body>
+    <div class="max-w-4xl mx-auto px-5 py-10">
+        
+        <!-- Header -->
+        <section id="nav">
+            <nav class="flex justify-between">
+               <a href="#">Alexander Deplov</a>
+               <div class="flex navigation">
+                  <a href="#" class="pl-3 text-slate-400">Resume</a>
+                  <div class="pl-3 text-slate-300">•</div>
+                  <a href="#" class="px-3 text-slate-400">Blog</a>
+               </div>
+            </nav>
+        </section>
+
+        <section id="header">
+          <h1 class="mt-14 py-24">  
+            <div class="size-48 font-semibold z-10 text-slate-950 leading-none">I'm a Senior Product Designer <span class="text-neutral-400">who bridges business goals with user needs.</span></div>
+          </h1>
+        </section>
+
+        
+        <section id="portfolio" class="portfolio">
+            
+            <div class="flex flex-col lg:flex-row lg:space-x-14 space-y-5 lg:space-y-0 mt-24">
+              <div class="grow">
+
+                <div class="grid grid-cols-2 gap-5 gap-20">
+                  
+                  <!-- Sway -->
+                  <div class="col-span-2 lg:col-span-1">
+                    <div class="projectBox rounded-lg max-w-full">
+                      <div class="image rounded-lg height-330 sway group flex lg:aspect-square">
+                        <div class="flex p-10 m-auto relative">
+                          <img class="absolute left-40 -bottom-2 lg:left-36 lg:top-52" src="./images/sway-badge.png" srcset="./images/sway-badge.png 1x, ./images/sway-badge.png 2x">
+                          <img class="m-auto rounded-lg" src="./images/sway-gif.gif" >
+                        </div>
+                      </div>
+                      <div class="mt-3 size-21 font-semibold">Sway: Al Dance (now Roblox)</div>
+                      <div class="mt-1 text-sm text-slate-500">Product Design · 2019</div>
+                    </div>
+                  </div>
+                  
+                  <!-- Slumber -->
+                  <div class="col-span-2 lg:col-span-1">
+                    <div class="projectBox rounded-lg max-w-full">
+                      <div class="image rounded-lg height-330 slumber group flex lg:aspect-square">
+                        <img class="m-auto p-5" src="./images/slumber.png" srcset="./images/slumber.png 1x, ./images/slumber@2x.png 2x">
+                      </div>
+                      <div class="mt-3 size-21 font-semibold">Slumber: Stories & Deep Sleep</div>
+                      <div class="mt-1 text-sm text-slate-500">Product Design · 2022</div>
+                    </div>
+                  </div>
+
+                   <!-- Curve -->
+                   <div class="col-span-2 my-7">
+                    <div class="projectBox rounded-lg max-w-full">
+                      <div class="image rounded-lg height-330 curve group flex">
+                        <img class="m-auto rounded-lg" src="./images/curve.png" srcset="./images/curve.png 1x, ./images/curve@2x.png 2x">
+                      </div>
+                      <div class="mt-3 size-21 font-semibold lg:pl-60">Vectornator (Now Linearity Curve)</div>
+                      <div class="mt-1 text-sm text-slate-500 lg:pl-60">Product Design · 2023</div>
+                    </div>
+                  </div>
+                  
+                  <!-- Olli -->
+                  <div class="col-span-2 lg:col-span-1">
+                    <div class="projectBox rounded-lg max-w-full">
+                      <div class="image rounded-lg height-330 olli group flex lg:aspect-square">
+                        <img class="m-auto p-20" src="./images/olli.png" srcset="./images/olli.png 1x, ./images/olli@2x.png 2x">
+                      </div>
+                      <div class="mt-3 size-21 font-semibold">Olli by Tinrocket</div>
+                      <div class="mt-1 text-sm text-slate-500">Product Design · 2019</div>
+                    </div>
+                  </div>
+                  
+                   <!-- Waterlogue -->
+                   <div class="col-span-2 lg:col-span-1">
+                    <div class="projectBox rounded-lg max-w-full">
+                      <div class="image rounded-lg height-330 waterlogue group flex lg:aspect-square">
+                        <img class="mx-auto" src="./images/waterlogue.png" srcset="./images/waterlogue.png 1x, ./images/waterlogue@2x.png 2x">
+                      </div>
+                      <div class="mt-3 size-21 font-semibold">Waterlogue Pro by Tinrocket</div>
+                      <div class="mt-1 text-sm text-slate-500">Product Design · 2017</div>
+                    </div>
+                  </div>
+
+                  <!-- Pleeq -->
+                  <div class="col-span-2 lg:col-span-1">
+                    <div class="projectBox rounded-lg max-w-full">
+                      <div class="image rounded-lg height-330 pleeq group flex aspect-square">
+                        <img class="m-auto p-10" src="./images/pleeq.png" srcset="./images/pleeq.png 1x, ./images/pleeq@2x.png 2x">
+                      </div>
+                      <div class="mt-3 size-21 font-semibold">Co-Founder of Pleeq Software</div>
+                      <div class="mt-1 text-sm text-slate-500">Since 2013</div>
+                    </div>
+                  </div>
+                  
+                  <!-- Transmission -->
+                  <div class="col-span-2 lg:col-span-1">
+                    <div class="projectBox rounded-lg max-w-full">
+                      <div class="image rounded-lg height-330 transmission group flex aspect-square">
+                        <img class="m-auto p-10" src="./images/transmission.png" srcset="./images/transmission.png 1x, ./images/transmission@2x.png 2x">
+                      </div>
+                      <div class="mt-3 size-21 font-semibold">Transmission Web</div>
+                      <div class="mt-1 text-sm text-slate-500">Web Design · Project is in Archive</div>
+                    </div>
+                  </div>
+
+
+                </div>
+                
+              </div>
+
+
+
+            </div>
+
+            <!-- Recommendations -->
+            <div class="mt-48 text-neutral-400">
+              <div class="uppercase font-semibold">Recommendations</div>
+              <div class="mt-5 size-42 font-semibold leading-none text-neutral-400">Alex was our first design contractor for our flagship app Sway, and his early contribution was a major factor for our smooth, user-friendly UI that eventually led to the big success — <a class="underline decoration-lime-500/40" href="https://twitter.com/GSP/status/1224416520635183105">peaked at #3 overall</a> in the app store chart — of our mobile marketing partnership with <span class="text-slate-950">Doritos / Lil Nas X / Sam Elliot for the Super Bowl 2020 campaign.</span> </div>
+                
+              
+              <div class="flex flex-col lg:flex-row space-y-5 lg:space-y-0 lg:space-x-4 mt-14">
+                <div class="grow">  
+                  <a href="https://www.youtube.com/watch?v=OBDo4u-2eEI">
+                    <img class="w-full rounded-md saturate-50" src="./images/ezgif.com-optimize.gif" />
+                  </a>
+                </div>
+
+                <div class="grow">  
+                  <a href="https://www.youtube.com/watch?v=OBDo4u-2eEI">
+                    <img class="w-full rounded-md saturate-50 " src="./images/sway-4.gif" />
+                  </a>
+                </div>
+              </div>
+
+              <div class="mt-3 text-xs">Source: <a href="https://www.youtube.com/watch?v=OBDo4u-2eEI">YouTube</a></div>
+
+              </div>
+              <div class="mt-5 size-18 font-semibold text-neutral-400">Alex is hardworking and possesses all the necessary skills that make a great app designer. Moreover, his programming/technical background is rare to find in most designer candidates on the market. I truly enjoyed working with him and would recommend him to anyone looking for a highly-skilled and motivated designer.</div>
+              <div class="mt-5 size-18 font-semibold text-neutral-400">Tinghui Zhou<br/>Generative AI at Roblox</div>
+              
+            </div>
+
+          
+
+        </section>
+
+    </div>
+
+</body>
+
+<script>
+    // var body = document.getElementsByTagName('body')[0];
+
+    // const observer = new IntersectionObserver(entries => {
+    //   entries.forEach(entry => {
+    //     if (entry.isIntersecting) {
+    //       const targetId = entry.target.id;
+    //       switch (targetId) {
+    //         case "header":
+    //             body.style.backgroundColor = 'white';
+    //             document.documentElement.style.backgroundColor = 'white';
+    //           break;
+    //         case "portfolio":
+    //             body.style.backgroundColor = 'whitesmoke';
+    //             document.documentElement.style.backgroundColor = 'whitesmoke';
+    //           break;
+    //         case "three":
+    //             body.style.backgroundColor = 'lightgray';
+    //             document.documentElement.style.backgroundColor = 'lightgray';
+    //           break;
+    //       }
+    //     }
+    //   });
+    // });
+
+    // Observe the sections
+    // observer.observe(document.getElementById("header"));
+    // observer.observe(document.getElementById("portfolio"));
+    // observer.observe(document.getElementById("three"));
+
+    // window.addEventListener("scroll", function() {
+    //   if (window.scrollY < 100) {
+    //     body.style.backgroundColor = 'white';
+    //     document.documentElement.style.backgroundColor = 'white';
+    //   } 
+    // });
+
+
+    // ANIMATION
+    // var footerHeight;
+
+    // $(document).ready(function () {
+    //     footerHeight = $("#footer").height();
+    // });
+
+    // $(document).scroll(function () {
+    //     if ($(window).scrollTop() + $(window).height() > $('body').height() - (footerHeight - 100)) {
+    //         $("#floatingMenu").hide();
+    //     } else {
+    //         $("#floatingMenu").show();
+    //     }
+    // });
+
+    // Animation, TURN BACK ON:
+
+    // const sectionOne = document.getElementById("one");
+    // sectionOne.style.opacity = 0
+
+    // anime({
+    //     targets: "#header",
+    //     opacity: {
+    //         duration: 400,
+    //         easing: 'easeOutQuart',
+    //         loop: false,
+    //         delay: 200,
+    //         value: 1
+    //     },
+    //     translateY: {
+    //         duration: 800,
+    //         easing: 'easeOutQuart',
+    //         loop: false,
+    //         delay: 200,
+    //         value: -50
+    //     }
+    // })
+
+
+    // anime({
+    //     targets: "#portfolio",
+    //     opacity: {
+    //         duration: 400,
+    //         easing: 'easeOutQuart',
+    //         loop: false,
+    //         delay: 400,
+    //         value: 1
+    //     },
+    //     translateY: {
+    //         duration: 800,
+    //         easing: 'easeOutQuart',
+    //         loop: false,
+    //         delay: 400,
+    //         value: -50
+    //     }
+    // })
+
+</script>
+
+</html>

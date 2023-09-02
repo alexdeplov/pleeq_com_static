@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.tailwindcss.com/3.3.1"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+</head>
+
+
+<body>
+    <div class="m-auto w-full px-5 py-10">
+
+      <div class="max-w-xs" style="background-color: aquamarine;">
+        
+        <img class="masked m-auto w-full" src="./images/onboardingVideo.2023-08-20 18_53_48.gif">
+        
+      </div>
+        
+    </div>
+
+</body>
+
+<script>
+    var body = document.getElementsByTagName('body')[0];
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const targetId = entry.target.id;
+          switch (targetId) {
+            case "header":
+                body.style.backgroundColor = 'whitesmoke';
+                document.documentElement.style.backgroundColor = 'whitesmoke';
+              break;
+            case "portfolio":
+                body.style.backgroundColor = 'whitesmoke';
+                document.documentElement.style.backgroundColor = 'whitesmoke';
+              break;
+            case "three":
+                body.style.backgroundColor = 'orange';
+                document.documentElement.style.backgroundColor = 'orange';
+              break;
+          }
+        }
+      });
+    });
+
+    // Observe the sections
+    observer.observe(document.getElementById("header"));
+    observer.observe(document.getElementById("portfolio"));
+    observer.observe(document.getElementById("three"));
+
+    window.addEventListener("scroll", function() {
+      if (window.scrollY < 100) {
+        body.style.backgroundColor = 'whitesmoke';
+        document.documentElement.style.backgroundColor = 'whitesmoke';
+      } 
+    });
+
+
+    // ANIMATION
+    // var footerHeight;
+
+    // $(document).ready(function () {
+    //     footerHeight = $("#footer").height();
+    // });
+
+    // $(document).scroll(function () {
+    //     if ($(window).scrollTop() + $(window).height() > $('body').height() - (footerHeight - 100)) {
+    //         $("#floatingMenu").hide();
+    //     } else {
+    //         $("#floatingMenu").show();
+    //     }
+    // });
+
+    // Animation, TURN BACK ON:
+
+    // const sectionOne = document.getElementById("one");
+    // sectionOne.style.opacity = 0
+
+    // anime({
+    //     targets: "#header",
+    //     opacity: {
+    //         duration: 400,
+    //         easing: 'easeOutQuart',
+    //         loop: false,
+    //         delay: 200,
+    //         value: 1
+    //     },
+    //     translateY: {
+    //         duration: 800,
+    //         easing: 'easeOutQuart',
+    //         loop: false,
+    //         delay: 200,
+    //         value: -50
+    //     }
+    // })
+
+
+    // anime({
+    //     targets: "#portfolio",
+    //     opacity: {
+    //         duration: 400,
+    //         easing: 'easeOutQuart',
+    //         loop: false,
+    //         delay: 400,
+    //         value: 1
+    //     },
+    //     translateY: {
+    //         duration: 800,
+    //         easing: 'easeOutQuart',
+    //         loop: false,
+    //         delay: 400,
+    //         value: -50
+    //     }
+    // })
+
+</script>
+
+</html>
