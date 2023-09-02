@@ -145,10 +145,10 @@ h1{
     transform: translateY(-15px);
 }
 
-.masked{
-    mask-image: url(https://pleeq.com/images/anchorPointer.png);
-    mask-repeat: no-repeat;
-    mask-position: center center;
-    mask-size:contain;
+.midjourney{
+    background-color: #CFC7DA;
 }
 
+.paperJS{
+    background-color: #C7D0DA;
+}
