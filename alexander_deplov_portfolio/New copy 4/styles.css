@@ -4,6 +4,7 @@
 *{
     box-sizing: border-box;
     padding: 0;
+    transition: all .15s ease-in-out;
 }
 
 body {
@@ -14,9 +15,6 @@ body {
 
 #two, #three{
     min-height: 1200px;
-}
-
-h1{
 }
 
 /* FONT SIZE */
@@ -110,6 +108,10 @@ h1{
 
 .height-600{
     min-height: 600px;
+}
+
+.height-270{
+    min-height: 270px;
 }
 
 .height-330{
