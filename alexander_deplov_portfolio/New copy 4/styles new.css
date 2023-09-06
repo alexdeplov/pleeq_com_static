@@ -1,0 +1,198 @@
+*{
+    imageBox-sizing: border-imageBox;
+    padding: 0;
+    transition: all .15s ease-in-out;
+}
+
+body {
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    transition: background 1s ease;
+    color: rgb(2, 6, 23);
+}
+
+/* FONT SIZE */
+
+.size-18{
+    font-size: 18px;
+}
+
+.size-21{
+    font-size: 21px;
+}
+
+.size-24{
+    font-size: 24px;
+}
+
+.size-28{
+    font-size: 28px;
+}
+
+.size-32{
+    font-size: 32px;
+}
+
+.size-36{
+    font-size: 36px;
+}
+
+.size-42{
+    font-size: 42px;
+}
+
+.size-48{
+    font-size: 48px;
+}
+
+.size-55{
+    font-size: 55px;
+}
+
+.size-63{
+    font-size: 63px;
+}
+
+.size-73{
+    font-size: 73px;
+}
+
+.size-84{
+    font-size: 84px;
+}
+
+.size-96{
+    font-size: 96px;
+}
+
+.wrapper{
+    max-width: 856px;
+    margin: auto;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .wrapper{
+      max-width: 768px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .wrapper {
+      max-width: 768px;
+      background-color: aqua;
+    }
+}
+  
+@media (max-width: 767px) {
+    .wrapper {
+        max-width: 640px;
+        background-color: blue;
+    }
+} 
+
+.title-h1{
+    line-height: 1;
+    font-weight: 600;
+}
+
+.mt-26{
+    margin-top: 6rem;
+}
+
+.title-h1 span{
+    color: rgb(163 163 163);
+}
+
+.portfolio {
+    gap: 1.25rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    display: grid;
+}
+
+@media (max-width: 767px) {
+    .portfolio {
+        grid-template-columns: 1fr;
+        background-color: red;
+        
+    }
+} 
+
+.portfolio *{
+    transition: all 0.2s ease;
+}
+
+.portfolio .box{
+    background-color: blue;
+    width: 100%;
+}
+
+.portfolio .imageBox{
+    border-radius: 0.5rem;
+    /* aspect-ratio: 1 / 1; */
+    display: flex;
+    min-height: 330px;
+    display: flex;
+}
+
+.portfolio .name{
+    font-size: 21px;
+    font-weight: 600;
+    margin-top: 0.75rem;
+}
+
+.wideSection{
+    grid-column: span 2 / span 2;
+}
+
+.sway .imageBox{
+    background-color: #EFDEB1;
+}
+
+.slumber .imageBox{
+    background-color: #C8DAC7;
+}
+
+.linearity .imageBox{
+    background-color: lightgrey;
+    aspect-ratio: auto;
+}
+
+.olli .imageBox{
+    background-color: #DAD7D3;
+}
+
+.waterlogue .imageBox{
+    background-color: #C6C7CC;
+}
+
+.pleeq .imageBox{
+    background-color: #F1EBD5;
+}
+
+.transmission .imageBox{
+    background-color: #E3E3E3;
+}
+
+
+/* Define max-width values for each size */
+
+/* 
+  
+  @media (min-width: 1024px) {
+    .custom-lg {
+      max-width: 1024px;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .custom-md {
+      max-width: 768px;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .custom-sm {
+      max-width: 640px;
+    }
+  } 
+  
+  */
