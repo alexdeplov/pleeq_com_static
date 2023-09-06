@@ -106,13 +106,12 @@ body {
     gap: 1.25rem;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     display: grid;
+  
 }
-
 @media (max-width: 767px) {
     .portfolio {
-        grid-template-columns: 1fr;
-        background-color: red;
-        
+        /* grid-template-columns: 1fr; */
+        background-color: red;   
     }
 } 
 
@@ -124,13 +123,23 @@ body {
     background-color: blue;
     width: 100%;
 }
+@media (max-width: 767px) {
+    .portfolio .box{
+        grid-column: span 2 / span 2;
+    }
+}
 
 .portfolio .imageBox{
     border-radius: 0.5rem;
-    /* aspect-ratio: 1 / 1; */
+    aspect-ratio: 1 / 1;
     display: flex;
     min-height: 330px;
     display: flex;
+}
+@media (max-width: 767px) {
+    .portfolio .imageBox{
+        aspect-ratio: inherit;
+    }
 }
 
 .portfolio .name{
