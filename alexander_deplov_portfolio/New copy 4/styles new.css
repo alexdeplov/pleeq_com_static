@@ -32,6 +32,8 @@ body {
     font-size: 32px;
 }
 
+/* Titles: */
+
 .size-36{
     font-size: 36px;
 }
@@ -51,6 +53,11 @@ body {
 .size-63{
     font-size: 63px;
 }
+@media (max-width: 767px) {
+    .size-63{
+        font-size: 32px;
+    }
+}
 
 .size-73{
     font-size: 73px;
@@ -68,11 +75,6 @@ body {
     max-width: 856px;
     margin: auto;
 }
-@media (max-width: 767px) {
-    .wrapper{
-        padding: 0 20px;
-    }
-}
 
 @media (min-width: 768px) and (max-width: 1023px) {
     .wrapper{
@@ -83,14 +85,15 @@ body {
 @media (min-width: 768px) and (max-width: 1023px) {
     .wrapper {
       max-width: 768px;
-      background-color: aqua;
+      /* background-color: aqua; */
     }
 }
   
 @media (max-width: 767px) {
     .wrapper {
         max-width: 640px;
-        background-color: blue;
+        padding: 0 20px;
+        /* background-color: blue; */
     }
 } 
 
@@ -113,19 +116,14 @@ body {
     display: grid;
   
 }
-@media (max-width: 767px) {
-    .portfolio {
-        /* grid-template-columns: 1fr; */
-        background-color: red;   
-    }
-} 
+
 
 .portfolio *{
     transition: all 0.2s ease;
 }
 
 .portfolio .box{
-    background-color: blue;
+    /* background-color: blue; */
     width: 100%;
 }
 @media (max-width: 767px) {
