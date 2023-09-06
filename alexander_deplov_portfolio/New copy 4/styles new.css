@@ -8,9 +8,14 @@ body {
     font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     transition: background 1s ease;
     color: rgb(2, 6, 23);
+    font-weight: 600;
 }
 
 /* FONT SIZE */
+
+.uppercase{
+    text-transform: uppercase;
+}
 
 .size-18{
     font-size: 18px;
@@ -62,6 +67,11 @@ body {
 .size-73{
     font-size: 73px;
 }
+@media (max-width: 767px) {
+    .size-73{
+        font-size: 42px;
+    }
+}
 
 .size-84{
     font-size: 84px;
@@ -74,21 +84,19 @@ body {
 .wrapper{
     max-width: 856px;
     margin: auto;
+    padding-bottom: 10rem;
 }
-
 @media (min-width: 768px) and (max-width: 1023px) {
     .wrapper{
       max-width: 768px;
     }
 }
-
 @media (min-width: 768px) and (max-width: 1023px) {
     .wrapper {
       max-width: 768px;
       /* background-color: aqua; */
     }
 }
-  
 @media (max-width: 767px) {
     .wrapper {
         max-width: 640px;
@@ -97,35 +105,87 @@ body {
     }
 } 
 
+/* HEADER */
+
+.header {
+    margin: 10rem auto;
+}
+@media (max-width: 767px) {
+    .header{
+        margin: 2rem auto;
+    }
+}
+
+/* NAVIGATION */
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav .menu{
+    display: flex;
+    align-items: center;
+}
+
+.nav .menu div{
+    padding: 0 5px;
+    font-weight: normal;
+    color: rgb(148, 163, 184);
+}
+
+.nav .name{
+    display: flex;
+    align-items: center;
+}
+
+.nav .name img{
+    margin-right: 0.7rem;
+}
+
 .title-h1{
     line-height: 1;
-    font-weight: 600;
+
 }
 
 .mt-26{
     margin-top: 6rem;
+}
+@media (max-width: 767px) {
+    .mt-26{
+        margin-top: 4rem;
+    }
+}
+
+.mt-5{
+    margin-top: 1.25rem;
+}
+
+.mt-10{
+    margin-top: 2.5rem;
 }
 
 .title-h1 span{
     color: rgb(163 163 163);
 }
 
-.portfolio {
+.portfolio, 
+.publicSpeaking .gridBox {
     gap: 1.25rem;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    display: grid;
-  
+    display: grid; 
 }
 
+.portfolio .description{
+    font-weight: normal;
+    font-size: 0.875rem;
+    color: rgb(115, 115, 115)
+}
 
 .portfolio *{
     transition: all 0.2s ease;
 }
 
-.portfolio .box{
-    /* background-color: blue; */
-    width: 100%;
-}
 @media (max-width: 767px) {
     .portfolio .box{
         grid-column: span 2 / span 2;
@@ -147,7 +207,6 @@ body {
 
 .portfolio .name{
     font-size: 21px;
-    font-weight: 600;
     margin-top: 0.75rem;
 }
 
@@ -184,6 +243,94 @@ body {
     background-color: #E3E3E3;
 }
 
+/* Recommendations */
+
+.recommendations h2{
+    line-height: 1;
+    margin-top: 1.2rem;
+}
+
+.recommendations a{
+    text-decoration: underline;
+    text-decoration-color: rgba(132, 204, 22, 0.4);
+}
+
+/* Public Speaking */
+.publicSpeaking h2{
+    line-height: 1;
+    text-align: center;
+}
+
+.publicSpeaking img{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.publicSpeaking .midjourney{
+    background-color: #D1C77B;
+}
+
+.publicSpeaking .paperjs{
+    background-color: #29276C;
+}
+
+.publicSpeaking .gridBox{
+
+}
+
+.publicSpeaking .imageBox{
+    border-radius: 1rem;
+    padding: 1.25rem;
+}
+@media (max-width: 767px) {
+    .publicSpeaking .imageBox{
+        grid-column: span 2 / span 2;
+    }
+}
+
+/* Press */
+
+.press{
+    padding: 0 4rem;
+}
+
+.press ul{
+}
+
+.press .projectType{
+    font-weight: normal;
+    font-size: 0.8rem;
+}
+
+.press li{
+    display: flex;
+    padding-bottom: 1rem;
+    align-items: end;
+}
+
+.press .dots{
+    border-bottom: #d2d2d2 2px dotted;
+    flex-grow: 4;
+    margin: 0 0.5rem;
+    margin-bottom: 5px;
+}
+
+.press .date{
+    font-size: 0.8rem;
+}
+
+/* COLORS */
+.color-black{
+    color: rgb(2, 6, 23)
+}
+
+.color-gray-light{
+    color: rgb(163, 163, 163);
+}
+
+.press a{
+    color: #296218;
+}
 
 /* Define max-width values for each size */
 
