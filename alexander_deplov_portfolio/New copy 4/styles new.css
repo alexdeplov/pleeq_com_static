@@ -139,6 +139,10 @@ body {
     align-items: center;
 }
 
+.nav .name img:hover{
+    transform: rotate(-10deg);
+}
+
 .nav .name img{
     margin-right: 0.7rem;
 }
