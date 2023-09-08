@@ -308,16 +308,11 @@ body {
 }
 
 .gridBox .imageBox .badge{
-    /* background-color: purple; */
-    /* border: 2px solid red; */
     text-align: center;
     inset: 0;
     bottom: 0;
-    /* height: 20px; */
     position: absolute;
     top: 85%;
-    /* opacity: 0.5; */
-    width: 50px;
     margin: 0 auto;
     margin-bottom: -20px;
     z-index: 3;
