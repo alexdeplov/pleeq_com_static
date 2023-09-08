@@ -89,9 +89,8 @@
 
                     arrow.fillColor = new Color.random()
                     arrow.fillColor.lightness += 0.4
-                    arrow.fillColor.saturation += 0.5
+                    arrow.fillColor.saturation += 1
                     arrow.fitBounds(element.bounds)
-                    arrow.applyMatrix = false
                     arrow.position = element.position
                     arrow.rotate(i * rotation + 90)
                     arrow.parent = group
@@ -103,7 +102,6 @@
 
                     arrow.onFrame = function(event){
                       this.fillColor.hue += 1
-                      arrow.
                     }
                     
                     }
