@@ -373,7 +373,7 @@ body {
 }
 
 .publicSpeaking .paperjs{
-    background-color: #29276C;
+    background-color: #1e1c4f;
     position: relative;
 }
 
@@ -420,6 +420,11 @@ body {
 
 .press{
     padding: 0 4rem;
+}
+@media (max-width: 767px) {
+    .press{
+        padding: 0;
+    }
 }
 
 .press ul{

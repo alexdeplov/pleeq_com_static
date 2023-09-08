@@ -29,29 +29,50 @@
   body{
     font: normal normal 700 17px/130% Space Mono,SF Mono,monospace;
     letter-spacing: -.5px;
+    
   }
-  body a{
+
+  body, html{
+    background-color: #e2dcca;
+  }
+  @media (prefers-color-scheme: dark) {
+      body, html{
+        background-color: #212122;
+        color: #e3e3e3;
+      }
+  }
+
+  a{
     text-decoration: underline;
   }
+
   .purple{
     color: #5714ff;
   }
+
   h1{
     letter-spacing: -1px;
   }
+
   .notesSelection{
-    background-color:
   }
+
   mark {
     background-color: #ffda41;
     color: #100618;
   }
+
   .orange{
     color: #ff5d47;
   }
 
   .gray{
     color: #10061880;
+  }
+  @media (prefers-color-scheme: dark) {
+      .gray{
+        color: #ccc9cf80;
+      }
   }
 
   .dm-font{
@@ -73,11 +94,11 @@
 
   .appsGrid img{
     position: relative;
-    transition: .2s;
-    transition-timing-function: ease;
+    transition: .15s;
+    transition-timing-function: ease-in-out;
   }
 
-  .appsGrid img:hover{
+  .appsGrid a:hover img{
     transform: translateY(-15px);
     transition-timing-function: ease-in-out;
     -webkit-transform: translateY(-15px);
@@ -95,8 +116,7 @@
 
   </style>
 </head>
-<body class="bg-[#e2dcca]">
-  <div class="">
+<body>
 
     <!-- Header -->
     <header class="flex max-w-2xl m-auto pt-14 justify-center text-center">
@@ -137,10 +157,10 @@
     </header>
 
     <!-- Description -->
-    <div class="flex max-w-2xl m-auto pt-14 justify-center text-left flex-col pb-4 px-4">
+    <div class="flex max-w-2xl m-auto pt-14 justify-center text-left flex-col pb-4 px-2">
       <h1 class="text-2xl pb-10">
       We are Pleeq Software.<br/>
-      <mark class="notesSelection">Making iOS apps and games since 2013</mark>. Both graduated from art school we believe that only well-crafted things can improve our lives.
+      <mark class="notesSelection">Making iOS apps and games since 2013</mark>.<br/> Both graduated from art school we believe that only well-crafted things can improve our lives.
       </h1>
       <div>
           <a class="orange underline text-xl" href="mailto:deplovsbrothers@gmail.com?subject=Pleeq Software Support" class="text-lg">Need Support?</a>
@@ -234,7 +254,7 @@
     <!-- Press -->
     <div class="flex max-w-2xl m-auto pt-14 justify-center text-left flex-col pb-4 px-4">
 
-        <h2 class="border-solid border-b-black border-b-4 text-2xl pb-4 mb-8">
+        <h2 class="border-solid border-b-black border-b-4 text-2xl pb-4 mb-8 dark:border-gray-300">
           Press about our apps.
         </h2>
 
@@ -276,7 +296,7 @@
     <!-- Clients -->
     <div class="flex max-w-2xl m-auto pt-14 justify-center text-left flex-col pb-4 px-4">
 
-        <h2 class="border-solid border-b-black border-b-4 text-2xl pb-4 mb-8">
+        <h2 class="border-solid border-b-black border-b-4 text-2xl pb-4 mb-8 dark:border-gray-300">
           Clients.
         </h2>
 
@@ -311,6 +331,6 @@
       <img class="" src="./images/pleeq_logo.png" width="140" height="140" alt="Pleeq Software">
     </div>
 
-  </div>
+  
 </body>
 </html>
