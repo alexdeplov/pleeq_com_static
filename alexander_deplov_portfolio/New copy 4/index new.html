@@ -176,7 +176,7 @@
                           opacity: 0,
                       })
 
-                      var scale = 0.2 + Math.sin(i / rotation + 0.4 * Math.PI/2 * i / rotation)
+                      var scale = 0.3 + Math.sin(i / rotation + 0.4 * Math.PI/2 * i / rotation)
                       element.scale(scale)
                       
                       var arrow = project.importSVG(document.getElementById("arrow"))
@@ -187,11 +187,11 @@
                       arrow.fitBounds(element.bounds)
                       arrow.position = element.position
                       arrow.rotate(i * rotation + 90)
-                      arrow.parent = group
+                      arrow.applyMatrix = false
                       var distance = view.center.getDistance(arrow.position)
                       arrow.fillColor.hue = (view.size.width / distance) * 50
                       var saturationValue = 0.2
-
+                      arrow.parent = group
 
                       arrow.onFrame = function(event){
                         this.fillColor.hue += 1
