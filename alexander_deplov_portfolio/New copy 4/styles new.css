@@ -212,7 +212,6 @@ body {
     aspect-ratio: 1 / 1;
     display: flex;
     min-height: 330px;
-    display: flex;
 }
 @media (max-width: 767px) {
     .portfolio .imageBox{
@@ -224,6 +223,7 @@ body {
 .portfolio .name{
     font-size: 21px;
     margin-top: 0.75rem;
+    line-height: 1.2;
 }
 
 .wideSection{
@@ -232,6 +232,19 @@ body {
 
 .sway .imageBox{
     background-color: #EFDEB1;
+}
+
+.sway .imageBox .gifBox{
+    padding: 2.5rem;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    display: flex;
+    position: relative;
+}
+
+.sway .imageBox .gifBox img{
+    border-radius: 0.5rem;
 }
 
 .slumber .imageBox{
@@ -318,11 +331,19 @@ body {
 
 
 .gridBox .imageBox{
-    background-color: #29276C;
+
     display: flex;
     flex-direction: column;
     position: relative;
+    
+}
+
+.publicSpeaking .gridBox .imageBox{
     height: 450px;
+}
+
+.gridBox .midjourney{
+    background-color: #29276C;
 }
 
 .gridBox .imageBox .top{
@@ -364,6 +385,9 @@ body {
     z-index: 3;
 }
 
+.badge img{
+    margin: auto;
+}
 
 
 
