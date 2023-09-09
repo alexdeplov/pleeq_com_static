@@ -94,14 +94,13 @@ body {
 @media (min-width: 768px) and (max-width: 1023px) {
     .wrapper {
       max-width: 768px;
-      /* background-color: aqua; */
     }
 }
 @media (max-width: 767px) {
     .wrapper {
         max-width: 640px;
         padding: 0 20px;
-        /* background-color: blue; */
+        padding-bottom: 10rem;
     }
 } 
 
@@ -139,14 +138,19 @@ body {
     color: rgb(148, 163, 184);
 }
 
+.nav .menu a:hover{
+    color: #3142db;
+}
+
 .nav .name{
     display: flex;
     align-items: center;
+    font-weight: normal;
 }
 
-.nav .name img:hover{
+/* .nav .name img:hover{
     transform: rotate(-10deg);
-}
+} */
 
 .nav .name img{
     margin-right: 0.7rem;
@@ -154,7 +158,6 @@ body {
 
 .title-h1{
     line-height: 1;
-
 }
 
 .mt-26{
@@ -236,8 +239,14 @@ body {
 }
 
 .linearity .imageBox{
-    background-color: lightgrey;
     aspect-ratio: auto;
+    height: auto;
+    min-height: auto;
+}
+@media (max-width: 767px) {
+    .linearity .imageBox{
+      
+    }
 }
 
 .olli .imageBox{
@@ -274,7 +283,12 @@ body {
     flex-direction: row;
     justify-content: space-between;
     flex-flow: row nowrap;
-  align-items: center;
+    align-items: center;
+}
+@media (max-width: 767px) {
+    .recommendations .imageBox{
+       flex-direction: column;
+    }
 }
 
 .recommendations .imageBox img{
@@ -432,7 +446,7 @@ body {
 /* Press */
 
 .press{
-    padding: 0 4rem;
+    padding: 0 6rem;
 }
 @media (max-width: 767px) {
     .press{
