@@ -148,9 +148,9 @@ body {
     font-weight: normal;
 }
 
-/* .nav .name img:hover{
+.nav .name img:hover{
     transform: rotate(-10deg);
-} */
+}
 
 .nav .name img{
     margin-right: 0.7rem;
@@ -446,7 +446,7 @@ body {
 /* Press */
 
 .press{
-    padding: 0 6rem;
+    padding: 0 4rem;
 }
 @media (max-width: 767px) {
     .press{
