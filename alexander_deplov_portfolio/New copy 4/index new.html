@@ -117,16 +117,16 @@
 
 
      <!-- PUBLIC SPEAKING -->
-     <section class="publicSpeaking mt-26">
+     <section class="publicSpeaking mt-28">
       <h2 class="size-73">Public Speaking</h2>
 
-        <div class="gridBox mt-10">
+        <div class="gridBox mt-20">
             <a href="https://www.linkedin.com/posts/linearity-gmbh_vectornator-design-meetup-2-artificial-activity-7001855813346566144-n1m6/?originalSubdomain=my" class="midjourney imageBox">
               <div class="top">
                 <div class="badge">
                   <img src="./images/badgeMeetup.png" srcset="./images/badgeMeetup.png 1x, ./images/badgeMeetup@2x.png 2x">
                 </div>
-                <img src="./images/midjourney.png" srcset="./images/midjourney.png 1x, ./images/midjourney@2x.png 2x">
+                <img class="midjourneyImage" src="./images/midjourney.png" srcset="./images/midjourney.png 1x, ./images/midjourney@2x.png 2x">
                 <div>
                 </div>
               </div>
@@ -190,13 +190,7 @@
                       arrow.applyMatrix = false
                       var distance = view.center.getDistance(arrow.position)
                       arrow.fillColor.hue = (view.size.width / distance) * 50
-                      var saturationValue = 0.2
                       arrow.parent = group
-
-                      arrow.onFrame = function(event){
-                        this.fillColor.hue += 1
-                      }
-                    
                     }
                     return group
 
@@ -205,6 +199,12 @@
                 group.position = view.center
                 var topLeft = -view.size.width/2
                 var bottomRight = view.center
+
+                function onFrame(event){
+                  group.children.map(function(object, i){   
+                    object.fillColor.hue += 1
+                  })
+                }
 
                 function onMouseMove(event){
                     group.children.map(function(object, i){        
@@ -272,6 +272,21 @@
           <div class="date color-gray-light">Aug 22</div>
         </li>
       </ul>
+    </section>
+
+
+
+
+    <!-- LinkedIn  -->
+    <section class="linkedIn mt-26">
+        <a class="size-21 linkedInButton" href="https://www.linkedin.com/in/alexander-deplov/">
+          <img src="./images/linkedin.svg">
+          <div>LinkeIn</div>
+        </a>
+        <div class="resume mt-5">
+          <a href="#">Resume</a>
+        </div>
+        
     </section>
 
   </div>
