@@ -128,6 +128,11 @@ body {
     align-items: center;
 }
 
+.nav .menu .active{
+    color: hsl(215, 20.22%, 15.1%);
+}
+
+.nav .menu a,
 .nav .menu div{
     padding: 0 5px;
     font-weight: normal;
@@ -175,7 +180,7 @@ body {
 
 .portfolio, 
 .publicSpeaking .gridBox {
-    gap: 1.25rem;
+    gap: 2.5rem 1.25rem;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     display: grid; 
 }
@@ -190,6 +195,9 @@ body {
     transition: all 0.2s ease;
 }
 
+.portfolio .box{
+    
+}
 @media (max-width: 767px) {
     .portfolio .box{
         grid-column: span 2 / span 2;
