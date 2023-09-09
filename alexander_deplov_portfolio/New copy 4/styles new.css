@@ -435,14 +435,9 @@ body {
 .press ul{
 }
 
-.press .projectType{
-    font-weight: normal;
-    font-size: 0.8rem;
-}
-
 .press li{
     display: flex;
-    padding-bottom: 1rem;
+    padding-bottom: 1.5rem;
     align-items: end;
 }
 
@@ -467,9 +462,21 @@ body {
     color: rgb(163, 163, 163);
 }
 
-.press a:hover{
-    /* color: #296218; */
+.press a{
+    color: #5d629a;
+    transition: all .1s ease-in-out;
 }
+
+.press:hover a{
+    color: #c0c3e3;
+    transition: all .5s ease-in-out;
+}
+
+.press a:hover{
+    color: #3142db;
+    transition: all .1s ease-in-out;
+}
+
 
 
 /* LinkedIn */
@@ -505,7 +512,7 @@ body {
 
 .linkedIn .resume a{
     margin: 0 auto;
-    color: hsl(252, 80%, 44%);
+    color: hsl(252, 0%, 20%);
     background-color: hsl(230, 80%, 97%);
     padding: 5px 12px;
     border-radius: 20px;
