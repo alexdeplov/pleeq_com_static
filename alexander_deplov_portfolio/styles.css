@@ -73,10 +73,6 @@ body {
     }
 }
 
-.size-84{
-    font-size: 84px;
-}
-
 .size-96{
     font-size: 96px;
 }
@@ -216,7 +212,7 @@ body {
 @media (max-width: 767px) {
     .portfolio .imageBox{
         aspect-ratio: inherit;
-        height: 530px;
+        
     }
 }
 
@@ -283,6 +279,11 @@ body {
 .recommendations h2{
     line-height: 1.2;
     margin-top: 1.2rem;
+}
+@media (max-width: 767px) {
+    .recommendations h2{
+       font-size: 24px;
+    }
 }
 
 .recommendations a{
@@ -458,6 +459,10 @@ body {
     }
 }
 
+.press h2{
+    line-height: 1.2;
+}
+
 .press ul{
 }
 
@@ -481,6 +486,18 @@ body {
 
 .press a{
     font-weight: normal;
+}
+@media (max-width: 767px) {
+    .press .size-24{
+        font-size: 18px;
+    }
+    
+    .press .dots{
+        display: none;
+    }
+    .press .date{
+        display: none;
+    }
 }
 
 /* COLORS */

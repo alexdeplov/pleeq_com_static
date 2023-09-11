@@ -1,0 +1,174 @@
+*{
+    imageBox-sizing: border-imageBox;
+    padding: 0;
+    margin: 0;
+    transition: all .15s ease-in-out;
+}
+
+body {
+    transition: background 1s ease;
+    color: rgb(2, 6, 23);
+}
+
+.wrapper{
+    max-width: 856px;
+    margin: auto;
+    padding-bottom: 10rem;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+    .wrapper{
+      max-width: 768px;
+    }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+    .wrapper {
+      max-width: 768px;
+    }
+}
+@media (max-width: 767px) {
+    .wrapper {
+        max-width: 640px;
+        padding: 0 20px;
+        padding-bottom: 10rem;
+    }
+} 
+
+/* NAVIGATION */
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav .menu{
+    display: flex;
+    align-items: center;
+}
+
+.nav .menu .active{
+    color: hsl(215, 20%, 15%);
+}
+
+.nav .menu a,
+.nav .menu div{
+    padding: 0 5px;
+    color: rgb(148, 163, 184);
+}
+
+.nav .menu a:hover{
+    color: hsl(215, 20%, 15%);
+}
+
+.nav .name{
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+}
+
+.nav .name img{
+    margin-right: 0.7rem;
+}
+
+/* PORTFOLIO */
+
+.portfolio, 
+.publicSpeaking .gridBox {
+    gap: 2.5rem 1.25rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    display: grid; 
+}
+
+.portfolio .description{
+    font-weight: normal;
+    font-size: 0.875rem;
+    color: rgb(115, 115, 115)
+}
+
+.portfolio *{
+    transition: all 0.2s ease;
+}
+
+.portfolio a:hover .imageBox{
+    transform: translateY(-0.75rem);
+}
+
+.portfolio .box{
+    
+}
+@media (max-width: 767px) {
+    .portfolio .box{
+        grid-column: span 2 / span 2;
+    }
+}
+
+.portfolio .imageBox{
+    border-radius: 0.5rem;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    min-height: 330px;
+}
+@media (max-width: 767px) {
+    .portfolio .imageBox{
+        aspect-ratio: inherit;
+        
+    }
+}
+
+.portfolio .name{
+    font-size: 21px;
+    margin-top: 0.75rem;
+    line-height: 1.2;
+}
+
+.wideSection{
+    grid-column: span 2 / span 2;
+}
+
+.sway .imageBox{
+    background-color: #EFDEB1;
+}
+
+.sway .imageBox .gifBox{
+    padding: 2.5rem;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    display: flex;
+    position: relative;
+}
+
+.sway .imageBox .gifBox img{
+    border-radius: 0.5rem;
+}
+
+.slumber .imageBox{
+    background-color: #C8DAC7;
+}
+
+.linearity .imageBox{
+    aspect-ratio: auto;
+    /* height: auto; */
+    /* min-height: auto; */
+    background-color:rgb(148, 163, 184);
+}
+@media (max-width: 767px) {
+    .linearity .imageBox{
+      
+    }
+}
+
+.olli .imageBox{
+    background-color: #DAD7D3;
+}
+
+.waterlogue .imageBox{
+    background-color: #C6C7CC;
+}
+
+.pleeq .imageBox{
+    background-color: #F1EBD5;
+}
+
+.transmission .imageBox{
+    background-color: #E3E3E3;
+}
