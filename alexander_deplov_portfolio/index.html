@@ -7,7 +7,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdn.tailwindcss.com/3.3.1"></script>    
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="./styles.css">
+  <link rel="stylesheet" type="text/css" href="./styles_new.css">
+  <link rel="stylesheet" type="text/css" href="./fontKit.css">
+  <link rel="stylesheet" type="text/css" href="./spacingKit.css">
 
   <!-- Facebook Meta Tags -->
   <meta property="og:url" content="https://pleeq.com/alexander_deplov_portfolio/">
@@ -20,33 +22,45 @@
 <body>
 
   <div class="wrapper">
-
     <!-- NAVIGATION -->
-
-    <nav class="nav mt-10">
-      <div class="name">
-        <img src="./images/avatar.png" srcset="./images/avatar.png 1x, ./images/avatar@2x.png 2x">
-        <div>
-          Alexander Deplov
+    <section class="spacing-2">
+      
+      <nav class="nav size-17">
+        <div class="name">
+          <img src="./images/avatar.png" srcset="./images/avatar.png 1x, ./images/avatar@2x.png 2x">
+          <div>
+            Alexander Deplov
+          </div>
         </div>
-      </div>
-      <div class="menu">
-        <a href="https://pleeq.com/alexander_deplov_portfolio/" class="active">Work</a>
-        <div>•</div>
-        <a target="_blank" href="https://medium.com/seniors-product-designer-blog">Blog</a>
-      </div>
-    </nav>
+        <div class="menu">
+          <a href="https://pleeq.com/alexander_deplov_portfolio/" class="active">Work</a>
+          <div>•</div>
+          <a target="_blank" href="https://medium.com/seniors-product-designer-blog">Blog</a>
+        </div>
+      </nav>      
+    </section>
 
-    
-    <!-- HEADER -->
-    <section class="header">
-      <h1 class="size-63 title-h1 mt-26">
-        I'm a Senior Product Designer <span>who bridges business goals with user needs.</span>
+
+
+
+
+
+    <!-- header -->
+    <section class="spacing-5 header">
+
+      <h1 class="size-heading-48">
+        <span>I'm a Senior Product Designer</span> who bridges business goals with user needs.
       </h1>
     </section>
 
-    <!-- PORTFOLIO -->
-    <section class="portfolio mt-26">
+
+
+
+
+
+    <!-- portfolio -->
+    <section class="spacing-5 portfolio">
+
       <a target="_blank" href="https://web.archive.org/web/20200108152534/https://www.humen.ai/" class="sway box">
 
         <div class="gridBox">
@@ -72,7 +86,7 @@
         <div class="imageBox">
           <img class="m-auto" src="./images/slumber.webp" srcset="./images/slumber.webp 1x, ./images/slumber@2x.webp 2x">
         </div>
-        <div class="name">Slumber: Stories & Deep Sleep</div>
+        <div class="name">Slumber: ultra-relaxing sleep stories to beat insomnia</div>
         <div class="description">Product Design · 2022</div>
       </a>
 
@@ -88,7 +102,7 @@
         <div class="imageBox">
           <img class="m-auto" src="./images/olli.webp" srcset="./images/olli.webp 1x, ./images/olli@2x.webp 2x">
         </div>
-        <div class="name">Olli by Tinrocket</div>
+        <div class="name">Olli by Tinrocket: create living illustrations</div>
         <div class="description">Product Design · 2019</div>
       </a>
 
@@ -96,7 +110,7 @@
         <div class="imageBox">
           <img class="m-auto p-10" src="./images/waterlogue.png" srcset="./images/waterlogue.png 1x, ./images/waterlogue@2x.png 2x">
         </div>
-        <div class="name">Waterlogue Pro by Tinrocket</div>
+        <div class="name">Waterlogue Pro by Tinrocket: create beautiful watercolor images</div>
         <div class="description">Product Design · 2017</div>
       </a>
 
@@ -117,11 +131,17 @@
       </div>
     </section>
 
-    <!-- RECOMMENDATIONS -->
-    <section class="recommendations mt-26 color-gray-light">
+
+
+
+
+
+    <!-- recommendations -->
+    <section class="spacing-5 recommendations">
+    
       <div class="size-note uppercase">Recommendations</div>
-      <h2 class="size-42">
-        Alex was our first design contractor for our flagship app Sway, and his early contribution was a major factor for our smooth, user-friendly UI that eventually led to the big success — <a target="_blank" href="https://twitter.com/GSP/status/1224416520635183105">peaked at #3 overall</a> in the app store chart — of our mobile marketing partnership with <span class="color-black">Doritos / Lil Nas X / Sam Elliot for the Super Bowl 2020 campaign.</span>
+      <h2 class="size-42 spacing-1">
+        Alex was our first design contractor for our flagship app Sway, and his early contribution was a major factor for our smooth, user-friendly UI that eventually led to the big success — <a target="_blank" href="https://twitter.com/GSP/status/1224416520635183105">peaked at #3 overall</a> in the app store chart — of our mobile marketing partnership with <span>Doritos / Lil Nas X / Sam Elliot for the Super Bowl 2020 campaign.</span>
       </h2>
       <div class="imageBox mt-10">
         <div>
@@ -149,11 +169,15 @@
 
 
 
-     <!-- PUBLIC SPEAKING -->
-     <section class="publicSpeaking mt-28">
-      <h2 class="size-73">Public Speaking</h2>
 
-        <div class="gridBox mt-20">
+
+
+    <!-- public speaking -->
+    <section class="spacing-5 publicSpeaking">
+      
+      <h2 class="size-heading-64">Public Speaking</h2>
+
+        <div class="gridBox spacing-3">
             <a class="imageBox midjourney" href="https://www.linkedin.com/posts/linearity-gmbh_vectornator-design-meetup-2-artificial-activity-7001855813346566144-n1m6/?originalSubdomain=my">
               <div class="top">
                 <div class="badge">
@@ -252,45 +276,47 @@
                 }
               </script>
             </div>
-    
-
+  
         </div>
-
     </section>
 
-   
 
-    <!-- PRESS -->
-    <section class="press mt-26">
-      <h2 class="size-48">Press Mentions</h2>
-      <ul class="mt-5">
+
+
+
+
+    <!-- press -->
+    <section class="spacing-5 press">
+      
+      <h2 class="size-heading-48">Press Mentions</h2>
+      <ul class="spacing-2">
         <li>
-          <a class="size-24" href="https://techcrunch.com/2023/09/04/cinemin-is-a-fun-camera-app-with-animated-film-aesthetics-without-any-ai/">TechCrunch (USA): Cinemin app</a>           
+          <a class="size-21" href="https://techcrunch.com/2023/09/04/cinemin-is-a-fun-camera-app-with-animated-film-aesthetics-without-any-ai/">TechCrunch (USA): Cinemin app</a>           
           <div class="dots"></div>
           <div class="date color-gray-light">2023</div>
         </li>
         <li>
-          <a class="size-24" href="https://www.dailymotion.com/video/x6c3eo2" >Olhar Digital (Brazil): Pleeq Bookmarks</a>
+          <a class="size-21" href="https://www.dailymotion.com/video/x6c3eo2" >Olhar Digital (Brazil): Pleeq Bookmarks</a>
           <div class="dots"></div>
           <div class="date color-gray-light">2017</div>
         </li>
         <li>
-          <a class="size-24" href="https://www.afr.com/technology/anchor-pointer-the-navigation-app-that-apple-should-buy-20160526-gp4cyr">Financial Review (Australia): Anchor Pointer app</a>
+          <a class="size-21" href="https://www.afr.com/technology/anchor-pointer-the-navigation-app-that-apple-should-buy-20160526-gp4cyr">Financial Review (Australia): Anchor Pointer app</a>
           <div class="dots"></div>
           <div class="date color-gray-light">2016</div>
         </li>
         <li>
-          <a class="size-24" href="https://www.engadget.com/2014/08/15/anchor-pointer-is-a-great-app-for-finding-your-car-or-that-great/">Engadget: Anchor Pointer app</a>
+          <a class="size-21" href="https://www.engadget.com/2014/08/15/anchor-pointer-is-a-great-app-for-finding-your-car-or-that-great/">Engadget: Anchor Pointer app</a>
           <div class="dots"></div>
           <div class="date color-gray-light">2014</div>
         </li>
         <li>
-          <a class="size-24" href="https://thenextweb.com/apps/2014/07/01/iphone-app-uses-anchors-compass-virtual-breadcrumbs-youll-never-get-lost/">TheNextWeb: Anchor Pointer app</a>
+          <a class="size-21" href="https://thenextweb.com/apps/2014/07/01/iphone-app-uses-anchors-compass-virtual-breadcrumbs-youll-never-get-lost/">TheNextWeb: Anchor Pointer app</a>
           <div class="dots"></div>
           <div class="date color-gray-light">2014</div>
         </li>
         <li>
-          <a class="size-24" href="https://twitter.com/tinrocket/status/1059472509689565184">UI Graphics Magazine (Japan): Olli app</a>
+          <a class="size-21" href="https://twitter.com/tinrocket/status/1059472509689565184">UI Graphics Magazine (Japan): Olli app</a>
           <div class="dots"></div>
           <div class="date color-gray-light">2018</div>
         </li>
@@ -301,18 +327,16 @@
 
 
     <!-- LinkedIn  -->
-    <section class="linkedIn mt-26">
-        <a class="size-21 linkedInButton" href="https://www.linkedin.com/in/alexander-deplov/">
-          <img src="./images/linkedin.svg">
-          <div>LinkeIn</div>
-        </a>
-        <!-- <div class="resume mt-5">
-          <a href="#">Resume</a>
-        </div> -->
-        
-    </section>
+    <section class="linkedIn spacing-3">
+      <a class="size-21 linkedInButton" href="https://www.linkedin.com/in/alexander-deplov/">
+        <img src="./images/linkedin.svg">
+        <div>LinkeIn</div>
+      </a>      
+  </section>
+    
 
   </div>
+    
 
 </body>  
 </html>

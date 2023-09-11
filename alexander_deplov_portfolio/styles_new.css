@@ -69,6 +69,22 @@ body {
     margin-right: 0.7rem;
 }
 
+/* HEADER */
+
+.header h1{
+    padding: 0 4rem;
+    color: rgb(163 163 163);
+}
+@media (max-width: 767px) {
+    .header h1{
+        padding: 0;
+    }
+}
+
+.header h1 span{
+    color: black;
+}
+
 /* PORTFOLIO */
 
 .portfolio, 
@@ -148,12 +164,12 @@ body {
 .linearity .imageBox{
     aspect-ratio: auto;
     /* height: auto; */
-    /* min-height: auto; */
+    
     background-color:rgb(148, 163, 184);
 }
 @media (max-width: 767px) {
     .linearity .imageBox{
-      
+      min-height: auto;
     }
 }
 
@@ -171,4 +187,305 @@ body {
 
 .transmission .imageBox{
     background-color: #E3E3E3;
+}
+
+
+
+
+
+/* Recommendations */
+
+.recommendations{
+    color: rgb(163, 163, 163);
+}
+
+/* .recommendations h2{
+    line-height: 1.2;
+    margin-top: 1.2rem;
+}
+@media (max-width: 767px) {
+    .recommendations h2{
+       font-size: 24px;
+    }
+} */
+
+.recommendations span{
+    color: black;
+}
+
+.recommendations a{
+    text-decoration: underline;
+    text-decoration-color: rgba(132, 204, 22, 0.4);
+}
+
+.recommendations .imageBox{
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+@media (max-width: 767px) {
+    .recommendations .imageBox{
+       flex-direction: column;
+    }
+}
+
+.recommendations .imageBox img{
+    border-radius: 0.375rem;
+    width: 100%;
+    flex-grow: 1;
+    filter: saturate(0.5);
+}
+
+.recommendations .imageBox div{
+    width: 100%;
+}
+
+.recommendations .source{
+    margin-top: 0.75rem;
+    text-decoration: none;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: normal;
+}
+
+.gridBox .imageBox{
+
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    
+}
+
+.publicSpeaking .gridBox .imageBox{
+    height: 450px;
+}
+
+.gridBox .midjourney{
+    background-color: #29276C;
+}
+
+.gridBox .imageBox .top{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: center;
+    align-self: center;
+    display: flex;
+    z-index: 2;
+}
+
+.gridBox .imageBox .bottom{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 20%;
+    z-index: 0;
+}
+
+.gridBox .imageBox .bottom img{
+    margin: auto;
+    height: auto;
+}
+
+.gridBox .imageBox .badge{
+    text-align: center;
+    inset: 0;
+    bottom: 0;
+    position: absolute;
+    top: 85%;
+    margin: 0 auto;
+    margin-bottom: -20px;
+    z-index: 3;
+}
+
+.badge img{
+    margin: auto;
+}
+
+
+
+
+/* Public Speaking */
+.publicSpeaking h2{
+    line-height: 1;
+    text-align: center;
+}
+
+.publicSpeaking .imageBox{
+}
+
+.publicSpeaking .imageBox:hover{
+    transform: translateY(-0.75rem);
+}
+
+.publicSpeaking img{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.publicSpeaking .midjourney{
+    background-color: #D1C77B;
+}
+
+.publicSpeaking .midjourney:hover .midjourneyImage{
+    transform: rotate(-5deg);
+    transition: transform 0.35s ease-in-out;
+}
+
+.publicSpeaking .paperjs{
+    background-color: #1e1c4f;
+    position: relative;
+}
+
+.publicSpeaking .paperjs .fixed{
+    position: absolute;
+    top: 0;
+    bottom: 8rem;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: end;
+}
+
+.publicSpeaking .paperjs .fixed .badge{
+    margin: 0 auto;
+}
+
+.publicSpeaking .gridBox{
+
+}
+
+.publicSpeaking .imageBox{
+    border-radius: 1rem;
+    padding: 1.25rem;
+}
+@media (max-width: 767px) {
+    .publicSpeaking .imageBox{
+        grid-column: span 2 / span 2;
+    }
+}
+
+.publicSpeaking #canvas{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+/* Press */
+
+.press{
+    padding: 0 4rem;
+}
+@media (max-width: 767px) {
+    .press{
+        padding: 0;
+    }
+}
+
+.press h2{
+    line-height: 1.2;
+}
+
+.press ul{
+}
+
+.press li{
+    display: flex;
+    padding-bottom: 1.5rem;
+    align-items: end;
+}
+
+.press .dots{
+    border-bottom: #d2d2d2 2px dotted;
+    flex-grow: 4;
+    margin: 0 0.5rem;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 767px) {
+    .press .size-24{
+        font-size: 18px;
+    }
+    
+    .press .dots{
+        display: none;
+    }
+    .press .date{
+        display: none;
+    }
+}
+
+/* COLORS */
+.color-black{
+    color: rgb(2, 6, 23);
+}
+
+.color-gray-light{
+    color: rgb(163, 163, 163);
+}
+
+.press a{
+    color: #787b9d;
+    transition: all .1s ease-in-out;
+}
+
+.press a:hover{
+    text-decoration: underline;
+    transition: all .1s ease-in-out;
+    color: hsl(252, 80%, 44%);
+}
+
+/* LinkedIn */
+
+.linkedIn{
+    
+}
+
+.linkedInButton{
+    display: flex;
+    flex-direction: row;
+    max-width: 180px;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    background-color: #3142db;
+    padding: 1.25rem 2rem;
+    border-radius: 0.75rem;
+    font-weight: normal;
+    font-size: 1.25rem;
+    color: hsla(0, 0%, 100%, .9);
+    margin: 0 auto;
+}
+
+.linkedInButton:hover{
+    gap: 1.2rem;
+    background-color: #2c40fa;
+}
+
+.linkedIn .resume{
+    display: flex;
+}
+
+.linkedIn .resume a{
+    margin: 0 auto;
+    color: hsl(252, 0%, 20%);
+    background-color: hsl(230, 80%, 97%);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: normal;
+}
+
+.linkedIn .resume a:hover{
+    color: hsl(230, 5.56%, 95%);
+    background-color: hsl(252, 80%, 44%);
 }
