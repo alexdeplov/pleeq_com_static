@@ -73,7 +73,7 @@ body {
 
 .header h1{
     padding: 0 4rem;
-    color: rgb(163 163 163);
+    color: rgb(163, 163, 163);
 }
 @media (max-width: 767px) {
     .header h1{
@@ -489,4 +489,19 @@ body {
 .linkedIn .resume a:hover{
     color: hsl(230, 5.56%, 95%);
     background-color: hsl(252, 80%, 44%);
+}
+
+
+/* COLORS */
+
+.gray{
+    color: rgb(163, 163, 163);
+}
+
+.medium-gray{
+    color: rgb(116, 116, 116);
+}
+
+.dark-gray{
+    color: rgb(59, 59, 59);
 }
