@@ -18,7 +18,6 @@
       <media:content medium="image" url="https://pleeq.com/images/anchorPointer.png" height="400" width="400" type="image/png"/>
       <media:content medium="image" url="https://pleeq.com/images/pleeq_logo.png" height="280" width="280" type="image/png"/>
       </media:group>
-      
     </item>
   </channel>
 </rss>
