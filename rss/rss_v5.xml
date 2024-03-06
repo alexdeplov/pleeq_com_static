@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <atom:link href="http://pleeq.com/rss/rss_v5.xml" rel="self" type="application/rss+xml" />
     <title>Pleeq Bookmarks 4</title>
@@ -15,8 +15,8 @@
       <link>http://pleeq.com</link>
       <pubDate>Wed, 6 Mar 2024 10:44:35 CET</pubDate>
       <media:group>
-      <media:content medium="image" url="https://pleeq.com/images/anchorPointer.png" height="400" width="400" type="image/png"/>
-      <media:content medium="image" url="https://pleeq.com/images/pleeq_logo.png" height="280" width="280" type="image/png"/>
+        <media:content medium="image" url="https://pleeq.com/images/anchorPointer.png" height="400" width="400" type="image/png"/>
+        <media:content medium="image" url="https://pleeq.com/images/pleeq_logo.png" height="280" width="280" type="image/png"/>
       </media:group>
     </item>
   </channel>
