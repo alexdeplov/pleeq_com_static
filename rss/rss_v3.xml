@@ -6,6 +6,9 @@
   <link>https://pleeq.com</link>
   <description>Latest bookmarks</description>
 
+  <a href="https://pleeq.com/rss/image1.jpg"/>
+  <img src="https://pleeq.com/rss/image1.jpg"/>
+
   <item>
     <title>pool table</title>
     <link>https://pleeq.com/rss/image1.jpg</link>
