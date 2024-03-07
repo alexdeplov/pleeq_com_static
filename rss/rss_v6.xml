@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <rss version="2.0" xmlns:p="https://pleeq.com/rss/rss_v6.xml">
+      <channel>
+        <title>Pleeq</title>
+        <link>https://pleeq.com</link>
+        <description>Example</description>
+        <item>
+          <title>Image 2</title>
+          <link>https://pleeq.com/rss/image2.jpg</link>
+          <image>
+              <url>https://pleeq.com/rss/image2.jpg</url>
+              <title>Exmaple of image 2</title>
+          </image>
+          <description>Example of an image 2.</description>
+        </item>
+      </channel>
+    </rss>
