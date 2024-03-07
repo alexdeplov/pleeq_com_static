@@ -12,5 +12,13 @@
     <guid>https://pleeq.com/rss/</guid>
     <enclosure url="https://pleeq.com/rss/image.jpg" type="image/jpeg"/> 
   </item>
+  <item>
+    <title>Amazing New Article 2!</title>
+    <link>https://pleeq.com/rss/</link>
+    <description>This article will blow your mind with awesomeness.</description>
+    <pubDate>Thu, 07 Mar 2024 13:31:00 GMT</pubDate>
+    <guid>https://pleeq.com/rss/</guid>
+    <enclosure url="https://pleeq.com/rss/image2.jpg" type="image/jpeg"/> 
+  </item>
 </channel>
 </rss>
