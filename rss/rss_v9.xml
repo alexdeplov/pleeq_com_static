@@ -6,7 +6,7 @@
   <description>Images to share on Pinterest.</description>
   <item>
     <title>Amazing New Article!</title>
-    <link>https://pleeq.com/rss/</link>
+    <link>https://pleeq.com/rss/page2/</link>
     <description>This article will blow your mind with awesomeness.</description>
     <pubDate>Thu, 07 Mar 2024 13:30:00 GMT</pubDate>
     <guid>https://pleeq.com/rss/1</guid>
@@ -14,10 +14,10 @@
   </item>
   <item>
     <title>Amazing New Article 2!</title>
-    <link>https://pleeq.com/rss/</link>
+    <link>https://pleeq.com/rss/page2/</link>
     <description>This article will blow your mind with awesomeness.</description>
     <pubDate>Thu, 07 Mar 2024 13:31:00 GMT</pubDate>
-    <guid>https://pleeq.com/rss/2</guid>
+    <guid>https://pleeq.com/rss/page2/</guid>
     <enclosure url="https://pleeq.com/rss/image2.jpg" type="image/jpeg"/> 
   </item>
 </channel>
