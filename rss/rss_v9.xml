@@ -5,27 +5,27 @@
   <link>https://pleeq.com</link>
   <description>Images to share on Pinterest.</description>
   <item>
-    <title>Amazing New Article!</title>
+    <title>image.jpg</title>
     <link>https://pleeq.com/rss/</link>
     <description>This article will blow your mind with awesomeness.</description>
     <pubDate>Thu, 07 Mar 2024 13:30:00 GMT</pubDate>
-    <guid>https://pleeq.com/rss/page1/</guid>
+    <guid>1</guid>
     <enclosure url="https://pleeq.com/rss/image.jpg" type="image/jpeg"/> 
   </item>
   <item>
-    <title>Amazing New Article 2!</title>
+    <title>image2.jpg</title>
     <link>https://pleeq.com/rss/</link>
     <description>This article will blow your mind with awesomeness.</description>
     <pubDate>Thu, 07 Mar 2024 13:31:00 GMT</pubDate>
-    <guid>https://pleeq.com/rss/</guid>
+    <guid>2</guid>
     <enclosure url="https://pleeq.com/rss/image2.jpg" type="image/jpeg"/> 
   </item>
   <item>
-    <title>Amazing New Article 3!</title>
+    <title>image3.jpg</title>
     <link>https://pleeq.com/rss/</link>
     <description>This article will blow your mind with awesomeness.</description>
     <pubDate>Thu, 07 Mar 2024 13:31:00 GMT</pubDate>
-    <guid>https://pleeq.com/rss/</guid>
+    <guid>3</guid>
     <enclosure url="https://pleeq.com/rss/image3.jpg" type="image/jpeg"/> 
   </item>
 </channel>
