@@ -5,7 +5,7 @@ from PIL import Image
 from PIL.ExifTags import TAGS
 
 # Configuration
-image_folder = "/Users/alexander/GitHub/pleeq_com_static/rss/cartoons/" 
+image_folder = "/Users/alexander/GitHub/pleeq_com_static/rss/fashion/" 
 rss_file = "rss.xml"
 
 # RSS header 
@@ -38,11 +38,11 @@ def process_image(image_path):
 
         item_str = f"""  <item>
     <title>{filename_with_spaces}</title>
-    <link>https://pleeq.com/rss/cartoons/{filename}.jpg</link> 
+    <link>https://pleeq.com/rss/luxury%20cars/{filename}.jpg</link> 
     <pubDate>{creation_date}</pubDate>
     <description>{image_description}</description>
     <guid>{filename_with_underscores}</guid>  
-    <enclosure url="https://pleeq.com/rss/cartoons/{filename}.jpg" type="image/jpeg"/> 
+    <enclosure url="https://pleeq.com/rss/luxury%20cars/{filename}.jpg" type="image/jpeg"/> 
   </item>
 """
         return item_str
@@ -58,7 +58,7 @@ for filename in os.listdir(image_folder):
 rss_content += "</channel>\n</rss>"
 
 # Write to RSS file
-with open("/Users/alexander/GitHub/pleeq_com_static/rss/cartoons.xml", "w", encoding="utf-8") as f:
+with open("/Users/alexander/GitHub/pleeq_com_static/rss/luxury_cars.xml", "w", encoding="utf-8") as f:
     f.write(rss_content)
 
 print("RSS feed updated!")
