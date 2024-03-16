@@ -5,7 +5,7 @@ from PIL import Image
 from PIL.ExifTags import TAGS
 
 # Configuration
-image_folder = "/Users/alexander/GitHub/pleeq_com_static/rss/art/" 
+image_folder = "/Users/alexander/GitHub/pleeq_com_static/rss/80s/" 
 rss_file = "rss.xml"
 
 # RSS header 
