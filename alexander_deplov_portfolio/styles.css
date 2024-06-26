@@ -105,6 +105,7 @@ body {
 .header {
     margin: 10rem auto;
 }
+
 @media (max-width: 767px) {
     .header{
         margin: 2rem auto;
