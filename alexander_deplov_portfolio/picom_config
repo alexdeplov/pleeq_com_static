@@ -1,3 +1,6 @@
+# 1. Install Picom > https://www.freshports.org/x11-wm/picom
+# 2. Create ~/.config/picom/picom.conf and put inside:  
+
 # GENERAL SETTINGS ------------------------------
 
 dbus = true;
