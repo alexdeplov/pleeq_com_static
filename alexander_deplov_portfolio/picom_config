@@ -1,16 +1,13 @@
-# 1. Install Picom > https://www.freshports.org/x11-wm/picom
-# 2. Create ~/.config/picom/picom.conf and put inside:  
-
 # GENERAL SETTINGS ------------------------------
 
 dbus = true;
 backend = "glx";
-dithered-present = false;
+dithered-present = true;
 vsync = true;
 detect-rounded-corners = true;
-detect-client-opacity = true;
-detect-transient = true;
-use-damage = true;
+#detect-client-opacity = true;
+#detect-transient = true;
+#use-damage = true;
 # use-ewmh-active-win = false
 # unredir-if-possible = false
 # unredir-if-possible-delay = 0
@@ -58,7 +55,7 @@ corner-radius-exclude = [
 ];
 
 shadow-exclude = [
-	"class_g = 'firefox'",
+#	"class_g = 'firefox'",
 	"class_g = 'Cairo-dock'",
 	"class_g = 'Mate-panel'",
 	"window_type = 'popup_menu'",
@@ -66,9 +63,13 @@ shadow-exclude = [
 ];
 
 blur-background-exclude = [
- 	"class_g = 'firefox'",
+# 	"class_g = 'firefox'",
 	"class_g = 'Cairo-dock'",
 	"window_type = 'popup_menu'",
+];
+
+opacity-background-exclude = [
+# 	"class_g = 'firefox'",
 ];
 
 wintypes: {
@@ -87,20 +88,22 @@ shadow-offset-y = -28;
 
 # FADING ------------------------------
 
-fading = true;
-fade-in-step = 0.15;
-fade-out-step = 0.09;
+# fading = true;
+# fade-in-step = 0.15;
+# fade-out-step = 0.09;
 # fade-delta = 10
-# no-fading-openclose = false
+# no-fading-openclose = true
 # no-fading-destroyed-argb = false
 
 # OPACITY ------------------------------
 
-# frame-opacity = 0.5;
+frame-opacity = 0.92;
 # inactive-dim-fixed = true;
 # inactive-opacity-override = true;
-# inactive-dim = 0.03;
-inactive-opacity = 0.97;
+# inactive-dim = 0.15;
+ inactive-opacity = 0.92;
+# opacity = 0.7;
+ active-opacity = 0.95;
 
 # CORNERS ------------------------------
 
@@ -111,12 +114,12 @@ corner-radius = 10;
 blur: {
 	method = "dual_kawase";
 	strength = 5;
-	background = true;
+	blur-background = true;
 	background-frame = false;
-	background-fixed = false;
+	background-fixed = true;
 }
 
-# blur-method =
+# blur-method = 
 # blur-size = 12;
 # blur-deviation = false
 # blur-strength = 5;
