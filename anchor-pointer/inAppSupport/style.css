@@ -19,8 +19,7 @@ h1 {
 
 p {
 	color: #cacaca;
-	line-height: 160%;
-	font-size: 14px;
+	line-height: 140%;
 }
 
 #wrapper {
@@ -52,8 +51,6 @@ a {
 
 #sendEmail {
 	text-align: center;
-
-
 }
 
 #sendEmail a {
