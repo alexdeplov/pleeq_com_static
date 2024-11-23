@@ -1,0 +1,3 @@
+baseURL = 'https://pleeq.com/blog/'
+languageCode = 'en-us'
+title = 'Blog'
