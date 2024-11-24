@@ -1,4 +1,4 @@
-baseURL = 'https://pleeq.com/'
+baseURL = 'https://pleeq.com/blog/public/'
 languageCode = 'en-us'
 title = 'Pleeq Software Blog'
 theme = "paper"

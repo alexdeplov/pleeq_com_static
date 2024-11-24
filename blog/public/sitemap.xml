@@ -2,17 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://pleeq.com/</loc>
+    <loc>https://pleeq.com/blog/public/</loc>
     <lastmod>2024-11-24T10:23:03+01:00</lastmod>
   </url><url>
-    <loc>https://pleeq.com/posts/</loc>
+    <loc>https://pleeq.com/blog/public/posts/</loc>
     <lastmod>2024-11-24T10:23:03+01:00</lastmod>
   </url><url>
-    <loc>https://pleeq.com/posts/the-cost-of-lost-parking-time-more-than-just-inconvenience/</loc>
+    <loc>https://pleeq.com/blog/public/posts/the-cost-of-lost-parking-time-more-than-just-inconvenience/</loc>
     <lastmod>2024-11-24T10:23:03+01:00</lastmod>
   </url><url>
-    <loc>https://pleeq.com/categories/</loc>
+    <loc>https://pleeq.com/blog/public/categories/</loc>
   </url><url>
-    <loc>https://pleeq.com/tags/</loc>
+    <loc>https://pleeq.com/blog/public/tags/</loc>
   </url>
 </urlset>
