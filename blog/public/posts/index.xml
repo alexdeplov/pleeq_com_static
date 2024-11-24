@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Pleeq Software Blog</title>
-    <link>https://example.org/</link>
-    <description>Recent content on Pleeq Software Blog</description>
+    <title>Posts on Pleeq Software Blog</title>
+    <link>https://example.org/posts/</link>
+    <description>Recent content in Posts on Pleeq Software Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 24 Nov 2024 10:23:03 +0100</lastBuildDate>
-    <atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Cost of Lost Parking Time More Than Just Inconvenience</title>
       <link>https://example.org/posts/the-cost-of-lost-parking-time-more-than-just-inconvenience/</link>
