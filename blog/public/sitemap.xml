@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://pleeq.com/blog/public/</loc>
+    <loc>https://pleeq.com/blog/</loc>
     <lastmod>2024-11-24T10:23:03+01:00</lastmod>
   </url><url>
-    <loc>https://pleeq.com/blog/public/posts/</loc>
+    <loc>https://pleeq.com/blog/posts/</loc>
     <lastmod>2024-11-24T10:23:03+01:00</lastmod>
   </url><url>
-    <loc>https://pleeq.com/blog/public/categories/</loc>
+    <loc>https://pleeq.com/blog/categories/</loc>
   </url><url>
-    <loc>https://pleeq.com/blog/public/tags/</loc>
+    <loc>https://pleeq.com/blog/tags/</loc>
   </url>
 </urlset>
