@@ -19,6 +19,7 @@ ul a{
     transition: all .2s;
     position: relative;
     font-weight: 700;
+    font-size: 0.88em;
 }
 
 .ctaButton a:hover{

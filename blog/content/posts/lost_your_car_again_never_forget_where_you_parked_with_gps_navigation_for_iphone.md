@@ -44,4 +44,6 @@ Ready to experience the freedom and peace of mind that comes with knowing you'll
 
 [Download GPS Navigation for iPhone from the App Store](https://apps.apple.com/us/app/gps-navigation-hiking-compass/id791684332) 
 
+---
+
 **Keywords:** GPS Navigation for iPhone, find my car, parking app, offline navigation, hiking app, location finder, GPS app,  lost car, parking lot, no internet connection, travel app, find my friends,  navigation app
