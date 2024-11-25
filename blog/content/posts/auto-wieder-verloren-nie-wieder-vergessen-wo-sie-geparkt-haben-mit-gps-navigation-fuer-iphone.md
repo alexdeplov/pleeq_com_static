@@ -8,8 +8,6 @@ Wir alle kennen das. Dieses sinkende Gefühl, wenn man durch ein Meer von Autos 
 
 Es ist eine häufige Erfahrung, aber es muss nicht *Ihre* Erfahrung sein.
 
-![](images/female_berlin_waiting_for_train.webp)
-
 **GPS Navigation für iPhone** bietet eine einfache, elegante Lösung für dieses alltägliche Problem. Diese leistungsstarke App nutzt die GPS-Technologie Ihres iPhones, um den Standort Ihres Autos punktgenau zu bestimmen und Sie mühelos dorthin zurückzuführen, selbst auf den weitläufigsten Parkplätzen.
 
 ##  Verabschieden Sie sich von Parkfrust
