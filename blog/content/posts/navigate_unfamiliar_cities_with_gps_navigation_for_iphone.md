@@ -46,8 +46,6 @@ Whether trekking through remote trails, venturing into a dense forest, or explor
 
 One user shared, _“I was lost in the woods while mushroom picking, and the app’s arrow and distance feature guided me back to safety. It’s now a must-have on my phone.”_  
 
-![GPS Navigation for iPhone Hiking](images/gps_navigation_for_iphone_hiking.webp)
-
 ---
 
 ## Why Choose GPS Navigation for iPhone?  

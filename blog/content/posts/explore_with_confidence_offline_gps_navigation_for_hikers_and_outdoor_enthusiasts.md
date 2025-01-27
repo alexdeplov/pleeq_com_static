@@ -20,8 +20,9 @@ Unlike many other navigation apps that rely on a constant internet connection, G
 
 ##  My Experience with GPS Navigation for iPhone
 
-I recently used GPS Navigation for iPhone on a hiking trip in the Scottish Highlands.  The trails were poorly marked, and cell service was non-existent.  I used the app to mark the trailhead and several key points along the way.  When a sudden fog rolled in, reducing visibility to near zero, I was incredibly grateful for the app's clear directional arrow, which guided me safely back to the trailhead.  It truly provided peace of mind in a potentially challenging situation.
+_I recently used GPS Navigation for iPhone on a hiking trip in the Scottish Highlands.  The trails were poorly marked, and cell service was non-existent.  I used the app to mark the trailhead and several key points along the way.  When a sudden fog rolled in, reducing visibility to near zero, I was incredibly grateful for the app's clear directional arrow, which guided me safely back to the trailhead.  It truly provided peace of mind in a potentially challenging situation._
 
+![GPS Navigation for iPhone Hiking](images/explore_with_confidence_offline_gps_navigation_for_hikers_and_outdoor_enthusiasts.webp)
 
 ##  Essential Features for Outdoor Adventures
 
