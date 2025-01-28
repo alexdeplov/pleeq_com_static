@@ -10,6 +10,25 @@ But with exploration comes the risk of getting lost.  Poor cell service, unmarke
 
 That's where [**GPS Navigation for iPhone**](https://apps.apple.com/us/app/gps-navigation-hiking-compass/id791684332)  comes in. This powerful app is a must-have for hikers and outdoor enthusiasts, offering reliable navigation capabilities, even when you're off the grid.
 
+{{< conversation time="Campfire Conversations, 9:01 PM" >}}
+[
+  { "type": "user", "text": "Hey, I got lost on a hike last weekend. Do you know a good way to navigate without cell service?" },
+  { "type": "partner", "text": "Oh, totally. I’ve been using this app called GPS Navigation for iPhone. It works offline and saved me a couple of times." },
+  
+  { "type": "user", "text": "How does it work offline though? I thought all apps needed data." },
+  { "type": "partner", "text": "It just uses your phone’s GPS, not the internet. You can save waypoints, like where you start, and it’ll guide you back even if there’s no signal." },
+
+  { "type": "user", "text": "Nice. Does it show like a map or something?" },
+  { "type": "partner", "text": "It has a clear arrow and tells you the distance to your saved spots. Super simple. I used it in the Highlands, and it worked perfectly even in fog." },
+
+  { "type": "user", "text": "That sounds solid. Can I use it for other stuff, like camping?" },
+  { "type": "partner", "text": "For sure! You can mark campsites, fishing spots, trails—whatever you need. It’s super versatile." },
+
+  { "type": "user", "text": "Alright, I’m downloading it. What’s it called again?" },
+  { "type": "partner", "text": "GPS Navigation for iPhone. You’ll love it." }
+]
+{{< /conversation >}}
+
 ##  Your Offline Navigation Companion
 
 Unlike many other navigation apps that rely on a constant internet connection, GPS Navigation for iPhone works seamlessly offline.  This means you can:
