@@ -25,7 +25,7 @@ That's where [**GPS Navigation for iPhone**](https://apps.apple.com/us/app/gps-n
   { "type": "partner", "text": "For sure! You can mark campsites, fishing spots, trails—whatever you need. It’s super versatile." },
 
   { "type": "user", "text": "Alright, I’m downloading it. What’s it called again?" },
-  { "type": "partner", "text": "GPS Navigation for iPhone. You’ll love it." }
+  { "type": "partner", "text": "<a href='https://apps.apple.com/us/app/gps-navigation-hiking-compass/id791684332' target='_blank'>GPS Navigation for iPhone</a> You’ll love it." }
 ]
 {{< /conversation >}}
 
