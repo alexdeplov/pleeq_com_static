@@ -81,8 +81,8 @@ body {
     }
 }
 
-.header h1 span{
-    color: black;
+.header h1{
+    color: rgb(14, 14, 14);
 }
 
 /* PORTFOLIO */
