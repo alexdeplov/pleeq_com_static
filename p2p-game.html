@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>P2P Reversi</title>
+    <style>
+        .game-container { max-width: 600px; margin: 20px auto; }
+        .connection-info { margin: 20px 0; }
+        #gameBoard { display: none; }
+        .board { display: grid; grid-template-columns: repeat(8, 50px); gap: 2px; }
+        .cell { 
+            width: 50px; 
+            height: 50px; 
+            background: green; 
+            border: 1px solid #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .piece {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        .black { background: black; }
+        .white { background: white; }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <div id="connectionSetup">
+            <h2>Connection Setup</h2>
+            <button id="createGame">Create New Game</button>
+            <div id="hostInfo" style="display: none;">
+                <p>Share this game ID with your opponent:</p>
+                <textarea id="gameId" readonly></textarea>
+            </div>
+            <div>
+                <h3>Join Existing Game</h3>
+                <input id="joinId" placeholder="Enter game ID">
+                <button id="joinGame">Join Game</button>
+            </div>
+        </div>
+
+        <div id="gameBoard">
+            <h2>Reversi</h2>
+            <div class="connection-info">
+                <p>Connection status: <span id="connectionStatus">Not connected</span></p>
+                <p>Your role: <span id="playerRole">Unknown</span></p>
+            </div>
+            <div id="board" class="board"></div>
+        </div>
+    </div>
+
+    <script>
+        class ReversiGame {
+            constructor() {
+                this.board = Array(8).fill().map(() => Array(8).fill(null));
+                this.currentPlayer = 'black';
+                // Initialize starting position
+                this.board[3][3] = 'white';
+                this.board[3][4] = 'black';
+                this.board[4][3] = 'black';
+                this.board[4][4] = 'white';
+            }
+
+            isValidMove(row, col, player) {
+                if (this.board[row][col] !== null) return false;
+                
+                const directions = [
+                    [-1, -1], [-1, 0], [-1, 1],
+                    [0, -1],           [0, 1],
+                    [1, -1],  [1, 0],  [1, 1]
+                ];
+
+                let validMove = false;
+                for (let [dx, dy] of directions) {
+                    let x = row + dx;
+                    let y = col + dy;
+                    let flips = [];
+                    
+                    while (x >= 0 && x < 8 && y >= 0 && y < 8) {
+                        if (this.board[x][y] === null) break;
+                        if (this.board[x][y] === player) {
+                            if (flips.length > 0) validMove = true;
+                            break;
+                        }
+                        flips.push([x, y]);
+                        x += dx;
+                        y += dy;
+                    }
+                }
+                return validMove;
+            }
+
+            makeMove(row, col, player) {
+                if (!this.isValidMove(row, col, player)) return false;
+                
+                const directions = [
+                    [-1, -1], [-1, 0], [-1, 1],
+                    [0, -1],           [0, 1],
+                    [1, -1],  [1, 0],  [1, 1]
+                ];
+
+                this.board[row][col] = player;
+                
+                for (let [dx, dy] of directions) {
+                    let x = row + dx;
+                    let y = col + dy;
+                    let flips = [];
+                    
+                    while (x >= 0 && x < 8 && y >= 0 && y < 8) {
+                        if (this.board[x][y] === null) break;
+                        if (this.board[x][y] === player) {
+                            flips.forEach(([fx, fy]) => {
+                                this.board[fx][fy] = player;
+                            });
+                            break;
+                        }
+                        flips.push([x, y]);
+                        x += dx;
+                        y += dy;
+                    }
+                }
+                
+                this.currentPlayer = this.currentPlayer === 'black' ? 'white' : 'black';
+                return true;
+            }
+        }
+
+        class GameConnection {
+            constructor() {
+                this.peerConnection = null;
+                this.dataChannel = null;
+                this.isHost = false;
+                this.game = new ReversiGame();
+                this.playerColor = null;
+                this.setupUI();
+            }
+
+            async createGame() {
+                this.isHost = true;
+                this.playerColor = 'black';
+                this.peerConnection = new RTCPeerConnection();
+                
+                // Create data channel
+                this.dataChannel = this.peerConnection.createDataChannel('gameData');
+                this.setupDataChannel(this.dataChannel);
+
+                // Create and show offer
+                const offer = await this.peerConnection.createOffer();
+                await this.peerConnection.setLocalDescription(offer);
+                
+                // Show the offer as game ID
+                document.getElementById('gameId').value = btoa(JSON.stringify(offer));
+                document.getElementById('hostInfo').style.display = 'block';
+            }
+
+            async joinGame(joinId) {
+                try {
+                    this.isHost = false;
+                    this.playerColor = 'white';
+                    this.peerConnection = new RTCPeerConnection();
+                    
+                    // Handle data channel
+                    this.peerConnection.ondatachannel = (event) => {
+                        this.dataChannel = event.channel;
+                        this.setupDataChannel(this.dataChannel);
+                    };
+
+                    // Parse and set remote description
+                    const offer = JSON.parse(atob(joinId));
+                    await this.peerConnection.setRemoteDescription(offer);
+                    
+                    // Create and send answer
+                    const answer = await this.peerConnection.createAnswer();
+                    await this.peerConnection.setLocalDescription(answer);
+                    
+                    // Show the answer
+                    document.getElementById('gameId').value = btoa(JSON.stringify(answer));
+                    document.getElementById('hostInfo').style.display = 'block';
+                } catch (error) {
+                    console.error('Error joining game:', error);
+                }
+            }
+
+            setupDataChannel(channel) {
+                channel.onopen = () => {
+                    console.log('Data channel open');
+                    document.getElementById('connectionStatus').textContent = 'Connected';
+                    document.getElementById('connectionSetup').style.display = 'none';
+                    document.getElementById('gameBoard').style.display = 'block';
+                    document.getElementById('playerRole').textContent = 
+                        this.isHost ? 'Host (Black)' : 'Guest (White)';
+                    this.renderBoard();
+                };
+
+                channel.onmessage = (event) => {
+                    const move = JSON.parse(event.data);
+                    this.game.makeMove(move.row, move.col, move.player);
+                    this.renderBoard();
+                };
+            }
+
+            setupUI() {
+                const board = document.getElementById('board');
+                board.innerHTML = '';
+                
+                // Create board cells
+                for (let i = 0; i < 8; i++) {
+                    for (let j = 0; j < 8; j++) {
+                        const cell = document.createElement('div');
+                        cell.className = 'cell';
+                        cell.dataset.row = i;
+                        cell.dataset.col = j;
+                        cell.addEventListener('click', () => this.handleMove(i, j));
+                        board.appendChild(cell);
+                    }
+                }
+
+                // Setup connection buttons
+                document.getElementById('createGame').addEventListener('click', 
+                    () => this.createGame());
+                document.getElementById('joinGame').addEventListener('click', 
+                    () => this.joinGame(document.getElementById('joinId').value));
+            }
+
+            handleMove(row, col) {
+                // Only allow moves on player's turn
+                if (this.game.currentPlayer === this.playerColor) {
+                    if (this.game.makeMove(row, col, this.playerColor)) {
+                        this.renderBoard();
+                        // Send move to opponent
+                        if (this.dataChannel && this.dataChannel.readyState === 'open') {
+                            this.dataChannel.send(JSON.stringify({
+                                row: row,
+                                col: col,
+                                player: this.playerColor
+                            }));
+                        }
+                    }
+                }
+            }
+
+            renderBoard() {
+                const cells = document.getElementsByClassName('cell');
+                for (let i = 0; i < 8; i++) {
+                    for (let j = 0; j < 8; j++) {
+                        const cell = cells[i * 8 + j];
+                        cell.innerHTML = '';
+                        
+                        if (this.game.board[i][j]) {
+                            const piece = document.createElement('div');
+                            piece.className = `piece ${this.game.board[i][j]}`;
+                            cell.appendChild(piece);
+                        }
+                    }
+                }
+            }
+        }
+
+        // Initialize game
+        const gameConnection = new GameConnection();
+    </script>
+</body>
+</html>
