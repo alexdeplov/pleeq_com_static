@@ -138,28 +138,61 @@
             }
 
             async createGame() {
+                document.getElementById('connectionStatus').textContent = 'Creating game...';
+                
+                // Add ICE candidate handling
+                this.peerConnection.onicecandidate = (event) => {
+                    if (event.candidate === null) {
+                        // ICE gathering completed, now we can generate the game ID
+                        document.getElementById('gameId').value = btoa(JSON.stringify(this.peerConnection.localDescription));
+                        document.getElementById('hostInfo').style.display = 'block';
+                        document.getElementById('connectionStatus').textContent = 'Waiting for opponent...';
+                    }
+                };
                 this.isHost = true;
                 this.playerColor = 'black';
-                this.peerConnection = new RTCPeerConnection();
+                this.peerConnection = new RTCPeerConnection({
+                    iceServers: [
+                        {
+                            urls: [
+                                'stun:stun.l.google.com:19302',
+                                'stun:stun1.l.google.com:19302',
+                                'stun:stun2.l.google.com:19302',
+                                'stun:stun3.l.google.com:19302',
+                                'stun:stun4.l.google.com:19302'
+                            ]
+                        }
+                    ]
+                });
                 
                 // Create data channel
                 this.dataChannel = this.peerConnection.createDataChannel('gameData');
                 this.setupDataChannel(this.dataChannel);
 
-                // Create and show offer
+                // Create offer
                 const offer = await this.peerConnection.createOffer();
                 await this.peerConnection.setLocalDescription(offer);
-                
-                // Show the offer as game ID
-                document.getElementById('gameId').value = btoa(JSON.stringify(offer));
                 document.getElementById('hostInfo').style.display = 'block';
             }
 
             async joinGame(joinId) {
+                document.getElementById('connectionStatus').textContent = 'Joining game...';
                 try {
                     this.isHost = false;
                     this.playerColor = 'white';
-                    this.peerConnection = new RTCPeerConnection();
+                    this.peerConnection = new RTCPeerConnection({
+                    iceServers: [
+                        {
+                            urls: [
+                                'stun:stun.l.google.com:19302',
+                                'stun:stun1.l.google.com:19302',
+                                'stun:stun2.l.google.com:19302',
+                                'stun:stun3.l.google.com:19302',
+                                'stun:stun4.l.google.com:19302'
+                            ]
+                        }
+                    ]
+                });
                     
                     // Handle data channel
                     this.peerConnection.ondatachannel = (event) => {
