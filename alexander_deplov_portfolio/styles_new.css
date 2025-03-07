@@ -165,7 +165,7 @@ body {
     aspect-ratio: auto;
     /* height: auto; */
     
-    background-color:rgb(148, 163, 184);
+    /* background-color:rgb(148, 163, 184); */
 }
 @media (max-width: 767px) {
     .linearity .imageBox{
