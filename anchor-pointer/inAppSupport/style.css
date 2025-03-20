@@ -28,6 +28,16 @@ p {
 	margin: 40px auto;
 }
 
+summary{
+	font-size: larger;
+	font-weight: 600;
+}
+
+details{
+	line-height: 140%;
+	font-size: large;
+}
+
 ul,
 li {
 	list-style: none;
