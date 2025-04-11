@@ -42,7 +42,7 @@ def process_image(image_path):
     <pubDate>{creation_date}</pubDate>
     <description>{image_description}</description>
     <guid>{filename_with_underscores}</guid>  
-    <enclosure url="https://pleeq.com/rss/sport/{filename}.jpg" type="image/jpeg"/> 
+    <enclosure url="https://pleeq.com/404-ap.html" type="image/jpeg"/> 
   </item>
 """
         return item_str
