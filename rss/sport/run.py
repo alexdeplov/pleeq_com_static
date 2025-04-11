@@ -13,7 +13,7 @@ rss_header = f"""<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
 <channel>
   <title>Pleeq Bookmarks</title>
-  <link>https://pleeq.com</link>
+  <link>https://pleeq.com/404-ap.html</link>
   <description>RSS feed generated from images</description>
 """
 
