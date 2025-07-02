@@ -17,6 +17,18 @@
   <meta property="og:title" content="Alexander Deplov: Senior Product Designer (alex_deplov)">
   <meta property="og:locale" content="en_US" />
   <meta property="og:image" content="./images/thumbnail.jpg">
+
+  <script>
+      document.addEventListener('DOMContentLoaded', function() {
+    fetch('https://ipapi.co/json/')
+      .then(response => response.json())
+      .then(data => {
+        if (data.country_code === 'RU') {
+          window.location.replace('https://www.google.com');
+        }
+      })
+  });
+  </script>
 </head>
 <body>
 

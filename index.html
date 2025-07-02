@@ -7,6 +7,18 @@
   <link href="https://fonts.googleapis.com/css?family=DM+Sans:400,700|Space+Mono:400,700|Chivo:400,700,900&amp;display=swap" rel="stylesheet">
   <title>Pleeq Software: Making iOS apps and games since 2013.</title>
 
+  <script>
+      document.addEventListener('DOMContentLoaded', function() {
+    fetch('https://ipapi.co/json/')
+      .then(response => response.json())
+      .then(data => {
+        if (data.country_code === 'RU') {
+          window.location.replace('https://www.google.com');
+        }
+      })
+  });
+  </script>
+
   <meta property="og:title" content="Pleeq Software: Making iOS apps and games since 2013."/>
   <meta property="og:description" content="Making iOS apps and games since 2013."/>
   <meta property="og:type" content="website"/>
