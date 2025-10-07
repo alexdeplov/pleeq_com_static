@@ -6,3 +6,6 @@ publishDir = "."
 
 [permalinks]
   posts = "/:slug.html"
+
+[params]
+  author = "James Smith"
