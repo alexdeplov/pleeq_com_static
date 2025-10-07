@@ -1,8 +1,17 @@
 {{ define "main" }}
-<h1>{{ .Title }}</h1>
-<p><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time></p>
-{{ if .Params.author }}
-  <p>Written by {{ .Params.author }}</p>
-{{ end }}
-<div>{{ .Content }}</div>
+<article class="px-6 py-10 max-w-3xl mx-auto">
+    <header class="mb-8">
+        <h1 class="content-animate">{{ .Title }}</h1>
+        <div class="mt-5 text-stone-500 text-sm flex items-center gap-2 content-animate font-medium">
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+            {{ with .Params.author }}
+            <span>·</span>
+            <span>by {{ . }}</span>
+            {{ end }}
+        </div>
+    </header>
+    <div class="prose prose-stone max-w-none content-animate">
+        {{ .Content }}
+    </div>
+</article>
 {{ end }}

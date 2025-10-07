@@ -1,8 +1,20 @@
 {{ define "main" }}
-<h1>{{ .Site.Title }}</h1>
-<ul>
-    {{ range .Site.RegularPages }}
-    <li><a href="{{ .Permalink }}">{{ .Title }}</a> ({{ .Date.Format "January 2, 2006" }})</li>
-    {{ end }}
-</ul>
+<section class="px-6 py-10 max-w-5xl mx-auto">
+    <h1 class="text-3xl md:text-5xl font-bold tracking-tight mb-6">{{ .Site.Title }}</h1>
+    <ul class="space-y-4">
+        {{ range .Site.RegularPages }}
+        <li>
+            <a class="block p-5 rounded-2xl border border-stone-200 hover:border-stone-300 transition" href="{{ .RelPermalink }}">
+                <div class="flex items-baseline justify-between gap-4">
+                    <h2 class="text-xl md:text-2xl font-semibold">{{ .Title }}</h2>
+                    <time class="text-stone-500 text-sm" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+                </div>
+                {{ with .Params.description }}
+                <p class="mt-2 text-stone-600">{{ . }}</p>
+                {{ end }}
+            </a>
+        </li>
+        {{ end }}
+    </ul>
+</section>
 {{ end }}

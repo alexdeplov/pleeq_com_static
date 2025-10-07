@@ -2,7 +2,7 @@
 title: "Latest AI Video Generation Breakthroughs: Sora 2, Pika Labs, and the Future of Content Creation"
 date: 2025-10-07T10:00:00+02:00
 draft: false
-author: "John Smith, 42 years old, USA, NYC"
+author: "John Smith"
 ---
 
 
