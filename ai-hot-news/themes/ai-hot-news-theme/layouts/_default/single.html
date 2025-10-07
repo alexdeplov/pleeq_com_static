@@ -1,0 +1,6 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+<p><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time></p>
+<div>{{ .Content }}</div>
+<p>DEBUG: Permalink is {{ .Permalink }}</p>
+{{ end }}
