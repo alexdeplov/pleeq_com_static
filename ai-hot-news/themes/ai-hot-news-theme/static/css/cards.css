@@ -37,7 +37,9 @@
 
 p:has(em){
   font-size: 0.8rem !important;
-  line-height: 140%;
+  line-height: 140% !important;
+  font-weight: 600 !important;
+  color: hsl(25, 5.3%, 44.7%) !important;
 }
 
 article h2{

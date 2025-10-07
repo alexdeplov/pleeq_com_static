@@ -13,6 +13,19 @@
     <div class="prose prose-stone max-w-none content-animate">
         {{ .Content }}
     </div>
+    
+    <div class="w-full mt-10 content-animate">
+        <div class="flex items-center space-x-4">
+            <img src="../static/images/avatar.webp" alt="Olivia Smith" class="w-20 aspect-square rounded-full object-cover">
+            <h5 class="text-2xl font-semibold text-gray-900 mb-0">Olivia Smith</h5>
+        </div>
+        <div>        
+            <p class="text-[16px] text-stone-500 pt-2">
+                Olivia Smith is a senior reporter at <strong>AI Hot News</strong>, covering artificial intelligence, machine learning, and ethical tech innovations. Olivia covers startups, tech policy-related updates, and all other major tech-centric developments from the United States.
+            </p>
+        </div>
+    </div>
+
     <div class="mt-12 flex justify-center border-t border-gray-800/20 pt-6 content-animate">
         <a href="{{ .Permalink | absURL }}"
             class="accent inline-block text-white text-2xl px-5 py-1.5 rounded-full transition-colors duration-300"
@@ -20,6 +33,11 @@
             Share This Article
         </a>
     </div>
+    
+
+   
+    </div>
+
     <script>
     document.getElementById('shareButton').addEventListener('click', function(event) {
         event.preventDefault(); // Prevent default link behavior
@@ -34,6 +52,14 @@
             // Change background color to green
             button.classList.remove('accent');
             button.classList.add('copied');
+        
+            // Track the "linkCopied" event with GoatCounter
+            if (window.goatcounter) {
+                window.goatcounter.count({
+                    path: 'linkCopied', // Custom event name
+                    event: true // Mark as an event
+                });
+            }
 
             // Optional: Revert text and color after 2 seconds
             setTimeout(() => {
@@ -41,11 +67,11 @@
                 button.classList.remove('copied');
                 button.classList.add('accent');
             }, 4000);
-        }).catch(err => {
-            console.error('Failed to copy URL: ', err);
+            }).catch(err => {
+                console.error('Failed to copy URL: ', err);
+            });
         });
-    });
-</script>
+    </script>
 <style>
     .accent {
         background-color: #70f; 
