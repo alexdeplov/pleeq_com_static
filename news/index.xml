@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI Hot News</title>
+    <link>https://pleeq_com_static/news/</link>
+    <description>Recent content on AI Hot News</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 07 Oct 2025 10:00:00 +0200</lastBuildDate>
+    <atom:link href="https://pleeq_com_static/news/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>News 1</title>
+      <link>https://pleeq_com_static/news/news-1.html/</link>
+      <pubDate>Tue, 07 Oct 2025 10:00:00 +0200</pubDate>
+      <guid>https://pleeq_com_static/news/news-1.html/</guid>
+      <description>&lt;p&gt;This is the content of news article 1.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
