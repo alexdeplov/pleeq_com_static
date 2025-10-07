@@ -8,7 +8,7 @@ document.addEventListener('copy', function(e) {
     // Only proceed if there's actually text selected
     if (selectedText.length > 0) {
         // Create the copyright notice
-        const copyrightNotice = `\n\nCopyright by Alexander Deplov, https://interfacecraft.online`;
+        const copyrightNotice = `\n\nCopyright https://pleeq.com`;
         
         // Create the combined text
         const textWithCopyright = selectedText + copyrightNotice;

@@ -2,17 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://pleeq.com/ai-hot-news/</loc>
+    <loc>http://localhost:1313/ai-hot-news/</loc>
     <lastmod>2025-10-07T10:00:00+02:00</lastmod>
   </url><url>
-    <loc>https://pleeq.com/ai-hot-news/latest-ai-video-generation-breakthroughs-sora-2-pika-labs-and-the-future-of-content-creation.html/</loc>
+    <loc>http://localhost:1313/ai-hot-news/latest-ai-video-generation-breakthroughs-sora-2-pika-labs-and-the-future-of-content-creation/</loc>
     <lastmod>2025-10-07T10:00:00+02:00</lastmod>
   </url><url>
-    <loc>https://pleeq.com/ai-hot-news/posts/</loc>
+    <loc>http://localhost:1313/ai-hot-news/posts/</loc>
     <lastmod>2025-10-07T10:00:00+02:00</lastmod>
   </url><url>
-    <loc>https://pleeq.com/ai-hot-news/categories/</loc>
+    <loc>http://localhost:1313/ai-hot-news/categories/</loc>
   </url><url>
-    <loc>https://pleeq.com/ai-hot-news/tags/</loc>
+    <loc>http://localhost:1313/ai-hot-news/tags/</loc>
   </url>
 </urlset>
