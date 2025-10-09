@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <!-- Updated title for SEO with primary keywords and location -->
+  <title>Best Dating App in US - AI Dating: Free Dating App & Hinge Alternative</title>
+  <!-- Added meta description for SEO -->
+  <meta name="description" content="Discover the best dating app in the US! AI Dating offers a free dating app experience, a top Hinge alternative, and a smarter way to find love compared to Facebook Dating. Join 2M+ US singles today!">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- GoatCounter Script -->
+  <script data-goatcounter="https://goatdating.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
+  
+  <style>
+    /* Custom CSS for animations and specific needs */
+    html, body, #container {
+      height: 100%;
+    }
+    
+    .transition-shadow {
+      transition: box-shadow 0.3s ease;
+    }
+    
+    /* Mobile menu styles */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 64px;
+      left: 0;
+      right: 0;
+      background: white;
+      border-bottom: 1px solid #e5e7eb;
+      z-index: 40;
+      max-height: calc(100vh - 64px);
+      overflow-y: auto;
+    }
+    
+    .mobile-menu.active {
+      display: block;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-white">
+  <!-- Mobile Menu Overlay -->
+  <div id="mobileMenu" class="mobile-menu">
+    <nav class="flex flex-col p-4 space-y-4">
+      <a href="#features" class="text-gray-700 hover:text-pink-500 transition-colors py-2" data-goatcounter-click="mobile-menu-features">Features</a>
+      <a href="#how-it-works" class="text-gray-700 hover:text-pink-500 transition-colors py-2" data-goatcounter-click="mobile-menu-how-it-works">How It Works</a>
+      <a href="#testimonials" class="text-gray-700 hover:text-pink-500 transition-colors py-2" data-goatcounter-click="mobile-menu-testimonials">Success Stories</a>
+      <a href="#pricing" class="text-gray-700 hover:text-pink-500 transition-colors py-2" data-goatcounter-click="mobile-menu-pricing">Pricing</a>
+      <div class="pt-4 border-t border-gray-200 space-y-3">
+        <button class="w-full py-2 px-4 rounded-md text-sm font-medium text-gray-700 border border-gray-300 hover:bg-gray-50 transition-colors" data-goatcounter-click="mobile-menu-sign-in">
+          Sign In
+        </button>
+        <button class="w-full py-2 px-4 rounded-md text-sm font-medium text-white bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 transition-all" data-goatcounter-click="mobile-menu-get-started">
+          Get Started
+        </button>
+      </div>
+    </nav>
+  </div>
+  <div id="container">
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-md border-b border-gray-200 sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-pink-500">
+              <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path>
+            </svg>
+            <span class="text-xl font-medium text-gray-900">AI Dating</span>
+          </div>
+          
+          <nav class="hidden md:flex items-center gap-8">
+            <a href="#features" class="text-gray-700 hover:text-pink-500 transition-colors" data-goatcounter-click="header-features">Features</a>
+            <a href="#how-it-works" class="text-gray-700 hover:text-pink-500 transition-colors" data-goatcounter-click="header-how-it-works">How It Works</a>
+            <a href="#testimonials" class="text-gray-700 hover:text-pink-500 transition-colors" data-goatcounter-click="header-testimonials">Success Stories</a>
+            <a href="#pricing" class="text-gray-700 hover:text-pink-500 transition-colors" data-goatcounter-click="header-pricing">Pricing</a>
+          </nav>
+          
+          <div class="flex items-center gap-4">
+            <button class="hidden md:inline-flex items-center justify-center px-4 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100 transition-colors" data-goatcounter-click="header-sign-in">
+              Sign In
+            </button>
+            <button class="inline-flex items-center justify-center px-4 py-2 rounded-md text-sm font-medium text-white bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 transition-all" data-goatcounter-click="header-get-started">
+              Get Started
+            </button>
+            <button id="mobileMenuBtn" class="md:hidden inline-flex items-center justify-center w-9 h-9 rounded-md hover:bg-gray-100 transition-colors" data-goatcounter-click="mobile-menu-toggle">
+              <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                <path d="M4 5h16M4 12h16M4 19h16"></path>
+              </svg>
+              <svg id="closeIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 hidden">
+                <path d="M18 6L6 18M6 6l12 12"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <div class="relative overflow-hidden bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+          <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8">
+              <div class="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full border border-pink-200">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-pink-500">
+                  <path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path>
+                  <path d="M20 2v4M22 4h-4"></path>
+                  <circle cx="4" cy="20" r="2"></circle>
+                </svg>
+                <span class="text-sm text-gray-700">Powered by Advanced AI Technology</span>
+              </div>
+              
+              <!-- Updated H1 with keywords -->
+              <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900">
+                Best Dating App in US: 
+                <span class="bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent">
+                  AI-Powered Dating
+                </span>
+              </h1>
+              
+              <!-- Updated paragraph with keywords -->
+              <p class="text-lg sm:text-xl text-gray-600 max-w-xl">
+                Discover the best dating app in the US, a top Hinge alternative and smarter than Facebook Dating. Our free dating app uses AI to connect US singles with compatible matches.
+              </p>
+              
+              <div class="flex flex-col sm:flex-row gap-4">
+                <!-- Updated button text with keyword -->
+                <button class="inline-flex items-center justify-center px-8 py-3 rounded-md text-sm font-medium text-white bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 transition-all" data-goatcounter-click="hero-start-journey">
+                  Join Free Dating App
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 w-5 h-5">
+                    <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path>
+                  </svg>
+                </button>
+                <button class="inline-flex items-center justify-center px-6 py-3 rounded-md text-sm font-medium text-gray-900 bg-white border-2 border-gray-300 hover:bg-gray-50 transition-colors" data-goatcounter-click="hero-how-it-works">
+                  See How It Works
+                </button>
+              </div>
+              
+              <div class="flex items-center gap-4 sm:gap-8 pt-4 overflow-x-auto">
+                <div class="flex-shrink-0">
+                  <div class="text-2xl sm:text-3xl font-bold text-gray-900">2M+</div>
+                  <div class="text-xs sm:text-sm text-gray-600 whitespace-nowrap">Active US Singles</div>
+                </div>
+                <div class="w-px h-10 sm:h-12 bg-gray-300 flex-shrink-0"></div>
+                <div class="flex-shrink-0">
+                  <div class="text-2xl sm:text-3xl font-bold text-gray-900">500K+</div>
+                  <div class="text-xs sm:text-sm text-gray-600 whitespace-nowrap">Matches Made</div>
+                </div>
+                <div class="w-px h-10 sm:h-12 bg-gray-300 flex-shrink-0"></div>
+                <div class="flex-shrink-0">
+                  <div class="text-2xl sm:text-3xl font-bold text-gray-900">98%</div>
+                  <div class="text-xs sm:text-sm text-gray-600">Satisfaction</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="relative">
+              <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+                <!-- Updated alt text with keywords -->
+                <img src="https://images.unsplash.com/photo-1758874089358-67fe2adc9bcb?w=800&h=600&fit=crop" alt="Couple using AI Dating, the best dating app in the US" class="w-full h-auto object-cover">
+              </div>
+              <div class="absolute -bottom-4 sm:-bottom-6 -left-4 sm:-left-6 bg-white p-4 sm:p-6 rounded-xl shadow-xl border border-gray-100 max-w-[calc(100%-2rem)]">
+                <div class="flex items-center gap-2 sm:gap-3">
+                  <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-pink-500 to-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 sm:w-6 sm:h-6 text-white">
+                      <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="text-xs sm:text-sm text-gray-600">Match Score</div>
+                    <div class="text-xl sm:text-2xl font-bold text-gray-900">95%</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Features Section -->
+      <div id="features" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <!-- Updated heading with keywords -->
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Why AI Dating is the Best Dating App in the US</h2>
+            <p class="text-lg sm:text-xl text-gray-600">Our AI-powered dating app offers a superior alternative to Hinge and Facebook Dating, connecting US singles with meaningful matches.</p>
+          </div>
+          
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            <!-- Feature 1 -->
+            <div class="p-6 rounded-xl border border-gray-200 hover:border-pink-300 hover:shadow-lg transition-all duration-300">
+              <div class="w-12 h-12 bg-gradient-to-br from-pink-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-white">
+                  <path d="M12 18V5M15 13a4.17 4.17 0 0 1-3-4 4.17 4.17 0 0 1-3 4"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">Smart AI Matching</h3>
+              <p class="text-gray-600">Our AI-powered dating app analyzes thousands of data points to find your ideal partner, making it one of the best dating sites for US singles.</p>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="p-6 rounded-xl border border-gray-200 hover:border-pink-300 hover:shadow-lg transition-all duration-300">
+              <div class="w-12 h-12 bg-gradient-to-br from-pink-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-white">
+                  <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">Privacy First</h3>
+              <p class="text-gray-600">Your data is encrypted, making AI Dating a secure choice among dating sites for US singles.</p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="p-6 rounded-xl border border-gray-200 hover:border-pink-300 hover:shadow-lg transition-all duration-300">
+              <div class="w-12 h-12 bg-gradient-to-br from-pink-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-white">
+                  <path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">AI Chat Assistant</h3>
+              <p class="text-gray-600">Get personalized dating advice from our AI, a feature that sets us apart from Facebook Dating and other dating apps.</p>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="p-6 rounded-xl border border-gray-200 hover:border-pink-300 hover:shadow-lg transition-all duration-300">
+              <div class="w-12 h-12 bg-gradient-to-br from-pink-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-white">
+                  <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">Instant Connections</h3>
+              <p class="text-gray-600">Real-time notifications make AI Dating a leading free dating app for instant connections in the US.</p>
+            </div>
+
+            <!-- Feature 5 -->
+            <div class="p-6 rounded-xl border border-gray-200 hover:border-pink-300 hover:shadow-lg transition-all duration-300">
+              <div class="w-12 h-12 bg-gradient-to-br from-pink-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-white">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M16 3.128a4 4 0 0 1 0 7.744M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">Verified Profiles</h3>
+              <p class="text-gray-600">AI-powered verification ensures a safe dating experience, unlike other dating sites.</p>
+            </div>
+
+            <!-- Feature 6 -->
+            <div class="p-6 rounded-xl border border-gray-200 hover:border-pink-300 hover:shadow-lg transition-all duration-300">
+              <div class="w-12 h-12 bg-gradient-to-br from-pink-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-white">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <circle cx="12" cy="12" r="6"></circle>
+                  <circle cx="12" cy="12" r="2"></circle>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">Precision Matching</h3>
+              <p class="text-gray-600">Our machine learning improves match quality, making AI Dating a top Hinge alternative for US singles.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Section -->
+      <div class="py-20 bg-gradient-to-r from-pink-500 via-purple-500 to-pink-500">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 sm:w-16 sm:h-16 text-white mx-auto mb-6">
+            <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path>
+          </svg>
+          <!-- Updated heading with keywords -->
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6">Join the Best Dating App for US Singles</h2>
+          <!-- Updated paragraph with keywords -->
+          <p class="text-base sm:text-lg lg:text-xl text-pink-100 mb-6 sm:mb-8 max-w-2xl mx-auto">Join over 2 million US singles on AI Dating, a free dating app and Hinge alternative. Find love with our AI-powered dating app today!</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <!-- Updated button text with keyword -->
+            <button class="inline-flex items-center justify-center px-8 py-3 rounded-md text-sm font-medium bg-white text-purple-600 hover:bg-gray-100 transition-colors" data-goatcounter-click="cta-get-started-free">
+              Try Free Dating App
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 w-5 h-5">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </button>
+            <button class="inline-flex items-center justify-center px-6 py-3 rounded-md text-sm font-medium border-2 border-white text-white hover:bg-white/10 transition-colors" data-goatcounter-click="cta-download-app">
+              Download the App
+            </button>
+          </div>
+          <p class="mt-6 text-pink-100 text-sm">No credit card required • Free to join • Start matching instantly</p>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+          <div class="col-span-1 sm:col-span-2 md:col-span-1">
+            <div class="flex items-center gap-2 mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-pink-500">
+                <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path>
+              </svg>
+              <span class="text-xl font-medium text-white">AI Dating</span>
+            </div>
+            <!-- Updated footer description with keywords -->
+            <p class="text-sm text-gray-400">AI Dating: The best dating app in the US, offering a free dating experience and a Hinge alternative for singles nationwide.</p>
+            <div class="flex gap-3 mt-4">
+              <a href="#" class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-pink-500 transition-colors" data-goatcounter-click="footer-social-facebook">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                </svg>
+              </a>
+              <a href="#" class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-pink-500 transition-colors" data-goatcounter-click="footer-social-twitter">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
+                </svg>
+              </a>
+              <a href="#" class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-pink-500 transition-colors" data-goatcounter-click="footer-social-instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
+          
+          <div>
+            <h3 class="text-white font-medium mb-4">Company</h3>
+            <ul class="space-y-2 text-sm">
+              <li><a href="#" class="hover:text-pink-500 transition-colors" data-goatcounter-click="footer-company-about">About Us</a></li>
+              <li><a href="#" class="hover:text-pink-500 transition-colors" data-goatcounter-click="footer-company-careers">Careers</a></li>
+              <li><a href="#" class="hover:text-pink-500 transition-colors" data-goatcounter-click="footer-company-press">Press</a></li>
+              <li><a href="#" class="hover:text-pink-500 transition-colors" data-goatcounter-click="footer-company-blog">Blog</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 class="text-white font-medium mb-4">Support</h3>
+            <ul class="space-y-2 text-sm">
+              <li><a href="#" class="hover:text-pink-500 transition-colors" data-goatcounter-click="footer-support-help">Help Center</a></li>
+              <li><a href="#" class="hover:text-pink-500 transition-colors" data-goatcounter-click="footer-support-safety">Safety Tips</a></li>
+              <li><a href="#" class="hover:text-pink-500 transition-colors" data-goatcounter-click="footer-support-contact">Contact Us</a></li>
+              <li><a href="#" class="hover:text-pink-500 transition-colors" data-goatcounter-click="footer-support-faq">FAQ</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 class="text-white font-medium mb-4">Legal</h3>
+            <ul class="space-y-2 text-sm">
+              <li><a href="#" class="hover:text-pink-500 transition-colors" data-goatcounter-click="footer-legal-privacy">Privacy Policy</a></li>
+              <li><a href="#" class="hover:text-pink-500 transition-colors" data-goatcounter-click="footer-legal-terms">Terms of Service</a></li>
+              <li><a href="#" class="hover:text-pink-500 transition-colors" data-goatcounter-click="footer-legal-cookies">Cookie Policy</a></li>
+              <li><a href="#" class="hover:text-pink-500 transition-colors" data-goatcounter-click="footer-legal-guidelines">Community Guidelines</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="border-t border-gray-800 pt-8 text-xs sm:text-sm text-center text-gray-400">
+          <p>© 2025 AI Dating. All rights reserved. Made with ❤️ for singles across the USA.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  
+  <!-- Mobile Menu Script -->
+  <script>
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+    const closeIcon = document.getElementById('closeIcon');
+    let isMenuOpen = false;
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      isMenuOpen = !isMenuOpen;
+      
+      if (isMenuOpen) {
+        mobileMenu.classList.add('active');
+        menuIcon.classList.add('hidden');
+        closeIcon.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      } else {
+        mobileMenu.classList.remove('active');
+        menuIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+    });
+    
+    // Close menu when clicking on a link
+    const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+    mobileMenuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        isMenuOpen = false;
+        mobileMenu.classList.remove('active');
+        menuIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+        document.body.style.overflow = '';
+      });
+    });
+    
+    // Close menu when screen is resized to desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 768 && isMenuOpen) {
+        isMenuOpen = false;
+        mobileMenu.classList.remove('active');
+        menuIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+    });
+  </script>
+</body>
+</html>
