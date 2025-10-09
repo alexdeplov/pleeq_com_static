@@ -2,26 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://pleeq.com/ai-hot-news/</loc>
+    <loc>http://localhost:1313/ai-hot-news/</loc>
     <lastmod>2025-10-08T21:31:00+02:00</lastmod>
   </url><url>
-    <loc>https://pleeq.com/ai-hot-news/posts/</loc>
+    <loc>http://localhost:1313/ai-hot-news/posts/</loc>
     <lastmod>2025-10-08T21:31:00+02:00</lastmod>
   </url><url>
-    <loc>https://pleeq.com/ai-hot-news/september-2025-us-design-jobs-report-ai-disruption-and-a-cooling-market/</loc>
+    <loc>http://localhost:1313/ai-hot-news/september-2025-us-design-jobs-report-ai-disruption-and-a-cooling-market/</loc>
     <lastmod>2025-10-08T21:31:00+02:00</lastmod>
   </url><url>
-    <loc>https://pleeq.com/ai-hot-news/pika-labs-predictive-video-and-the-rise-of-ai-generated-content-trends/</loc>
+    <loc>http://localhost:1313/ai-hot-news/september-2025-us-design-jobs-report-ai-disruption-and-a-cooling-market/</loc>
+    <lastmod>2025-10-08T21:31:00+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/ai-hot-news/pika-labs-predictive-video-and-the-rise-of-ai-generated-content-trends/</loc>
     <lastmod>2025-10-08T10:00:00+02:00</lastmod>
   </url><url>
-    <loc>https://pleeq.com/ai-hot-news/latest-ai-video-generation-breakthroughs-sora-2-pika-labs-and-the-future-of-content-creation/</loc>
+    <loc>http://localhost:1313/ai-hot-news/latest-ai-video-generation-breakthroughs-sora-2-pika-labs-and-the-future-of-content-creation/</loc>
     <lastmod>2025-10-07T10:00:00+02:00</lastmod>
   </url><url>
-    <loc>https://pleeq.com/ai-hot-news/when-ai-makes-the-video-and-the-voice-youtube-tools-voice-cloning-laws-and-what-creators-should-do-next/</loc>
+    <loc>http://localhost:1313/ai-hot-news/when-ai-makes-the-video-and-the-voice-youtube-tools-voice-cloning-laws-and-what-creators-should-do-next/</loc>
     <lastmod>2025-10-06T10:00:00+02:00</lastmod>
   </url><url>
-    <loc>https://pleeq.com/ai-hot-news/categories/</loc>
+    <loc>http://localhost:1313/ai-hot-news/categories/</loc>
   </url><url>
-    <loc>https://pleeq.com/ai-hot-news/tags/</loc>
+    <loc>http://localhost:1313/ai-hot-news/tags/</loc>
   </url>
 </urlset>
