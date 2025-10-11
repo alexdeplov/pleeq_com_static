@@ -1,0 +1,8 @@
+baseURL = "https://pleeq_com_static/news/"
+languageCode = "en-us"
+title = "AI Hot News"
+theme = "ai-hot-news-theme"
+publishDir = "."
+
+[permalinks]
+  posts = "/:slug.html"

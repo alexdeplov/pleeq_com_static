@@ -165,11 +165,6 @@ Mark your campsite in Anchor Pointer before you head out. The app will guide you
     ></div>
   </div>
 
-  <div
-    class="btn-menu relative z-50 ltr:-mr-8 rtl:-ml-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
-    role="button"
-    aria-label="Menu"
-  ></div>
 
   
 
@@ -234,7 +229,9 @@ Mark your campsite in Anchor Pointer before you head out. The app will guide you
 
 <article>
   <header class="mb-14">
-    <h1 class="!my-0 pb-2.5">How to Navigate Back to Camp with Anchor Pointer iOS App</h1>
+    
+    
+    <h1 class="!my-0 pb-2.5" id="how-to-navigate-back-to-camp-with-anchor-pointer-ios-app">How to Navigate Back to Camp with Anchor Pointer iOS App</h1>
 
     
     <div class="text-xs antialiased opacity-60">
@@ -276,6 +273,37 @@ Mark your campsite in Anchor Pointer before you head out. The app will guide you
 
   
 </article>
+
+  
+  <script>
+    (function slugify(text){
+      return String(text)
+        .trim()
+        .toLowerCase()
+        .replace(/&[a-z]+;|[^\w\s-]/g, '')
+        .replace(/\s+/g, '-')
+        .replace(/--+/g,'-');
+    })(0);
+    (function(){
+      function slug(s){
+        return String(s || '')
+          .trim()
+          .toLowerCase()
+          .normalize('NFKD')
+          .replace(/\p{Diacritic}/gu, '')
+          .replace(/&[a-z]+;|[^\w\s-]/g, '')
+          .replace(/\s+/g, '-')
+          .replace(/--+/g,'-');
+      }
+      ['h1','h2','h3','h4','h5','h6'].forEach(function(tag){
+        document.querySelectorAll(tag).forEach(function(el){
+          if(!el.id){
+            el.id = slug(el.textContent || el.innerText || '');
+          }
+        });
+      });
+    })();
+  </script>
 
 
     </main>

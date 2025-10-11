@@ -1,0 +1,13 @@
+baseURL = "https://pleeq.com/ai-hot-news/"
+languageCode = "en-us"
+title = "AI Hot News: Latest AI News and Analysis"
+theme = "ai-hot-news-theme"
+publishDir = "."
+
+[permalinks]
+  posts = "/:slug"
+
+[params]
+  author = "James Smith"
+
+  

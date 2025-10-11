@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://pleeq_com_static/news/</loc>
+    <lastmod>2025-10-07T10:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://pleeq_com_static/news/news-1.html/</loc>
+    <lastmod>2025-10-07T10:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://pleeq_com_static/news/posts/</loc>
+    <lastmod>2025-10-07T10:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://pleeq_com_static/news/categories/</loc>
+  </url><url>
+    <loc>https://pleeq_com_static/news/tags/</loc>
+  </url>
+</urlset>

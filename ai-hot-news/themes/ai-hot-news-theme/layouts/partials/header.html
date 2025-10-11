@@ -1,0 +1,47 @@
+<header>
+    <div id="navigation" class="fixed top-0 left-0 right-0 w-full z-50">
+        <nav class="w-full flex justify-between p-4 bg-primary">
+            <!-- Left Segment (Home) -->
+            <a href="../" class="flex text-black">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                    <polyline points="9 22 9 12 15 12 15 22"/>
+                </svg>
+                <span class="hidden md:inline ml-2 font-semibold">Home</span>
+            </a>
+
+            <!-- Center Segment (Progress) -->
+            <div class="flex flex-col absolute justify-center left-1/2 transform -translate-x-1/2 top-6">
+                <div class="w-40 bg-gray-200/50 rounded-full">
+                    <div id="progressBar"
+                        class="h-1 bg-gray-900 rounded-full transition-all duration-150"
+                        style="width: 0%"
+                        data-progress="0">
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Right Segment -->
+             <a href="../" class="flex text-black">
+                <div class="hidden md:block text-sm text-stone-900 font-semibold mb-2">
+                    AI Hot News: Latest AI News and Analysis
+                </div>
+            </a>
+        </nav>
+    </div>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            // Calculate scroll percentage
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollPercentage = (scrollTop / scrollHeight) * 100;
+
+            // Update progress bar width
+            const progressBar = document.getElementById('progressBar');
+            progressBar.style.width = scrollPercentage + '%';
+            progressBar.setAttribute('data-progress', scrollPercentage.toFixed(2));
+        });
+    </script>
+</header>
