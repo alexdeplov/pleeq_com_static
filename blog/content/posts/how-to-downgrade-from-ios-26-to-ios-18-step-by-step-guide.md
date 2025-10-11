@@ -4,14 +4,6 @@ date = "2025-10-11T14:42:00+02:00"
 draft = false
 +++
 
-{{< conversation time="iPhone Forum Questions" >}}
-[
-  { "type": "user", "text": "Hey, I installed iOS 26 on my iPhone without backing up, and now it's full of bugs and battery drains fast. Do you know how to downgrade back to iOS 18?" },
-  { "type": "partner", "text": "Yeah, it can be unstable. You can downgrade using recovery mode with Finder or iTunes on your computer, but without a backup, it'll wipe your data clean. " }
-  
-]
-{{< /conversation >}}
-
 To downgrade from iOS 26 to iOS 18, connect your iPhone to a Mac or PC, enter recovery mode, and restore via Finder or iTunes. This wipes your device, so back up first if possible. Without a backup, expect data loss. 
 
 ## Why Downgrade iOS 26? Common Reasons and Considerations

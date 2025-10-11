@@ -4,14 +4,6 @@ date = "2025-10-11T15:13:00+02:00"
 draft = false
 +++
 
-{{< conversation time="iPhone Owners Forum Questions" >}}
-[
-  { "type": "user", "text": "How to completely disable the liquid glass functionality on iOS 26?" },
-  { "type": "user", "text": "I'm not going to get into a lengthy diatribe over why it's awful, I just want it gone" }
-  
-]
-{{< /conversation >}}
-
 In the world of iOS updates, iOS 26 brought a wave of excitement with its fresh design elements—but not everyone is on board with the "Liquid Glass" effect. If you're one of the many users frustrated by this shimmering, translucent UI overlay that makes icons and notifications feel overly glossy and distracting, you're not alone. Introduced as a core part of iOS 26's visual refresh, Liquid Glass aims to create a more dynamic, fluid interface reminiscent of frosted glass with subtle animations. However, for those with visual sensitivities, accessibility needs, or simply a preference for the crisp, matte look of previous versions, it can feel like an unwelcome change.
 
 The good news? While Apple hasn't provided a one-tap toggle to fully disable Liquid Glass (it's baked into the OS's foundational UI layer), there are effective workarounds to tone it down significantly. In this guide, we'll walk you through step-by-step instructions to reduce its impact, drawing from real user experiences on Apple Discussions and expert accessibility tweaks. We'll also cover why a complete disable isn't possible, alternative settings to experiment with, and how to voice your feedback to Apple for potential future updates.
