@@ -3,7 +3,7 @@
 {{ if eq $content "" }}
 <p>No messages to display</p>
 {{ else }}
-<div class="conversation my-8 md:px-16 flex flex-col">
+<div role="article" id="forum-conversation" class="conversation my-8 md:px-16 flex flex-col">
   {{ $messages := split .Inner "\n" }}
   {{ range $index, $message := $messages }}
     {{ if $message }}
@@ -13,7 +13,7 @@
         {{ $nextMessage := index $messages $nextIndex | unmarshal }}
         {{ $isLastInGroup := or (not $nextMessage) (ne $nextMessage.sender .sender) }}
         
-        <div class="message {{ if eq .sender "person2" }}message-right{{ else }}message-left{{ end }}">
+        <div id="comment-text" class="message {{ if eq .sender "person2" }}message-right{{ else }}message-left{{ end }}">
           <div class="message-bubble {{ if eq .sender "person2" }}bubble-blue{{ else }}bubble-grey{{ end }} {{ if $isLastInGroup }}last-in-group{{ end }}">
             <span class="message-text">{{ .text }}</span>
           </div>
@@ -21,14 +21,14 @@
 
         <!-- Small text display -->
         {{ if .small }}
-        <div class="small-text my-2 {{ if eq .sender "person2" }}float-right{{ else }}float-left{{ end }}">
+        <div id="author" class="small-text my-2 {{ if eq .sender "person2" }}float-right{{ else }}float-left{{ end }}">
           {{ .small }}
         </div>
         {{ end }}
       {{ end }}
     {{ end }}
   {{ end }}
-</div>
+    </div>
 {{ end }}
 
 <style>
