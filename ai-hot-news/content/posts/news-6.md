@@ -36,16 +36,16 @@ These figures underscore a brutal truth: AI job loss is accelerating, with young
 
 As of October 2025, discussions on AI automation unemployment are exploding across news, blogs, and social media. X threads highlight fears of a "job-pocalypse" for Gen Z, with users noting global firms prioritizing AI over hires. Key hot topics include:
 
-### 1. **Entry-Level White-Collar Wipeout**
+1. **Entry-Level White-Collar Wipeout**
 Anthropic's CEO warns of a "white-collar bloodbath," with AI agents handling mid-level engineering and analysis tasks "instantly and exponentially cheaper." Meta's 3,600 layoffs in Q1 2025? Blamed on AI efficiency, not just "low performers." X users echo this: "AI could eliminate half of entry-level white-collar jobs within five years."
 
-### 2. **Hybrid vs. Full Replacement: The Augmentation Myth**
+2. **Hybrid vs. Full Replacement: The Augmentation Myth**
 While 46% of U.S. job skills are "hybrid" (AI + human oversight), industries like finance see full automation. Blogs argue AI creates 6.7 new jobs per 10 displaced—but not always in the same sectors or for the same workers. Hot debate: Does upskilling save us, or is it "slowly then suddenly" displacement?
 
-### 3. **Youth Unemployment and the "Job-Pocalypse"**
+3. **Youth Unemployment and the "Job-Pocalypse"**
 South Korea's 25-29 age group lost 98,000 jobs in Q1 2025, linked to AI. Globally, 40% of employers plan workforce reductions via AI by 2030. X buzz: "Gen Z faces job-pocalypse as firms prioritize AI."
 
-### 4. **Ethical AI and Government "Human Quotas"**
+4. **Ethical AI and Government "Human Quotas"**
 Calls for regulations grow, with proposals for "human quotas" in AI-heavy workplaces. Legal risks in AI hiring are spiking, per HR reports. X post: "Governments eye human quotas for AI work."
 
 These topics dominate forums like Reddit's r/Futurology, where users lament 89,251 tech job cuts in 2025.
