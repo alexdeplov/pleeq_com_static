@@ -216,11 +216,6 @@ App StoreからiPhone向けGPSナビをダウンロードして、オフライ�
     ></div>
   </div>
 
-  <div
-    class="btn-menu relative z-50 ltr:-mr-8 rtl:-ml-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
-    role="button"
-    aria-label="Menu"
-  ></div>
 
   
 
@@ -285,7 +280,9 @@ App StoreからiPhone向けGPSナビをダウンロードして、オフライ�
 
 <article>
   <header class="mb-14">
-    <h1 class="!my-0 pb-2.5">オフラインGPSナビゲーションで安心の探検を：ハイカーやアウトドア愛好家のためのiPhone向けGPSナビ</h1>
+    
+    
+    <h1 class="!my-0 pb-2.5" id="%E3%82%AA%E3%83%95%E3%83%A9%E3%82%A4%E3%83%B3gps%E3%83%8A%E3%83%93%E3%82%B2%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%A7%E5%AE%89%E5%BF%83%E3%81%AE%E6%8E%A2%E6%A4%9C%E3%82%92%E3%83%8F%E3%82%A4%E3%82%AB%E3%83%BC%E3%82%84%E3%82%A2%E3%82%A6%E3%83%88%E3%83%89%E3%82%A2%E6%84%9B%E5%A5%BD%E5%AE%B6%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AEiphone%E5%90%91%E3%81%91gps%E3%83%8A%E3%83%93">オフラインGPSナビゲーションで安心の探検を：ハイカーやアウトドア愛好家のためのiPhone向けGPSナビ</h1>
 
     
     <div class="text-xs antialiased opacity-60">
@@ -357,6 +354,37 @@ App StoreからiPhone向けGPSナビをダウンロードして、オフライ�
 
   
 </article>
+
+  
+  <script>
+    (function slugify(text){
+      return String(text)
+        .trim()
+        .toLowerCase()
+        .replace(/&[a-z]+;|[^\w\s-]/g, '')
+        .replace(/\s+/g, '-')
+        .replace(/--+/g,'-');
+    })(0);
+    (function(){
+      function slug(s){
+        return String(s || '')
+          .trim()
+          .toLowerCase()
+          .normalize('NFKD')
+          .replace(/\p{Diacritic}/gu, '')
+          .replace(/&[a-z]+;|[^\w\s-]/g, '')
+          .replace(/\s+/g, '-')
+          .replace(/--+/g,'-');
+      }
+      ['h1','h2','h3','h4','h5','h6'].forEach(function(tag){
+        document.querySelectorAll(tag).forEach(function(el){
+          if(!el.id){
+            el.id = slug(el.textContent || el.innerText || '');
+          }
+        });
+      });
+    })();
+  </script>
 
 
     </main>
