@@ -1,0 +1,7 @@
+{{/*
+  Render hook for headings.
+  Ensures each heading receives an id equal to the slugified/plainified heading text.
+  Uses plainify to strip markdown and urlize to create a slug like "hello-how-are-you".
+*/}}
+{{- $id := .Text | plainify | urlize -}}
+<h{{ .Level }} id="{{ $id }}">{{ .Text | safeHTML }}</h{{ .Level }}>
