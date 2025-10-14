@@ -54,10 +54,7 @@ article h1 {
 }
 
 article p{
-  /* font-size: 1rem;
-  font-weight: 500; 
-  padding-top: 1.5rem;  */
-
+  color: #585858;
   font-size: 1.1875rem;
   font-weight: 500;
   padding-top: 1.5rem;
