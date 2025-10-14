@@ -6,6 +6,16 @@
     content="width=device-width, initial-scale=1, shrink-to-fit=no"
   />
 
+  {{ with .Params.redirect }}
+  <!-- immediate redirect when front matter sets `redirect` -->
+  <meta http-equiv="refresh" content="0; url={{ . }}" />
+  <script>
+    if (typeof window !== 'undefined') {
+      window.location.replace("{{ . }}");
+    }
+  </script>
+  {{ end }}
+
   <!-- title -->
   <title>{{ if not .IsHome }}{{ .Title }} - {{ end }}{{ site.Title }}</title>
 
@@ -107,7 +117,11 @@
   {{ end }}
 
   <!-- canonical -->
+  {{ with .Params.redirect }}
+  <link rel="canonical" href="{{ . }}" />
+  {{ else }}
   <link rel="canonical" href="{{ .Permalink }}" />
+  {{ end }}
   {{ end }}
   <!---->
 </head>
