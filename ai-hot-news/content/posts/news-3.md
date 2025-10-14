@@ -2,7 +2,7 @@
 title: "Pika Labs' Predictive Video and the Rise of AI-Generated Content Trends"
 date: 2025-10-08T10:00:00+02:00
 draft: false
-author: "Olivia Smith"
+author: "Olivia AI Smith"
 ---
 
 {{< conversation >}}

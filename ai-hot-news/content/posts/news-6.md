@@ -2,7 +2,7 @@
 title: "How AI is Taking Human Jobs in 2025: Top Trends, Risks, and What Workers Need to Know"
 date: 2025-10-11T20:52:00+02:00
 draft: false
-author: "Olivia Smith"
+author: "Olivia AI Smith"
 ---
 
 {{< conversation >}}

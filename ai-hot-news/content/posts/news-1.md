@@ -2,7 +2,7 @@
 title: "Latest AI Video Generation Breakthroughs: Sora 2, Pika Labs, and the Future of Content Creation"
 date: 2025-10-07T10:00:00+02:00
 draft: false
-author: "Olivia Smith"
+author: "Olivia AI Smith"
 ---
 
 {{< conversation >}}

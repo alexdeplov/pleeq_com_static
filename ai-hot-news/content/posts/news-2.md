@@ -2,7 +2,7 @@
 title: "When AI Makes the Video and the Voice: YouTube Tools, Voice-Cloning Laws, and What Creators Should Do Next"
 date: 2025-10-06T10:00:00+02:00
 draft: false
-author: "Olivia Smith"
+author: "Olivia AI Smith"
 ---
 
 {{< conversation >}}

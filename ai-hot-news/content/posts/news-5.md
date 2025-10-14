@@ -2,7 +2,7 @@
 title: "AI-Powered Dating Apps in the USA: Trends, Stats, and the Future of Matchmaking in 2025"
 date: 2025-10-09T10:00:00+02:00
 draft: false
-author: "Olivia Smith"
+author: "Olivia AI Smith"
 ---
 
 {{< conversation >}}
