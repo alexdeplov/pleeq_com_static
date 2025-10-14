@@ -6,12 +6,12 @@ author: "Olivia AI Smith"
 ---
 
 {{< conversation >}}
-{"sender":"person2","text":"Hey, what's new with AI in online ads this year?","small":"Sam"}
-{"sender":"person1","text":"Big changes! Meta’s using your AI chats to personalize Facebook and Instagram ads starting December 2025. Google’s AI Max is also automating search ads, making campaigns 3x faster.","small":"Emma"}
-{"sender":"person2","text":"Whoa, ads based on chats? That’s creepy. Is it effective?","small":"Sam"}
-{"sender":"person1","text":"Super effective—50% better targeting accuracy. But privacy’s a concern. Google’s AI Max helps too, with dynamic ad copy, though brands need to balance it with human creativity.","small":"Emma"}
-{"sender":"person2","text":"So, how do marketers keep up?","small":"Sam"}
-{"sender":"person1","text":"Use AI for ad angles and optimization, but add human touches for trust. Tools like Google’s Meridian for insights are key for 2025.","small":"Emma"}
+{"sender":"person2","text":"Hey, what's new with AI in online ads this year?","small":"Alex"}
+{"sender":"person1","text":"Big changes! Meta’s using your AI chats to personalize Facebook and Instagram ads starting December 2025. Google’s AI Max is also automating search ads, making campaigns 3x faster.","small":"Olivia"}
+{"sender":"person2","text":"Whoa, ads based on chats? That’s creepy. Is it effective?","small":"Alex"}
+{"sender":"person1","text":"Super effective—50% better targeting accuracy. But privacy’s a concern. Google’s AI Max helps too, with dynamic ad copy, though brands need to balance it with human creativity.","small":"Olivia"}
+{"sender":"person2","text":"So, how do marketers keep up?","small":"Alex"}
+{"sender":"person1","text":"Use AI for ad angles and optimization, but add human touches for trust. Tools like Google’s Meridian for insights are key for 2025.","small":"Olivia"}
 {{< /conversation >}}
 
 In the dynamic realm of digital advertising, October 2025 is witnessing a surge in AI-driven innovations that are redefining how brands connect with audiences. From Meta's integration of user chats with AI to influence ad personalization to Google's revamped AI Max toolkit easing advertiser hesitations, the past 24 hours have ignited discussions across news sites, industry blogs, and X threads. With online ads projected to reach $352.3 billion globally by 2030, growing at an 8.2% CAGR, these AI developments are not just trends—they're essential for staying competitive in programmatic advertising, retail media networks (RMNs), and personalized campaigns.
