@@ -4,6 +4,10 @@ title = "AI Hot News: Latest AI News and Analysis"
 theme = "ai-hot-news-theme"
 publishDir = "."
 
+# Pagination settings for Hugo v0.151.0
+[pagination]
+  pagerSize = 1000  # High number to show all articles on index page
+
 [permalinks]
   posts = "/:slug"
 
