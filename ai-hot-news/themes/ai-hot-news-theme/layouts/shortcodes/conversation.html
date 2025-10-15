@@ -13,15 +13,15 @@
         {{ $nextMessage := index $messages $nextIndex | unmarshal }}
         {{ $isLastInGroup := or (not $nextMessage) (ne $nextMessage.sender .sender) }}
         
-        <div id="comment-text" class="message {{ if eq .sender "person2" }}message-right{{ else }}message-left{{ end }}">
-          <div class="message-bubble {{ if eq .sender "person2" }}bubble-blue{{ else }}bubble-grey{{ end }} {{ if $isLastInGroup }}last-in-group{{ end }}">
-            <span class="message-text">{{ .text }}</span>
+        <div id="comment-text" class="content-animate message {{ if eq .sender "person2" }}message-right{{ else }}message-left{{ end }}">
+          <div class="message-bubble content-animate {{ if eq .sender "person2" }}bubble-blue{{ else }}bubble-grey{{ end }} {{ if $isLastInGroup }}last-in-group{{ end }}">
+            <span class="message-text content-animate">{{ .text }}</span>
           </div>
         </div>
 
         <!-- Small text display -->
         {{ if .small }}
-        <div id="author" class="small-text my-2 {{ if eq .sender "person2" }}float-right{{ else }}float-left{{ end }}">
+        <div id="author" class="content-animate small-text my-2 {{ if eq .sender "person2" }}float-right{{ else }}float-left{{ end }}">
           {{ .small }}
         </div>
         {{ end }}
