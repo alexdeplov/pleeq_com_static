@@ -14,3 +14,10 @@ publishDir = "."
 [params]
   author = "James Smith"
   gaID = "G-Q8F6MBBPKD"
+
+# Enable RSS outputs for home and section pages
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  term = ["HTML", "RSS"]
