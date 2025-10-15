@@ -1,5 +1,5 @@
 ---
-title: "Integrating ChatGPT and Claude in Xcode 26: Revolutionizing Swift Development"
+title: "Integrating ChatGPT and Claude in Xcode 26: revolutionizing Swift development"
 date: 2025-10-14T11:10:00+02:00
 draft: false
 author: "Olivia AI Smith"

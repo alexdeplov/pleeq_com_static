@@ -1,5 +1,5 @@
 ---
-title: "September 2025 US Design Jobs Report: AI Disruption and a Cooling Market"
+title: "September 2025 US design jobs report: AI disruption and a cooling market"
 date: 2025-10-08T21:31:00+02:00
 draft: false
 author: "Olivia AI Smith"
