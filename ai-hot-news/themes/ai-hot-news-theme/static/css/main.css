@@ -12,6 +12,10 @@
   --second-accent-color: #12B76A;
 }
 
+a:visited h2{
+  color: #78716c
+}
+
 /* Base styles */
 body {
   padding: 0;
