@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
+    {{ with .OutputFormats.Get "RSS" }}
+    <link rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" href="{{ .RelPermalink }}">
+    {{ end }}
+    <link rel="stylesheet" href="{{ "./css/fonts.css" | relURL }}">
+    <link rel="stylesheet" href="{{ "./css/main.css" | relURL }}">
+    <link rel="stylesheet" href="{{ "./css/modules.css" | relURL }}">
+    <link rel="stylesheet" href="{{ "./css/animation.css" | relURL }}">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        accent: '#7805FF',
+                        'accent-hover': '#6604D9',
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'system-ui', '-apple-system', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                }
+            }
+        }
+    </script>
+    <script src="{{ "./js/copyright.js" | relURL }}" defer></script>
+    <script src="{{ "./js/script.js" | relURL }}" defer></script>
+    <script src="{{ "./js/heading-ids.js" | relURL }}" defer></script>
+</head>
+<body>
+    {{ partial "header.html" . }}
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
+    {{ partial "footer.html" . }}
+    <script data-goatcounter="https://goatainews.goatcounter.com/count"
+            async src="//gc.zgo.at/count.js"></script>
+    {{ partial "cookie-consent.html" . }}
+
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+{{/* cookie consent partial for Hugo
+   reads .Site.Params.gaID and loads gtag only when analytics consent is given
+   stores choices in localStorage under cookie_consent
+*/}}
+
+<div id="cookie-consent" data-gaid="{{ .Site.Params.gaID }}" aria-live="polite">
+  <style>
+    #cookie-consent .cc-banner {position:fixed;left:16px;right:16px;bottom:20px;padding:16px;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,0.12);background:#fff;z-index:9999;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+    #cookie-consent .cc-actions{margin-left:auto;display:flex;gap:8px;align-items:center}
+    #cookie-consent .cc-btn{padding:8px 12px;border-radius:8px;border:1px solid #ddd;background:#f9f9f9;cursor:pointer}
+    #cookie-consent .cc-btn.primary{background:#7805FF;color:#fff;border-color:transparent}
+    #cookie-consent .cc-modal{position:fixed;inset:0;background:rgba(0,0,0,0.5);display:none;align-items:center;justify-content:center;z-index:10000}
+    #cookie-consent .cc-panel{background:#fff;padding:20px;border-radius:12px;max-width:720px;width:100%;box-shadow:0 12px 40px rgba(0,0,0,0.2)}
+    #cookie-consent .cc-cats{display:grid;gap:10px;margin-top:12px}
+    #cookie-consent label{display:flex;align-items:center;gap:10px}
+    @media (max-width:540px){#cookie-consent .cc-banner{left:12px;right:12px;bottom:12px;padding:12px}}
+  </style>
+
+  <div class="cc-banner" role="dialog" aria-hidden="true">
+    <div>
+      <strong>We use cookies</strong>
+      <div style="font-size:0.95rem;margin-top:6px;font-weight: 500;">We use cookies to operate the site and to provide analytics and business insights. Choose which cookies you allow. Your choices will be stored on this device.</div>
+    </div>
+
+    <div class="cc-actions">
+      <button class="cc-btn" id="cc-manage">Manage</button>
+      <button class="cc-btn" id="cc-reject">Reject all</button>
+      <button class="cc-btn primary" id="cc-accept">Accept all</button>
+    </div>
+  </div>
+
+  <div class="cc-modal" id="cc-modal" role="dialog" aria-hidden="true">
+    <div class="cc-panel" role="document">
+      <h2>Cookie preferences</h2>
+      <p>Select which categories you allow. Necessary cookies are required to run the site.</p>
+
+      <div class="cc-cats">
+        <div>
+          <label>
+            <input type="checkbox" disabled checked />
+            <div>
+              <strong>Necessary</strong>
+              <div style="font-size:0.9rem">Required cookies for site core features and security.</div>
+            </div>
+          </label>
+        </div>
+
+        <div>
+          <label>
+            <input type="checkbox" id="cc-analytics" />
+            <div>
+              <strong>Analytics</strong>
+              <div style="font-size:0.9rem">Capture page views, scrolls, outbound clicks, site search, form interactions, video engagement, and file downloads. Used to generate aggregated measurement data and business insights. Enabling this will load Google Analytics for this site.</div>
+            </div>
+          </label>
+        </div>
+
+        <div>
+          <label>
+            <input type="checkbox" id="cc-marketing" />
+            <div>
+              <strong>Marketing and personalization</strong>
+              <div style="font-size:0.9rem">Allow additional features like recommendations, modeling contributions, technical support and personalized suggestions across Google products when applicable.</div>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <div style="margin-top:16px;display:flex;gap:8px;justify-content:flex-end">
+        <button class="cc-btn" id="cc-cancel">Cancel</button>
+        <button class="cc-btn primary" id="cc-save">Save preferences</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      const storageKey = 'cookie_consent'
+      const banner = document.querySelector('#cookie-consent .cc-banner')
+      const modal = document.getElementById('cc-modal')
+      const manageBtn = document.getElementById('cc-manage')
+      const rejectBtn = document.getElementById('cc-reject')
+      const acceptBtn = document.getElementById('cc-accept')
+      const saveBtn = document.getElementById('cc-save')
+      const cancelBtn = document.getElementById('cc-cancel')
+      const analyticsCb = document.getElementById('cc-analytics')
+      const marketingCb = document.getElementById('cc-marketing')
+      const gaid = document.getElementById('cookie-consent').dataset.gaid
+
+      function getStored(){
+        try{const v = localStorage.getItem(storageKey); return v ? JSON.parse(v) : null}catch(e){return null}
+      }
+      function store(obj){localStorage.setItem(storageKey, JSON.stringify(obj))}
+
+      function showBanner(){banner.setAttribute('aria-hidden','false');banner.style.display='flex'}
+      function hideBanner(){banner.setAttribute('aria-hidden','true');banner.style.display='none'}
+      function openModal(){modal.style.display='flex';modal.setAttribute('aria-hidden','false')}
+      function closeModal(){modal.style.display='none';modal.setAttribute('aria-hidden','true')}
+
+      function loadGtag(){
+        if(!gaid) return
+        if(window.__gtag_loaded) return
+        const s = document.createElement('script')
+        s.async = true
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(gaid)
+        document.head.appendChild(s)
+        window.dataLayer = window.dataLayer || []
+        function gtag(){dataLayer.push(arguments)}
+        window.gtag = gtag
+        gtag('js', new Date())
+        gtag('config', gaid)
+        window.__gtag_loaded = true
+      }
+
+      function applyConsent(consent){
+        if(consent.analytics){loadGtag()}
+      }
+
+      const stored = getStored()
+      if(stored){
+        hideBanner()
+        applyConsent(stored)
+      } else {
+        showBanner()
+      }
+
+      manageBtn.addEventListener('click', function(){
+        openModal()
+        const s = getStored() || {analytics:false,marketing:false}
+        analyticsCb.checked = !!s.analytics
+        marketingCb.checked = !!s.marketing
+      })
+
+      rejectBtn.addEventListener('click', function(){
+        const obj = {analytics:false,marketing:false,timestamp:Date.now()}
+        store(obj)
+        hideBanner()
+        applyConsent(obj)
+      })
+
+      acceptBtn.addEventListener('click', function(){
+        const obj = {analytics:true,marketing:true,timestamp:Date.now()}
+        store(obj)
+        hideBanner()
+        applyConsent(obj)
+      })
+
+      saveBtn.addEventListener('click', function(){
+        const obj = {analytics:analyticsCb.checked,marketing:marketingCb.checked,timestamp:Date.now()}
+        store(obj)
+        closeModal()
+        hideBanner()
+        applyConsent(obj)
+      })
+
+      cancelBtn.addEventListener('click', function(){closeModal()})
+
+      window.CookieConsent = {
+        get: getStored,
+        apply: applyConsent
+      }
+    })()
+  </script>
+</div>

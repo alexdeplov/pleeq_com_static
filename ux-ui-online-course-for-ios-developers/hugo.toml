@@ -1,6 +1,6 @@
 baseURL = "https://pleeq.com/ai-hot-news/"
 languageCode = "en-us"
-title = "AI Hot News: Latest AI News and Analysis"
+title = "UX/UI Course for iOS Devs"
 theme = "ai-hot-news-theme"
 publishDir = "public"
 
