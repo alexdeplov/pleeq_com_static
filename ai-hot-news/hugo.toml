@@ -2,11 +2,7 @@ baseURL = "https://pleeq.com/ai-hot-news/"
 languageCode = "en-us"
 title = "AI Hot News: Latest AI News and Analysis"
 theme = "ai-hot-news-theme"
-<<<<<<< HEAD
-
-=======
 publishDir = "."
->>>>>>> parent of 7e98938 (New)
 
 # Pagination settings for Hugo v0.151.0
 [pagination]
