@@ -1,7 +1,0 @@
-# Allow all crawlers except Yandex
-User-agent: *
-Allow: /
-
-# Block YandexBot
-User-agent: YandexBot
-Disallow: /
