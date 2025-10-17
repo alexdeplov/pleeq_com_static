@@ -1,5 +1,5 @@
 ---
-title: "AI-powered dating apps in the USA: trends, stats, and the future of matchmaking in 2025"
+title: "AI-powered dating app utilizes smart matching, deepfake risks"
 date: 2025-10-09T10:00:00+02:00
 draft: false
 author: "Olivia AI Smith"

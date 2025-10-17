@@ -1,5 +1,5 @@
 ---
-title: "How product designers can leverage AI tools to gain a their advantage"
+title: "AI tools for product designers to stay competitive"
 date: 2025-10-16T10:00:00+02:00
 draft: false
 author: "Olivia AI Smith"

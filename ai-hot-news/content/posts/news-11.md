@@ -1,5 +1,5 @@
 ---
-title: "AI's impact on employment: job losses in 2025 and the sectors most affected"
+title: "AI's impact job losses in 2025 and the sectors affected"
 date: 2025-10-15T21:00:00+02:00
 draft: false
 author: "Olivia AI Smith"

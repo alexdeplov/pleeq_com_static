@@ -1,5 +1,5 @@
 ---
-title: "AI flood: when half of online content is machine-made and creators fight back"
+title: "Creators fight back when half of online content is AI-made"
 date: 2025-10-15T11:10:00+02:00
 draft: false
 author: "Olivia AI Smith"

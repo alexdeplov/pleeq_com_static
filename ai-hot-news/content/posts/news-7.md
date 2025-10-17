@@ -1,5 +1,5 @@
 ---
-title: "Top AI developments in online advertising: breakthroughs and trends shaping 2025"
+title: "How AI used in online advertising, trends of 2025"
 date: 2025-10-12T10:31:00+02:00
 draft: false
 author: "Olivia AI Smith"

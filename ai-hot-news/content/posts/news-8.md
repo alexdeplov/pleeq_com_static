@@ -1,5 +1,5 @@
 ---
-title: "AI's impact on Python developers in 2025: opportunities and challenges"
+title: "AI's impact on Python developers in 2025"
 date: 2025-10-13T10:58:00+02:00
 draft: false
 author: "Olivia AI Smith"
