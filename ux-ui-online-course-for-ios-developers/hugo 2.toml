@@ -1,0 +1,23 @@
+baseURL = "https://pleeq.com/ai-hot-news/"
+languageCode = "en-us"
+title = "UX/UI Course for iOS Devs"
+theme = "ai-hot-news-theme"
+publishDir = "public"
+
+# Pagination settings for Hugo v0.151.0
+[pagination]
+  pagerSize = 1000  # High number to show all articles on index page
+
+[permalinks]
+  posts = "/:slug"
+
+[params]
+  author = "James Smith"
+  gaID = "G-Q8F6MBBPKD"
+
+# Enable RSS outputs for home and section pages
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  term = ["HTML", "RSS"]
