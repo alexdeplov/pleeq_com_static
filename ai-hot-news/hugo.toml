@@ -1,9 +1,8 @@
-baseURL = "https://pleeq.com/ai-hot-news/thread/"
+baseURL = "https://pleeq.com/ai-hot-news/"
 languageCode = "en-us"
 title = "AI Hot News: Latest AI News and Analysis"
 theme = "ai-hot-news-theme"
-# Avoid publishing into the repository root. Use a dedicated `public/` folder.
-publishDir = "thread"
+publishDir = "."
 
 # Pagination settings for Hugo v0.151.0
 [pagination]
