@@ -1,4 +1,4 @@
-baseURL = "https://pleeq.com/"
+baseURL = "https://pleeq.com/ai-hot-news/public/"
 languageCode = "en-us"
 title = "AI Hot News: Latest AI News and Analysis"
 theme = "ai-hot-news-theme"
