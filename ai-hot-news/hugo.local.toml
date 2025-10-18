@@ -1,0 +1,8 @@
+# Local development configuration
+# This overrides settings from hugo.toml for local development
+
+baseURL = "http://localhost:1313/"
+publishDir = "public"
+
+# For local development with subdirectory testing:
+# baseURL = "http://localhost:1313/ai-hot-news/"
